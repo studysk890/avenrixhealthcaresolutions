@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" width="100%" height="100%" fill="none" role="img" aria-label="Wall &amp; Ceiling Panels">
+  <defs>
+    <pattern id="grid-06-PANELS" width="20" height="20" patternUnits="userSpaceOnUse">
+      <path d="M 20 0 L 0 0 0 20" fill="none" stroke="#012C4E" stroke-width="0.5" stroke-opacity="0.06" />
+    </pattern>
+    <linearGradient id="grad-06-PANELS" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#F8FAFC" />
+      <stop offset="100%" stop-color="#E2E8F0" />
+    </linearGradient>
+  </defs>
+  <rect width="400" height="300" fill="#FFFFFF" />
+  <rect width="400" height="300" fill="url(#grid-06-PANELS)" />
+  <!-- Outer border -->
+  <rect x="15" y="15" width="370" height="270" stroke="#012C4E" stroke-width="0.8" stroke-opacity="0.15" />
+  <!-- Registration corners -->
+  <path d="M 20 25 L 20 20 L 25 20 M 375 25 L 375 20 L 370 20 M 20 275 L 20 280 L 25 280 M 375 275 L 375 280 L 370 280" stroke="#64748B" stroke-width="0.8" />
+  <!-- Header meta -->
+  <text x="28" y="32" font-family="'Inter', sans-serif" font-size="7.5" font-weight="600" letter-spacing="1" fill="#012C4E">SYS // 06-PANELS</text>
+  <circle cx="368" cy="30" r="3" fill="#F16419" />
+  <!-- Content Graphic -->
+  
+  <g transform="translate(50, 50)">
+    <rect x="20" y="20" width="260" height="165" fill="#FFFFFF" stroke="#012C4E" stroke-width="1.2" />
+    <rect x="20" y="20" width="260" height="25" fill="#F1F5F9" stroke="#012C4E" stroke-width="0.8" />
+    <line x1="85" y1="20" x2="85" y2="45" stroke="#012C4E" stroke-width="0.8" />
+    <line x1="150" y1="20" x2="150" y2="45" stroke="#012C4E" stroke-width="0.8" />
+    <line x1="215" y1="20" x2="215" y2="45" stroke="#012C4E" stroke-width="0.8" />
+    <path d="M 40 45 Q 40 55 50 55" stroke="#F16419" stroke-width="1.5" fill="none" />
+    <path d="M 260 45 Q 260 55 250 55" stroke="#F16419" stroke-width="1.5" fill="none" />
+    <rect x="40" y="55" width="65" height="115" fill="#F8FAFC" stroke="#012C4E" stroke-width="0.8" />
+    <rect x="108" y="55" width="65" height="115" fill="#FFFFFF" stroke="#012C4E" stroke-width="0.8" />
+    <rect x="176" y="55" width="65" height="115" fill="#F8FAFC" stroke="#012C4E" stroke-width="0.8" />
+    <line x1="106" y1="55" x2="106" y2="170" stroke="#F16419" stroke-width="1.5" />
+    <line x1="174" y1="55" x2="174" y2="170" stroke="#F16419" stroke-width="1.5" />
+    <path d="M 40 170 Q 40 180 50 180 L 250 180 Q 260 180 260 170" stroke="#012C4E" stroke-width="1.2" fill="none" />
+    <text x="150" y="110" font-family="'Inter'" font-size="7.5" font-weight="600" fill="#012C4E" text-anchor="middle">FLUSH MODULAR PANELS</text>
+    <text x="150" y="122" font-family="'Inter'" font-size="6.5" fill="#64748B" text-anchor="middle">ANTIMICROBIAL &amp; CHEMICAL RESISTANT</text>
+  </g>
+
+  <!-- Bottom bar -->
+  <line x1="15" y1="268" x2="385" y2="268" stroke="#012C4E" stroke-width="0.6" stroke-opacity="0.1" />
+  <text x="28" y="280" font-family="'Inter', sans-serif" font-size="7" font-weight="600" fill="#012C4E">WALL &amp; CEILING PANELS</text>
+  <text x="372" y="280" font-family="'Inter', sans-serif" font-size="6.5" fill="#64748B" text-anchor="end">AVENRIX TECHNICAL SPEC</text>
+</svg>

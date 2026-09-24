@@ -1,0 +1,1187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Avenrix Healthcare Solutions is a turnkey healthcare and pharmaceutical infrastructure company focused on designing, supplying, and executing solutions for critical and controlled environments.">
+  <meta name="theme-color" content="#012C4E">
+  <title>Avenrix Healthcare Solutions — Turnkey Critical Healthcare Environments</title>
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="images/Avenrix Logo Vertical.png">
+
+  <!-- Preload Essential Fonts -->
+  <link rel="preload" href="fonts/TheSeasons-Reg.otf" as="font" type="font/otf" crossorigin>
+  <link rel="preload" href="fonts/Inter-VariableFont_opsz,wght.ttf" as="font" type="font/ttf" crossorigin>
+
+  <!-- Core Stylesheets -->
+  <link rel="stylesheet" href="css/fonts.css">
+  <link rel="stylesheet" href="css/design-system.css">
+  <link rel="stylesheet" href="css/header.css">
+  <link rel="stylesheet" href="css/hero.css">
+  <link rel="stylesheet" href="css/about.css">
+  <link rel="stylesheet" href="css/products.css">
+  <link rel="stylesheet" href="css/values.css">
+  <link rel="stylesheet" href="css/contact.css">
+  <link rel="stylesheet" href="css/footer.css">
+</head>
+<body>
+  <!-- Accessible Skip to Main Content Link -->
+  <a href="#mainContent" class="avx-skip-link">Skip to main content</a>
+
+
+  <!-- ======================================================================
+       HEADER & NAVIGATION
+       ====================================================================== -->
+  <header class="avx-header" id="header" role="banner">
+    <div class="avx-container avx-header__inner">
+      <!-- Brand Logo -->
+      <a href="#home" class="avx-header__brand" aria-label="Avenrix Healthcare Solutions Home">
+        <img 
+          src="images/Avenrix Logo Horizontal.png" 
+          alt="Avenrix Healthcare Solutions" 
+          class="avx-header__logo avx-header__logo--desktop" 
+          width="200" 
+          height="54"
+          decoding="async"
+        >
+        <img 
+          src="images/Avenrix Logo Vertical.png" 
+          alt="Avenrix Healthcare Solutions" 
+          class="avx-header__logo avx-header__logo--mobile" 
+          width="60" 
+          height="44"
+          decoding="async"
+        >
+      </a>
+
+      <!-- Desktop Navigation Menu -->
+      <nav class="avx-header__nav" aria-label="Primary Navigation">
+        <ul class="avx-header__nav-list">
+          <li class="avx-header__nav-item">
+            <a href="#home" class="avx-header__nav-link is-active">Home</a>
+          </li>
+          <li class="avx-header__nav-item">
+            <a href="#about" class="avx-header__nav-link">About Us</a>
+          </li>
+          <li class="avx-header__nav-item">
+            <a href="#products" class="avx-header__nav-link">Products &amp; Services</a>
+          </li>
+          <li class="avx-header__nav-item">
+            <a href="#values" class="avx-header__nav-link">What We Stand For</a>
+          </li>
+          <li class="avx-header__nav-item">
+            <a href="#contact" class="avx-header__nav-link">Contact Us</a>
+          </li>
+        </ul>
+      </nav>
+
+      <!-- Desktop Header Actions & Mobile Hamburger -->
+      <div class="avx-header__actions">
+        <a href="#contact" class="avx-btn avx-btn--primary avx-header__cta">
+          <span>Discuss Your Project</span>
+          <svg class="avx-icon" width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+            <path d="M3 8H13M13 8L8.5 3.5M13 8L8.5 12.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </a>
+
+        <!-- Accessible Hamburger Button -->
+        <button 
+          class="avx-header__toggle" 
+          id="menuToggle" 
+          aria-label="Open Navigation Menu" 
+          aria-expanded="false" 
+          aria-controls="mobileDrawer"
+        >
+          <span class="avx-header__toggle-bar"></span>
+          <span class="avx-header__toggle-bar"></span>
+          <span class="avx-header__toggle-bar"></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Off-Canvas Drawer Backdrop -->
+  <div class="avx-drawer-backdrop" id="drawerBackdrop" aria-hidden="true"></div>
+
+  <!-- Mobile Off-Canvas Drawer -->
+  <aside 
+    class="avx-drawer" 
+    id="mobileDrawer" 
+    role="dialog" 
+    aria-modal="true" 
+    aria-label="Mobile Navigation Drawer" 
+    aria-hidden="true"
+  >
+    <div class="avx-drawer__content">
+      <div class="avx-drawer__brand">
+        <img 
+          src="images/Avenrix Logo Vertical.png" 
+          alt="Avenrix Healthcare Solutions" 
+          class="avx-drawer__logo" 
+          width="54" 
+          height="40"
+          decoding="async"
+        >
+      </div>
+      <nav class="avx-drawer__nav" aria-label="Mobile Menu Links">
+        <ul class="avx-drawer__list">
+          <li class="avx-drawer__item"><a href="#home" class="avx-drawer__link">Home</a></li>
+          <li class="avx-drawer__item"><a href="#about" class="avx-drawer__link">About Us</a></li>
+          <li class="avx-drawer__item"><a href="#products" class="avx-drawer__link">Products &amp; Services</a></li>
+          <li class="avx-drawer__item"><a href="#values" class="avx-drawer__link">What We Stand For</a></li>
+          <li class="avx-drawer__item"><a href="#contact" class="avx-drawer__link">Contact Us</a></li>
+        </ul>
+      </nav>
+    </div>
+    <div class="avx-drawer__footer">
+      <a href="#contact" class="avx-btn avx-btn--primary avx-drawer__cta">
+        <span>Discuss Your Project</span>
+      </a>
+    </div>
+  </aside>
+
+  <!-- ======================================================================
+       MAIN CONTENT: HERO
+       ====================================================================== -->
+  <main id="mainContent" role="main">
+    <section class="avx-hero" id="home" aria-label="Hero Introduction">
+      <!-- Architectural Grid Decorative Background -->
+      <div class="avx-hero__grid-bg" aria-hidden="true"></div>
+
+      <div class="avx-container avx-hero__container">
+        <div class="avx-hero__layout">
+          <!-- Left Column: Editorial Headline & Copy -->
+          <div class="avx-hero__content">
+            <div class="avx-hero__eyebrow avx-eyebrow">
+              <span>Turnkey Healthcare &amp; Pharmaceutical Infrastructure</span>
+            </div>
+            
+            <h1 class="avx-hero__title">
+              Building Critical Healthcare Environments with <span class="avx-hero__title-accent">Precision</span>, Expertise &amp; Trust
+            </h1>
+
+            <p class="avx-hero__desc">
+              Avenrix Healthcare Solutions is a turnkey healthcare and pharmaceutical infrastructure company focused on designing, supplying, and executing solutions for critical and controlled environments.
+            </p>
+
+            <div class="avx-hero__ctas">
+              <a href="#products" class="avx-btn avx-btn--primary avx-hero__btn-primary">
+                <span>Explore Our Solutions</span>
+                <svg class="avx-icon" width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+                  <path d="M3 8H13M13 8L8.5 3.5M13 8L8.5 12.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </a>
+              <a href="#contact" class="avx-btn avx-btn--secondary avx-hero__btn-secondary">
+                <span>Discuss Your Project</span>
+              </a>
+            </div>
+          </div>
+
+          <!-- Right Column: Precision Technical Visual Frame -->
+          <div class="avx-hero__visual-wrapper">
+            <div class="avx-hero__visual" id="heroVisual">
+              <!-- Corner Crosshair Registration Marks (+) -->
+              <span class="avx-hero__corner avx-hero__corner--tl" aria-hidden="true"></span>
+              <span class="avx-hero__corner avx-hero__corner--tr" aria-hidden="true"></span>
+              <span class="avx-hero__corner avx-hero__corner--bl" aria-hidden="true"></span>
+              <span class="avx-hero__corner avx-hero__corner--br" aria-hidden="true"></span>
+
+              <!-- Card Header Bar -->
+              <div class="avx-hero__visual-meta">
+                <span class="avx-hero__visual-id">SYS-REF // CRITICAL ENV SPEC</span>
+                <span class="avx-hero__visual-status">
+                  <span class="avx-hero__status-pulse" aria-hidden="true"></span>
+                  <span>SYSTEM OVERVIEW</span>
+                </span>
+              </div>
+
+              <!-- Schematic Graphic Container -->
+              <div class="avx-hero__schematic">
+                <img 
+                  src="images/hero-schematic.svg" 
+                  alt="Avenrix Critical Environment Architectural Schematic Diagram" 
+                  class="avx-hero__schematic-svg" 
+                  width="600" 
+                  height="420"
+                  decoding="async"
+                >
+              </div>
+
+              <!-- Technical Specification Footer -->
+              <div class="avx-hero__visual-spec">
+                <div class="avx-hero__spec-item">
+                  <span class="avx-hero__spec-label">FILTRATION</span>
+                  <span class="avx-hero__spec-val">HEPA H14 / 99.995%</span>
+                </div>
+                <div class="avx-hero__spec-item">
+                  <span class="avx-hero__spec-label">PRESSURE</span>
+                  <span class="avx-hero__spec-val">+15 Pa POSITIVE</span>
+                </div>
+                <div class="avx-hero__spec-item">
+                  <span class="avx-hero__spec-label">EXECUTION</span>
+                  <span class="avx-hero__spec-val">TURNKEY END-TO-END</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         SECTION 01: ABOUT US (Inspired by Left Coast Reference)
+         ====================================================================== -->
+    <section class="avx-about" id="about" aria-label="About Avenrix Healthcare Solutions">
+      <!-- Subtle Architectural Watermark Grid -->
+      <div class="avx-about__bg-grid" aria-hidden="true"></div>
+
+      <div class="avx-container avx-about__container">
+        <!-- Top Editorial Block -->
+        <div class="avx-about__header">
+          <div class="avx-about__meta">
+            <span class="avx-about__index">01</span>
+            <div class="avx-eyebrow avx-about__eyebrow">
+              <span>About Avenrix</span>
+            </div>
+          </div>
+
+          <h2 class="avx-about__title">
+            Building Critical Healthcare Environments with <span class="avx-about__title-accent">Precision</span>, Expertise &amp; Trust
+          </h2>
+
+          <p class="avx-about__intro">
+            Avenrix Healthcare Solutions is a turnkey healthcare and pharmaceutical infrastructure company focused on designing, supplying, and executing solutions for critical and controlled environments.
+          </p>
+
+          <div class="avx-about__accent-rule" aria-hidden="true"></div>
+        </div>
+
+        <!-- Asymmetric Editorial Body Layout -->
+        <div class="avx-about__layout">
+          <!-- Left Column: Structured Narrative & Solutions Scope -->
+          <div class="avx-about__narrative">
+            <div class="avx-about__lead-card">
+              <p class="avx-about__lead-text">
+                We bring together technical expertise, quality-driven products, and end-to-end project execution to create healthcare and pharmaceutical spaces that meet the demanding requirements of safety, hygiene, precision, and operational efficiency.
+              </p>
+            </div>
+
+            <!-- Solutions Scope Directory -->
+            <div class="avx-about__solutions-scope">
+              <h3 class="avx-about__scope-heading">Comprehensive Infrastructure Scope</h3>
+              <p class="avx-about__scope-desc">
+                Our expertise spans a comprehensive range of solutions, including AHUs &amp; HVAC Systems, Modular Operation Theatres, Cleanrooms, IVF Laboratories, Medical Gas Pipeline Systems, Wall &amp; Ceiling Panels, Specialized Flooring, and Medical Equipment.
+              </p>
+              
+              <!-- Solution Domain Tags -->
+              <div class="avx-about__tags" aria-label="Avenrix Specialized Solution Categories">
+                <span class="avx-about__tag">AHUs &amp; HVAC Systems</span>
+                <span class="avx-about__tag">Modular Operation Theatres</span>
+                <span class="avx-about__tag">Cleanrooms</span>
+                <span class="avx-about__tag">IVF Laboratories</span>
+                <span class="avx-about__tag">Medical Gas Pipeline Systems</span>
+                <span class="avx-about__tag">Wall &amp; Ceiling Panels</span>
+                <span class="avx-about__tag">Specialized Flooring</span>
+                <span class="avx-about__tag">Medical Equipment</span>
+              </div>
+            </div>
+
+            <!-- Turnkey Project Execution Block -->
+            <div class="avx-about__execution">
+              <div class="avx-about__execution-header">
+                <svg class="avx-icon" width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true">
+                  <path d="M10 2V6M10 14V18M2 10H6M14 10H18M4.93 4.93L7.76 7.76M12.24 12.24L15.07 15.07M4.93 15.07L7.76 12.24M12.24 7.76L15.07 4.93" stroke="#F16419" stroke-width="1.8" stroke-linecap="round"/>
+                </svg>
+                <h4 class="avx-about__execution-title">End-to-End Project Execution</h4>
+              </div>
+              <p class="avx-about__execution-text">
+                From initial consultation and solution planning to product sourcing, installation, integration, and project execution, we work closely with clients and our trusted network of industry partners to deliver seamless, reliable, and application-specific solutions.
+              </p>
+            </div>
+          </div>
+
+          <!-- Right Column: Architectural Visual Frame -->
+          <div class="avx-about__visual-col">
+            <div class="avx-about__media">
+              <!-- Corner Crosshair Registration Marks (+) -->
+              <span class="avx-about__corner avx-about__corner--tl" aria-hidden="true"></span>
+              <span class="avx-about__corner avx-about__corner--tr" aria-hidden="true"></span>
+              <span class="avx-about__corner avx-about__corner--bl" aria-hidden="true"></span>
+              <span class="avx-about__corner avx-about__corner--br" aria-hidden="true"></span>
+
+              <!-- Visual Header Bar -->
+              <div class="avx-about__media-meta">
+                <span>ARCH-REF // CRITICAL SPATIAL MODEL</span>
+                <span class="avx-about__media-status">
+                  <span class="avx-about__media-dot" aria-hidden="true"></span>
+                  <span>SYSTEM CROSS-SECTION</span>
+                </span>
+              </div>
+
+              <!-- Graphic / Image Frame -->
+              <div class="avx-about__image-frame">
+                <img 
+                  src="images/about-architecture.svg" 
+                  alt="Avenrix Critical Healthcare Architectural and Spatial Engineering Model" 
+                  class="avx-about__image" 
+                  width="800" 
+                  height="560"
+                  loading="lazy"
+                  decoding="async"
+                >
+              </div>
+
+              <!-- Visual Specification Bar -->
+              <div class="avx-about__media-specs">
+                <div class="avx-about__spec-col">
+                  <span class="avx-about__spec-label">CAPABILITY</span>
+                  <span class="avx-about__spec-val">Turnkey Execution</span>
+                </div>
+                <div class="avx-about__spec-col">
+                  <span class="avx-about__spec-label">CRITICAL ENV</span>
+                  <span class="avx-about__spec-val">Controlled Hygiene</span>
+                </div>
+                <div class="avx-about__spec-col">
+                  <span class="avx-about__spec-label">INTEGRATION</span>
+                  <span class="avx-about__spec-val">Seamless MEP</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         SECTION 02: PRODUCTS & SERVICES (Inspired by Selkirk Reference)
+         ====================================================================== -->
+    <section class="avx-products" id="products" aria-label="Products and Services">
+      <!-- Architectural Grid Decorative Background -->
+      <div class="avx-products__bg-grid" aria-hidden="true"></div>
+
+      <div class="avx-container avx-products__container">
+        <!-- Section Header Block -->
+        <div class="avx-products__header">
+          <div class="avx-products__meta">
+            <span class="avx-products__index">02</span>
+            <div class="avx-eyebrow avx-products__eyebrow">
+              <span>Our Products &amp; Services</span>
+            </div>
+          </div>
+
+          <h2 class="avx-products__title">
+            Comprehensive Solutions for Critical Healthcare &amp; <span class="avx-products__title-accent">Pharmaceutical Environments</span>
+          </h2>
+
+          <p class="avx-products__intro">
+            At Avenrix Healthcare Solutions, we offer a comprehensive range of specialized products and infrastructure solutions designed to meet the technical, operational, and safety requirements of healthcare and pharmaceutical facilities.
+          </p>
+
+          <div class="avx-products__accent-rule" aria-hidden="true"></div>
+        </div>
+
+        <!-- 3x3 Product Showcase Grid -->
+        <div class="avx-products__grid" role="list">
+          
+          <!-- Card 01: AHUs & HVAC Systems -->
+          <article class="avx-product-card" role="listitem">
+            <div class="avx-product-card__accent" aria-hidden="true"></div>
+            <div class="avx-product-card__media">
+              <span class="avx-product-card__badge">HVAC</span>
+              <img 
+                src="images/products/product-01-hvac.svg" 
+                alt="AHUs and HVAC Systems schematic engineering diagram" 
+                class="avx-product-card__image" 
+                width="400" 
+                height="300"
+                loading="lazy"
+                decoding="async"
+              >
+            </div>
+            <div class="avx-product-card__body">
+              <div class="avx-product-card__content">
+                <span class="avx-product-card__number">01 / AHU-HVAC</span>
+                <h3 class="avx-product-card__title">AHUs &amp; HVAC Systems</h3>
+                <p class="avx-product-card__desc">
+                  Advanced Air Handling Units and HVAC solutions designed to provide controlled temperature, humidity, air quality, and ventilation for critical healthcare and pharmaceutical environments.
+                </p>
+              </div>
+              <div class="avx-product-card__footer">
+                <a href="#contact" class="avx-product-card__action" aria-label="Inquire about AHUs and HVAC Systems">
+                  <span>Explore Solution</span>
+                  <svg class="avx-product-card__arrow" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+                    <path d="M3 8H13M13 8L8.5 3.5M13 8L8.5 12.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Card 02: Modular Operation Theatres -->
+          <article class="avx-product-card" role="listitem">
+            <div class="avx-product-card__accent" aria-hidden="true"></div>
+            <div class="avx-product-card__media">
+              <span class="avx-product-card__badge">SURGICAL</span>
+              <img 
+                src="images/products/product-02-ot.svg" 
+                alt="Modular Operation Theatres schematic engineering diagram" 
+                class="avx-product-card__image" 
+                width="400" 
+                height="300"
+                loading="lazy"
+                decoding="async"
+              >
+            </div>
+            <div class="avx-product-card__body">
+              <div class="avx-product-card__content">
+                <span class="avx-product-card__number">02 / MODULAR-OT</span>
+                <h3 class="avx-product-card__title">Modular Operation Theatres</h3>
+                <p class="avx-product-card__desc">
+                  Complete Modular OT solutions engineered for hygiene, infection control, operational efficiency, and stringent healthcare requirements.
+                </p>
+              </div>
+              <div class="avx-product-card__footer">
+                <a href="#contact" class="avx-product-card__action" aria-label="Inquire about Modular Operation Theatres">
+                  <span>Explore Solution</span>
+                  <svg class="avx-product-card__arrow" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+                    <path d="M3 8H13M13 8L8.5 3.5M13 8L8.5 12.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Card 03: Cleanrooms -->
+          <article class="avx-product-card" role="listitem">
+            <div class="avx-product-card__accent" aria-hidden="true"></div>
+            <div class="avx-product-card__media">
+              <span class="avx-product-card__badge">CONTROLLED</span>
+              <img 
+                src="images/products/product-03-cleanrooms.svg" 
+                alt="Cleanrooms schematic engineering diagram" 
+                class="avx-product-card__image" 
+                width="400" 
+                height="300"
+                loading="lazy"
+                decoding="async"
+              >
+            </div>
+            <div class="avx-product-card__body">
+              <div class="avx-product-card__content">
+                <span class="avx-product-card__number">03 / CLEANROOM</span>
+                <h3 class="avx-product-card__title">Cleanrooms</h3>
+                <p class="avx-product-card__desc">
+                  End-to-end cleanroom solutions for pharmaceutical, medical, research, and other controlled environments requiring precise control of air quality and contamination levels.
+                </p>
+              </div>
+              <div class="avx-product-card__footer">
+                <a href="#contact" class="avx-product-card__action" aria-label="Inquire about Cleanroom Solutions">
+                  <span>Explore Solution</span>
+                  <svg class="avx-product-card__arrow" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+                    <path d="M3 8H13M13 8L8.5 3.5M13 8L8.5 12.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Card 04: IVF Laboratories -->
+          <article class="avx-product-card" role="listitem">
+            <div class="avx-product-card__accent" aria-hidden="true"></div>
+            <div class="avx-product-card__media">
+              <span class="avx-product-card__badge">LABORATORY</span>
+              <img 
+                src="images/products/product-04-ivf.svg" 
+                alt="IVF Laboratories schematic engineering diagram" 
+                class="avx-product-card__image" 
+                width="400" 
+                height="300"
+                loading="lazy"
+                decoding="async"
+              >
+            </div>
+            <div class="avx-product-card__body">
+              <div class="avx-product-card__content">
+                <span class="avx-product-card__number">04 / IVF-LAB</span>
+                <h3 class="avx-product-card__title">IVF Laboratories</h3>
+                <p class="avx-product-card__desc">
+                  Specialized infrastructure solutions for IVF and assisted reproductive facilities, designed to support controlled environmental conditions and sensitive laboratory operations.
+                </p>
+              </div>
+              <div class="avx-product-card__footer">
+                <a href="#contact" class="avx-product-card__action" aria-label="Inquire about IVF Laboratories">
+                  <span>Explore Solution</span>
+                  <svg class="avx-product-card__arrow" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+                    <path d="M3 8H13M13 8L8.5 3.5M13 8L8.5 12.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Card 05: Medical Gas Pipeline Systems -->
+          <article class="avx-product-card" role="listitem">
+            <div class="avx-product-card__accent" aria-hidden="true"></div>
+            <div class="avx-product-card__media">
+              <span class="avx-product-card__badge">PIPELINE</span>
+              <img 
+                src="images/products/product-05-mgps.svg" 
+                alt="Medical Gas Pipeline Systems schematic engineering diagram" 
+                class="avx-product-card__image" 
+                width="400" 
+                height="300"
+                loading="lazy"
+                decoding="async"
+              >
+            </div>
+            <div class="avx-product-card__body">
+              <div class="avx-product-card__content">
+                <span class="avx-product-card__number">05 / MGPS</span>
+                <h3 class="avx-product-card__title">Medical Gas Pipeline Systems</h3>
+                <p class="avx-product-card__desc">
+                  Reliable medical gas pipeline solutions for the safe and efficient distribution of medical gases across hospitals, operation theatres, ICUs, laboratories, and other critical areas.
+                </p>
+              </div>
+              <div class="avx-product-card__footer">
+                <a href="#contact" class="avx-product-card__action" aria-label="Inquire about Medical Gas Pipeline Systems">
+                  <span>Explore Solution</span>
+                  <svg class="avx-product-card__arrow" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+                    <path d="M3 8H13M13 8L8.5 3.5M13 8L8.5 12.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Card 06: Wall & Ceiling Panels -->
+          <article class="avx-product-card" role="listitem">
+            <div class="avx-product-card__accent" aria-hidden="true"></div>
+            <div class="avx-product-card__media">
+              <span class="avx-product-card__badge">ENVELOPE</span>
+              <img 
+                src="images/products/product-06-panels.svg" 
+                alt="Wall and Ceiling Panels schematic engineering diagram" 
+                class="avx-product-card__image" 
+                width="400" 
+                height="300"
+                loading="lazy"
+                decoding="async"
+              >
+            </div>
+            <div class="avx-product-card__body">
+              <div class="avx-product-card__content">
+                <span class="avx-product-card__number">06 / PANELS</span>
+                <h3 class="avx-product-card__title">Wall &amp; Ceiling Panels</h3>
+                <p class="avx-product-card__desc">
+                  Specialized wall and ceiling panel systems designed for healthcare and controlled environments, offering hygiene, durability, ease of maintenance, and seamless integration.
+                </p>
+              </div>
+              <div class="avx-product-card__footer">
+                <a href="#contact" class="avx-product-card__action" aria-label="Inquire about Wall and Ceiling Panels">
+                  <span>Explore Solution</span>
+                  <svg class="avx-product-card__arrow" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+                    <path d="M3 8H13M13 8L8.5 3.5M13 8L8.5 12.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Card 07: Specialized Flooring -->
+          <article class="avx-product-card" role="listitem">
+            <div class="avx-product-card__accent" aria-hidden="true"></div>
+            <div class="avx-product-card__media">
+              <span class="avx-product-card__badge">SURFACES</span>
+              <img 
+                src="images/products/product-07-flooring.svg" 
+                alt="Specialized Flooring schematic engineering diagram" 
+                class="avx-product-card__image" 
+                width="400" 
+                height="300"
+                loading="lazy"
+                decoding="async"
+              >
+            </div>
+            <div class="avx-product-card__body">
+              <div class="avx-product-card__content">
+                <span class="avx-product-card__number">07 / FLOORING</span>
+                <h3 class="avx-product-card__title">Specialized Flooring</h3>
+                <p class="avx-product-card__desc">
+                  Healthcare-grade flooring solutions designed to provide durability, hygiene, safety, and ease of maintenance across demanding clinical and controlled environments.
+                </p>
+              </div>
+              <div class="avx-product-card__footer">
+                <a href="#contact" class="avx-product-card__action" aria-label="Inquire about Specialized Flooring">
+                  <span>Explore Solution</span>
+                  <svg class="avx-product-card__arrow" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+                    <path d="M3 8H13M13 8L8.5 3.5M13 8L8.5 12.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Card 08: Medical Equipment -->
+          <article class="avx-product-card" role="listitem">
+            <div class="avx-product-card__accent" aria-hidden="true"></div>
+            <div class="avx-product-card__media">
+              <span class="avx-product-card__badge">EQUIPMENT</span>
+              <img 
+                src="images/products/product-08-equipment.svg" 
+                alt="Medical Equipment schematic engineering diagram" 
+                class="avx-product-card__image" 
+                width="400" 
+                height="300"
+                loading="lazy"
+                decoding="async"
+              >
+            </div>
+            <div class="avx-product-card__body">
+              <div class="avx-product-card__content">
+                <span class="avx-product-card__number">08 / EQUIPMENT</span>
+                <h3 class="avx-product-card__title">Medical Equipment</h3>
+                <p class="avx-product-card__desc">
+                  A range of medical equipment sourced through trusted industry partners to support the operational requirements of hospitals, clinics, laboratories, and healthcare facilities.
+                </p>
+              </div>
+              <div class="avx-product-card__footer">
+                <a href="#contact" class="avx-product-card__action" aria-label="Inquire about Medical Equipment">
+                  <span>Explore Solution</span>
+                  <svg class="avx-product-card__arrow" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+                    <path d="M3 8H13M13 8L8.5 3.5M13 8L8.5 12.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Card 09: Turnkey Project Solutions (Featured Integrated Card) -->
+          <article class="avx-product-card avx-product-card--featured" role="listitem">
+            <div class="avx-product-card__accent" aria-hidden="true"></div>
+            <div class="avx-product-card__media">
+              <span class="avx-product-card__badge">TURNKEY INTEGRATION</span>
+              <img 
+                src="images/products/product-09-turnkey.svg" 
+                alt="Turnkey Project Solutions integrated engineering diagram" 
+                class="avx-product-card__image" 
+                width="400" 
+                height="300"
+                loading="lazy"
+                decoding="async"
+              >
+            </div>
+            <div class="avx-product-card__body">
+              <div class="avx-product-card__content">
+                <span class="avx-product-card__number">09 / TURNKEY</span>
+                <h3 class="avx-product-card__title">Turnkey Project Solutions</h3>
+                <p class="avx-product-card__desc">
+                  Beyond individual products, Avenrix provides end-to-end project execution, coordinating multiple solutions and industry partners to deliver integrated healthcare and pharmaceutical infrastructure.
+                </p>
+              </div>
+              <div class="avx-product-card__footer">
+                <a href="#contact" class="avx-product-card__action" aria-label="Inquire about Turnkey Project Solutions">
+                  <span>Explore Turnkey Execution</span>
+                  <svg class="avx-product-card__arrow" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+                    <path d="M3 8H13M13 8L8.5 3.5M13 8L8.5 12.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         SECTION 03: WHAT WE STAND FOR (Architectural Editorial Presentation)
+         ====================================================================== -->
+    <section class="avx-values" id="values" aria-labelledby="values-heading">
+      <!-- Subtle Architectural Watermark Grid -->
+      <div class="avx-values__bg-grid" aria-hidden="true"></div>
+
+      <div class="avx-container avx-values__container">
+        <div class="avx-values__layout">
+          
+          <!-- Left Column: Sticky Editorial Header & Quality Manifesto -->
+          <aside class="avx-values__aside">
+            <div class="avx-values__meta">
+              <span class="avx-values__index">03</span>
+              <span class="avx-values__meta-sep" aria-hidden="true">/</span>
+              <div class="avx-eyebrow avx-values__eyebrow">
+                <span>What We Stand For</span>
+              </div>
+            </div>
+
+            <h2 class="avx-values__title" id="values-heading">
+              Built on <span class="avx-values__title-accent">Quality</span>, <span class="avx-values__title-accent">Precision</span> &amp; <span class="avx-values__title-accent">Reliability</span>
+            </h2>
+
+            <p class="avx-values__intro">
+              Our approach to critical environments is grounded in technical rigor, coordinated project discipline, and dependable partnerships from initial coordination to handover.
+            </p>
+
+            <div class="avx-values__accent-rule" aria-hidden="true"></div>
+
+            <!-- Architectural Manifesto Statement -->
+            <div class="avx-values__manifesto" aria-hidden="true">
+              <p class="avx-values__manifesto-quote">
+                Controlled healthcare and pharmaceutical environments demand absolute discipline — where technical standards, cleanroom integrity, and project continuity are never compromised.
+              </p>
+              <div class="avx-values__manifesto-meta">
+                <span class="avx-values__manifesto-label">Execution Principles</span>
+                <div class="avx-values__manifesto-dots">
+                  <span class="is-active" data-dot="1"></span>
+                  <span data-dot="2"></span>
+                  <span data-dot="3"></span>
+                  <span data-dot="4"></span>
+                  <span data-dot="5"></span>
+                </div>
+              </div>
+            </div>
+          </aside>
+
+          <!-- Right Column: The 5 Editorial Pillars on a Continuous Architectural Spine -->
+          <div class="avx-values__editorial">
+            <div class="avx-values__list">
+
+              <!-- Value 01 -->
+              <article class="avx-value is-active" data-value-index="1" data-value-title="Quality" tabindex="0" aria-labelledby="val-title-01">
+                <div class="avx-value__axis" aria-hidden="true">
+                  <div class="avx-value__badge">
+                    <span class="avx-value__number">01</span>
+                    <span class="avx-value__badge-glow"></span>
+                  </div>
+                  <div class="avx-value__spine">
+                    <div class="avx-value__spine-progress"></div>
+                  </div>
+                </div>
+
+                <div class="avx-value__main">
+                  <div class="avx-value__heading-wrap">
+                    <div class="avx-value__connector" aria-hidden="true"></div>
+                    <h3 class="avx-value__title" id="val-title-01">Quality</h3>
+                    <span class="avx-value__tag" aria-hidden="true">Pillar 01</span>
+                  </div>
+                  <p class="avx-value__description">
+                    Delivering reliable products and solutions sourced through trusted industry partners.
+                  </p>
+                </div>
+              </article>
+
+              <!-- Value 02 -->
+              <article class="avx-value" data-value-index="2" data-value-title="Precision" tabindex="0" aria-labelledby="val-title-02">
+                <div class="avx-value__axis" aria-hidden="true">
+                  <div class="avx-value__badge">
+                    <span class="avx-value__number">02</span>
+                    <span class="avx-value__badge-glow"></span>
+                  </div>
+                  <div class="avx-value__spine">
+                    <div class="avx-value__spine-progress"></div>
+                  </div>
+                </div>
+
+                <div class="avx-value__main">
+                  <div class="avx-value__heading-wrap">
+                    <div class="avx-value__connector" aria-hidden="true"></div>
+                    <h3 class="avx-value__title" id="val-title-02">Precision</h3>
+                    <span class="avx-value__tag" aria-hidden="true">Pillar 02</span>
+                  </div>
+                  <p class="avx-value__description">
+                    Paying close attention to the technical requirements of critical environments.
+                  </p>
+                </div>
+              </article>
+
+              <!-- Value 03 -->
+              <article class="avx-value" data-value-index="3" data-value-title="Reliability" tabindex="0" aria-labelledby="val-title-03">
+                <div class="avx-value__axis" aria-hidden="true">
+                  <div class="avx-value__badge">
+                    <span class="avx-value__number">03</span>
+                    <span class="avx-value__badge-glow"></span>
+                  </div>
+                  <div class="avx-value__spine">
+                    <div class="avx-value__spine-progress"></div>
+                  </div>
+                </div>
+
+                <div class="avx-value__main">
+                  <div class="avx-value__heading-wrap">
+                    <div class="avx-value__connector" aria-hidden="true"></div>
+                    <h3 class="avx-value__title" id="val-title-03">Reliability</h3>
+                    <span class="avx-value__tag" aria-hidden="true">Pillar 03</span>
+                  </div>
+                  <p class="avx-value__description">
+                    Ensuring coordinated execution and dependable project support from start to completion.
+                  </p>
+                </div>
+              </article>
+
+              <!-- Value 04 -->
+              <article class="avx-value" data-value-index="4" data-value-title="Partnership" tabindex="0" aria-labelledby="val-title-04">
+                <div class="avx-value__axis" aria-hidden="true">
+                  <div class="avx-value__badge">
+                    <span class="avx-value__number">04</span>
+                    <span class="avx-value__badge-glow"></span>
+                  </div>
+                  <div class="avx-value__spine">
+                    <div class="avx-value__spine-progress"></div>
+                  </div>
+                </div>
+
+                <div class="avx-value__main">
+                  <div class="avx-value__heading-wrap">
+                    <div class="avx-value__connector" aria-hidden="true"></div>
+                    <h3 class="avx-value__title" id="val-title-04">Partnership</h3>
+                    <span class="avx-value__tag" aria-hidden="true">Pillar 04</span>
+                  </div>
+                  <p class="avx-value__description">
+                    Working closely with clients, consultants, contractors, and industry partners to achieve project objectives.
+                  </p>
+                </div>
+              </article>
+
+              <!-- Value 05 -->
+              <article class="avx-value" data-value-index="5" data-value-title="End-to-End Execution" tabindex="0" aria-labelledby="val-title-05">
+                <div class="avx-value__axis" aria-hidden="true">
+                  <div class="avx-value__badge">
+                    <span class="avx-value__number">05</span>
+                    <span class="avx-value__badge-glow"></span>
+                  </div>
+                </div>
+
+                <div class="avx-value__main">
+                  <div class="avx-value__heading-wrap">
+                    <div class="avx-value__connector" aria-hidden="true"></div>
+                    <h3 class="avx-value__title" id="val-title-05">End-to-End Execution</h3>
+                    <span class="avx-value__tag" aria-hidden="true">Pillar 05</span>
+                  </div>
+                  <p class="avx-value__description">
+                    Providing a single-window approach for multiple infrastructure requirements, simplifying project coordination for our clients.
+                  </p>
+                </div>
+              </article>
+
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         SECTION 05: CONTACT US & ENQUIRY FORM
+         Split-Screen: Left Dark Editorial / Right White Precision Form
+         ====================================================================== -->
+    <section class="avx-contact" id="contact" aria-labelledby="contact-heading">
+      <!-- Unified Architectural Grid Background Watermark -->
+      <div class="avx-contact__bg-grid" aria-hidden="true"></div>
+
+      <div class="avx-contact__split">
+        <!-- Left Column: Dark Navy Editorial Narrative -->
+        <div class="avx-contact__aside">
+          <div class="avx-contact__aside-grid" aria-hidden="true"></div>
+          <div class="avx-contact__aside-inner">
+            <div class="avx-contact__meta">
+              <span class="avx-contact__index">05</span>
+              <span class="avx-contact__meta-sep">/</span>
+              <span class="avx-eyebrow avx-contact__eyebrow">Contact Us</span>
+            </div>
+            <h2 class="avx-contact__title" id="contact-heading">
+              Let’s Build Better Critical Environments Together
+            </h2>
+            <div class="avx-contact__accent-rule" aria-hidden="true"></div>
+            <p class="avx-contact__lead">
+              Have a healthcare, pharmaceutical, or critical-environment project in mind? Our team is ready to understand your requirements and provide the right solution.
+            </p>
+            <p class="avx-contact__desc">
+              Whether you are planning a new healthcare facility, upgrading existing infrastructure, or seeking specialized product sourcing, we look forward to hearing from you.
+            </p>
+            <div class="avx-contact__caps">
+              <div class="avx-contact__cap-item">
+                <span class="avx-contact__cap-num">01</span>
+                <div class="avx-contact__cap-text">
+                  <span class="avx-contact__cap-title">Consultation &amp; Planning</span>
+                  <span class="avx-contact__cap-desc">Tailored to critical environment requirements</span>
+                </div>
+              </div>
+              <div class="avx-contact__cap-item">
+                <span class="avx-contact__cap-num">02</span>
+                <div class="avx-contact__cap-text">
+                  <span class="avx-contact__cap-title">Sourcing &amp; Integration</span>
+                  <span class="avx-contact__cap-desc">Trusted industry partner components</span>
+                </div>
+              </div>
+              <div class="avx-contact__cap-item">
+                <span class="avx-contact__cap-num">03</span>
+                <div class="avx-contact__cap-text">
+                  <span class="avx-contact__cap-title">Turnkey Project Support</span>
+                  <span class="avx-contact__cap-desc">Coordinated execution from start to completion</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right Column: Crisp White Form Panel -->
+        <div class="avx-contact__panel">
+          <div class="avx-contact__panel-grid" aria-hidden="true"></div>
+          <div class="avx-contact__panel-inner">
+            <div class="avx-contact__form-header">
+              <h3 class="avx-contact__form-title">Project Inquiries &amp; Consultation</h3>
+              <p class="avx-contact__form-intro">
+                Please complete the form below. Our technical engineering specialists will review your requirements.
+              </p>
+            </div>
+
+            <!-- Client Enquiry Form -->
+            <form class="avx-contact__form" id="avxContactForm" novalidate>
+              <div class="avx-contact__row avx-contact__row--two-col">
+                <!-- Name (Required) -->
+                <div class="avx-contact__field" id="fieldWrapName">
+                  <label for="avxContactName" class="avx-contact__label">
+                    <span>Full Name</span>
+                    <span class="avx-contact__required" aria-hidden="true">*</span>
+                  </label>
+                  <input 
+                    type="text" 
+                    id="avxContactName" 
+                    name="name" 
+                    class="avx-contact__input" 
+                    placeholder="e.g. John Doe"
+                    autocomplete="name"
+                    required
+                    aria-required="true"
+                    aria-describedby="avxNameError"
+                  >
+                  <div class="avx-contact__error" id="avxNameError" role="alert" aria-live="polite"></div>
+                </div>
+
+                <!-- Company (Optional) -->
+                <div class="avx-contact__field" id="fieldWrapCompany">
+                  <label for="avxContactCompany" class="avx-contact__label">
+                    <span>Company / Organization</span>
+                    <span class="avx-contact__optional">(optional)</span>
+                  </label>
+                  <input 
+                    type="text" 
+                    id="avxContactCompany" 
+                    name="company" 
+                    class="avx-contact__input" 
+                    placeholder="e.g. Apex Health Systems"
+                    autocomplete="organization"
+                  >
+                </div>
+              </div>
+
+              <div class="avx-contact__row avx-contact__row--two-col">
+                <!-- Email (Required) -->
+                <div class="avx-contact__field" id="fieldWrapEmail">
+                  <label for="avxContactEmail" class="avx-contact__label">
+                    <span>Email Address</span>
+                    <span class="avx-contact__required" aria-hidden="true">*</span>
+                  </label>
+                  <input 
+                    type="email" 
+                    id="avxContactEmail" 
+                    name="email" 
+                    class="avx-contact__input" 
+                    placeholder="e.g. name@organization.com"
+                    autocomplete="email"
+                    required
+                    aria-required="true"
+                    aria-describedby="avxEmailError"
+                  >
+                  <div class="avx-contact__error" id="avxEmailError" role="alert" aria-live="polite"></div>
+                </div>
+
+                <!-- Phone (Required) -->
+                <div class="avx-contact__field" id="fieldWrapPhone">
+                  <label for="avxContactPhone" class="avx-contact__label">
+                    <span>Phone Number</span>
+                    <span class="avx-contact__required" aria-hidden="true">*</span>
+                  </label>
+                  <input 
+                    type="tel" 
+                    id="avxContactPhone" 
+                    name="phone" 
+                    class="avx-contact__input" 
+                    placeholder="e.g. +1 555 123 4567"
+                    autocomplete="tel"
+                    required
+                    aria-required="true"
+                    aria-describedby="avxPhoneError"
+                  >
+                  <div class="avx-contact__error" id="avxPhoneError" role="alert" aria-live="polite"></div>
+                </div>
+              </div>
+
+              <!-- Product / Service Interest (Optional Select) -->
+              <div class="avx-contact__field" id="fieldWrapProduct">
+                <label for="avxContactProduct" class="avx-contact__label">
+                  <span>Interested Solution</span>
+                  <span class="avx-contact__optional">(optional)</span>
+                </label>
+                <select id="avxContactProduct" name="product" class="avx-contact__select">
+                  <option value="">Select a solution</option>
+                  <option value="AHUs &amp; HVAC Systems">01 — AHUs &amp; HVAC Systems</option>
+                  <option value="Modular Operation Theatres">02 — Modular Operation Theatres</option>
+                  <option value="Cleanrooms">03 — Cleanrooms</option>
+                  <option value="IVF Laboratories">04 — IVF Laboratories</option>
+                  <option value="Medical Gas Pipeline Systems">05 — Medical Gas Pipeline Systems</option>
+                  <option value="Wall &amp; Ceiling Panels">06 — Wall &amp; Ceiling Panels</option>
+                  <option value="Specialized Flooring">07 — Specialized Flooring</option>
+                  <option value="Medical Equipment">08 — Medical Equipment</option>
+                  <option value="Turnkey Project Solutions">09 — Turnkey Project Solutions</option>
+                </select>
+              </div>
+
+              <!-- Message (Optional Textarea) -->
+              <div class="avx-contact__field" id="fieldWrapMessage">
+                <label for="avxContactMessage" class="avx-contact__label">
+                  <span>Project Details / Message</span>
+                  <span class="avx-contact__optional">(optional)</span>
+                </label>
+                <textarea 
+                  id="avxContactMessage" 
+                  name="message" 
+                  class="avx-contact__textarea" 
+                  rows="2" 
+                  placeholder="Outline your facility requirements, scope, timeline, or specific inquiries..."
+                ></textarea>
+              </div>
+
+              <!-- Submit Button -->
+              <div class="avx-contact__submit-wrap">
+                <button type="submit" class="avx-contact__submit" id="avxContactSubmit">
+                  <span>Submit Inquiry</span>
+                  <svg class="avx-contact__arrow" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+                    <path d="M3 8H13M13 8L8.5 3.5M13 8L8.5 12.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                </button>
+              </div>
+            </form>
+
+            <!-- Polished Success Confirmation Block -->
+            <div class="avx-contact__success" id="avxContactSuccess" role="region" aria-live="polite">
+              <div class="avx-contact__success-icon-wrap" aria-hidden="true">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path d="M20 6L9 17L4 12"/>
+                </svg>
+              </div>
+              <h4 class="avx-contact__success-title">Inquiry Received</h4>
+              <p class="avx-contact__success-msg">
+                Thank you for reaching out. We have logged your project inquiry and will review your technical specifications.
+              </p>
+              <div>
+                <button type="button" class="avx-contact__reset-btn" id="avxContactReset">
+                  <span>&larr; Submit another inquiry</span>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ======================================================================
+       FOOTER
+       ====================================================================== -->
+  <footer class="avx-footer" id="footer" role="contentinfo">
+    <div class="avx-footer__bg-grid" aria-hidden="true"></div>
+    <!-- Note: Temporary Phase 1 pre-footer banner removed to prevent duplicate CTA heading directly following #contact -->
+
+    <!-- Main Footer Columns -->
+    <div class="avx-footer__main">
+      <div class="avx-container avx-footer__grid">
+        <!-- Col 1: Brand & Narrative -->
+        <div class="avx-footer__col-brand">
+          <div class="avx-footer__brand-box">
+            <img 
+              src="images/Avenrix Logo Horizontal.png" 
+              alt="Avenrix Healthcare Solutions" 
+              class="avx-footer__logo--desktop" 
+              width="160" 
+              height="44"
+              loading="lazy"
+              decoding="async"
+            >
+            <img 
+              src="images/Avenrix Logo Vertical.png" 
+              alt="Avenrix Healthcare Solutions" 
+              class="avx-footer__logo--mobile" 
+              width="52" 
+              height="38"
+              loading="lazy"
+              decoding="async"
+            >
+          </div>
+          <p class="avx-footer__summary">
+            Avenrix Healthcare Solutions is a turnkey healthcare and pharmaceutical infrastructure company focused on designing, supplying, and executing solutions for critical and controlled environments.
+          </p>
+        </div>
+
+        <!-- Col 2: Navigation Links -->
+        <div>
+          <h3 class="avx-footer__heading">Navigation</h3>
+          <ul class="avx-footer__list">
+            <li><a href="#home" class="avx-footer__link">Home</a></li>
+            <li><a href="#about" class="avx-footer__link">About Us</a></li>
+            <li><a href="#products" class="avx-footer__link">Products &amp; Services</a></li>
+            <li><a href="#values" class="avx-footer__link">What We Stand For</a></li>
+            <li><a href="#contact" class="avx-footer__link">Contact Us</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 3: Solutions Overview -->
+        <div>
+          <h3 class="avx-footer__heading">Solutions</h3>
+          <ul class="avx-footer__list">
+            <li><a href="#products" class="avx-footer__link">AHUs &amp; HVAC Systems</a></li>
+            <li><a href="#products" class="avx-footer__link">Modular Operation Theatres</a></li>
+            <li><a href="#products" class="avx-footer__link">Cleanrooms &amp; IVF Labs</a></li>
+            <li><a href="#products" class="avx-footer__link">Medical Gas Pipeline Systems</a></li>
+            <li><a href="#products" class="avx-footer__link">Turnkey Project Solutions</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 4: Project Inquiries -->
+        <div>
+          <h3 class="avx-footer__heading">Inquiries</h3>
+          <ul class="avx-footer__list">
+            <li><a href="#contact" class="avx-footer__link">Consultation Planning</a></li>
+            <li><a href="#contact" class="avx-footer__link">Product Sourcing &amp; Supply</a></li>
+            <li><a href="#contact" class="avx-footer__link">Installation &amp; Integration</a></li>
+            <li><a href="#contact" class="avx-footer__link">Turnkey Project Inquiries</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- Bottom Legal Bar & Back to Top -->
+    <div class="avx-footer__bottom">
+      <div class="avx-container avx-footer__bottom-inner">
+        <p class="avx-footer__copyright">
+          &copy; 2026 Avenrix Healthcare Solutions. All rights reserved.
+        </p>
+        <button class="avx-footer__back-to-top" id="backToTop" aria-label="Scroll Back to Top">
+          <span>Back to Top</span>
+          <svg class="avx-icon" width="14" height="14" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+            <path d="M8 13V3M8 3L3.5 7.5M8 3L12.5 7.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </footer>
+
+  <!-- GSAP & ScrollTrigger Libraries -->
+  <script src="js/vendor/gsap.min.js"></script>
+  <script src="js/vendor/ScrollTrigger.min.js"></script>
+
+  <!-- Application Logic -->
+  <script src="js/main.js"></script>
+  <script src="js/animations.js"></script>
+</body>
+</html>

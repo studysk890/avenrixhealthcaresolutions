@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" width="100%" height="100%" fill="none" role="img" aria-label="Turnkey Project Solutions">
+  <defs>
+    <pattern id="grid-09-TURNKEY" width="20" height="20" patternUnits="userSpaceOnUse">
+      <path d="M 20 0 L 0 0 0 20" fill="none" stroke="#012C4E" stroke-width="0.5" stroke-opacity="0.06" />
+    </pattern>
+    <linearGradient id="grad-09-TURNKEY" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#F8FAFC" />
+      <stop offset="100%" stop-color="#E2E8F0" />
+    </linearGradient>
+  </defs>
+  <rect width="400" height="300" fill="#FFFFFF" />
+  <rect width="400" height="300" fill="url(#grid-09-TURNKEY)" />
+  <!-- Outer border -->
+  <rect x="15" y="15" width="370" height="270" stroke="#012C4E" stroke-width="0.8" stroke-opacity="0.15" />
+  <!-- Registration corners -->
+  <path d="M 20 25 L 20 20 L 25 20 M 375 25 L 375 20 L 370 20 M 20 275 L 20 280 L 25 280 M 375 275 L 375 280 L 370 280" stroke="#64748B" stroke-width="0.8" />
+  <!-- Header meta -->
+  <text x="28" y="32" font-family="'Inter', sans-serif" font-size="7.5" font-weight="600" letter-spacing="1" fill="#012C4E">SYS // 09-TURNKEY</text>
+  <circle cx="368" cy="30" r="3" fill="#F16419" />
+  <!-- Content Graphic -->
+  
+  <g transform="translate(50, 45)">
+    <rect x="10" y="10" width="280" height="180" fill="#001F36" rx="2" />
+    <circle cx="150" cy="100" r="65" stroke="#FFFFFF" stroke-opacity="0.15" stroke-width="1" stroke-dasharray="3 3" />
+    <circle cx="150" cy="100" r="40" stroke="#F16419" stroke-width="1.2" fill="none" />
+    <circle cx="150" cy="100" r="16" fill="#F16419" />
+    <text x="150" y="103" font-family="'Inter'" font-size="7" font-weight="700" fill="#FFFFFF" text-anchor="middle">AVX</text>
+    <line x1="150" y1="60" x2="150" y2="32" stroke="#FFFFFF" stroke-width="1" stroke-opacity="0.4" />
+    <circle cx="150" cy="30" r="10" fill="#012C4E" stroke="#FFFFFF" stroke-width="0.8" />
+    <text x="150" y="33" font-family="'Inter'" font-size="5.5" font-weight="600" fill="#FFFFFF" text-anchor="middle">HVAC</text>
+    <line x1="190" y1="100" x2="222" y2="100" stroke="#FFFFFF" stroke-width="1" stroke-opacity="0.4" />
+    <circle cx="225" cy="100" r="10" fill="#012C4E" stroke="#FFFFFF" stroke-width="0.8" />
+    <text x="225" y="103" font-family="'Inter'" font-size="5.5" font-weight="600" fill="#FFFFFF" text-anchor="middle">MOD-OT</text>
+    <line x1="150" y1="140" x2="150" y2="168" stroke="#FFFFFF" stroke-width="1" stroke-opacity="0.4" />
+    <circle cx="150" cy="170" r="10" fill="#012C4E" stroke="#FFFFFF" stroke-width="0.8" />
+    <text x="150" y="173" font-family="'Inter'" font-size="5.5" font-weight="600" fill="#FFFFFF" text-anchor="middle">MGPS</text>
+    <line x1="110" y1="100" x2="78" y2="100" stroke="#FFFFFF" stroke-width="1" stroke-opacity="0.4" />
+    <circle cx="75" cy="100" r="10" fill="#012C4E" stroke="#FFFFFF" stroke-width="0.8" />
+    <text x="75" y="103" font-family="'Inter'" font-size="5.5" font-weight="600" fill="#FFFFFF" text-anchor="middle">CLEAN</text>
+    <text x="25" y="178" font-family="'Inter'" font-size="6.5" font-weight="600" fill="#F16419">END-TO-END EXECUTION</text>
+    <text x="275" y="178" font-family="'Inter'" font-size="6" fill="#94A3B8" text-anchor="end">CONSULTATION TO HANDOVER</text>
+  </g>
+
+  <!-- Bottom bar -->
+  <line x1="15" y1="268" x2="385" y2="268" stroke="#012C4E" stroke-width="0.6" stroke-opacity="0.1" />
+  <text x="28" y="280" font-family="'Inter', sans-serif" font-size="7" font-weight="600" fill="#012C4E">TURNKEY PROJECT SOLUTIONS</text>
+  <text x="372" y="280" font-family="'Inter', sans-serif" font-size="6.5" fill="#64748B" text-anchor="end">AVENRIX TECHNICAL SPEC</text>
+</svg>

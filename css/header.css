@@ -1,0 +1,360 @@
+/* ==========================================================================
+   AVENRIX HEALTHCARE SOLUTIONS — HEADER & NAVIGATION
+   Modular Header Styles (.avx-header, .avx-drawer)
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   Sticky Header Container
+   -------------------------------------------------------------------------- */
+.avx-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  padding: 1.5rem 0;
+  background-color: transparent;
+  border-bottom: 1px solid transparent;
+  transition: 
+    background-color var(--avx-transition-medium),
+    backdrop-filter var(--avx-transition-medium),
+    -webkit-backdrop-filter var(--avx-transition-medium),
+    box-shadow var(--avx-transition-medium),
+    border-color var(--avx-transition-medium),
+    padding var(--avx-transition-medium);
+}
+
+/* Scrolled state: applied via vanilla JS after scroll > 50px */
+.avx-header.is-scrolled {
+  padding: 0.875rem 0;
+  background-color: rgba(255, 255, 255, 0.94);
+  -webkit-backdrop-filter: blur(16px);
+  backdrop-filter: blur(16px);
+  border-bottom-color: rgba(0, 0, 0, 0.04);
+  box-shadow: 0 4px 20px -4px rgba(1, 44, 78, 0.04);
+}
+
+.avx-header__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--avx-space-6);
+}
+
+/* --------------------------------------------------------------------------
+   Brand Logo
+   -------------------------------------------------------------------------- */
+.avx-header__brand {
+  display: inline-flex;
+  align-items: center;
+  min-height: var(--avx-touch-target);
+  text-decoration: none;
+  flex-shrink: 0;
+}
+
+.avx-header__logo {
+  height: auto;
+  object-fit: contain;
+  transition: transform var(--avx-transition-fast);
+}
+
+.avx-header__logo--desktop {
+  width: 200px;
+  height: auto;
+  max-height: 52px;
+  display: block;
+}
+
+.avx-header__logo--mobile {
+  display: none;
+  width: 60px;
+  height: auto;
+  max-height: 44px;
+}
+
+/* --------------------------------------------------------------------------
+   Desktop Navigation
+   -------------------------------------------------------------------------- */
+.avx-header__nav {
+  display: flex;
+  align-items: center;
+}
+
+.avx-header__nav-list {
+  display: flex;
+  align-items: center;
+  gap: var(--avx-space-8);
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.avx-header__nav-item {
+  position: relative;
+}
+
+.avx-header__nav-link {
+  font-family: var(--avx-font-sans);
+  font-size: var(--avx-text-sm);
+  font-weight: 500;
+  color: var(--avx-navy);
+  text-decoration: none;
+  letter-spacing: var(--avx-tracking-wide);
+  padding: 0.5rem 0;
+  display: inline-block;
+  position: relative;
+  transition: color var(--avx-transition-fast);
+}
+
+/* Subtle Orange Underline Indicator on Hover / Active */
+.avx-header__nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: var(--avx-orange);
+  transition: width var(--avx-transition-fast);
+  border-radius: var(--avx-radius-sm);
+}
+
+.avx-header__nav-link.is-active::after {
+  width: 100%;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .avx-header__nav-link:hover {
+    color: var(--avx-orange);
+  }
+
+  .avx-header__nav-link:hover::after {
+    width: 100%;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   Header Actions & CTA
+   -------------------------------------------------------------------------- */
+.avx-header__actions {
+  display: flex;
+  align-items: center;
+  gap: var(--avx-space-4);
+  flex-shrink: 0;
+}
+
+.avx-header__cta {
+  padding: 0.65rem 1.35rem;
+  font-size: 0.85rem;
+}
+
+/* --------------------------------------------------------------------------
+   Accessible Mobile Hamburger Button
+   -------------------------------------------------------------------------- */
+.avx-header__toggle {
+  display: none;
+  width: 44px;
+  height: 44px;
+  padding: 10px;
+  background: transparent;
+  border: 1px solid var(--avx-border-light);
+  border-radius: var(--avx-radius-sm);
+  cursor: pointer;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  z-index: 1050;
+  transition: border-color var(--avx-transition-fast), background-color var(--avx-transition-fast);
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .avx-header__toggle:hover {
+    border-color: var(--avx-orange);
+    background-color: var(--avx-orange-subtle);
+  }
+}
+
+.avx-header__toggle-bar {
+  display: block;
+  width: 22px;
+  height: 2px;
+  background-color: var(--avx-navy);
+  border-radius: 2px;
+  transition: transform var(--avx-transition-fast), opacity var(--avx-transition-fast), background-color var(--avx-transition-fast);
+  transform-origin: center;
+}
+
+/* Active Hamburger Animation (X transformation) */
+.avx-header__toggle[aria-expanded="true"] .avx-header__toggle-bar:nth-child(1) {
+  transform: translateY(8px) rotate(45deg);
+  background-color: var(--avx-white);
+}
+
+.avx-header__toggle[aria-expanded="true"] .avx-header__toggle-bar:nth-child(2) {
+  opacity: 0;
+  transform: scaleX(0);
+}
+
+.avx-header__toggle[aria-expanded="true"] .avx-header__toggle-bar:nth-child(3) {
+  transform: translateY(-8px) rotate(-45deg);
+  background-color: var(--avx-white);
+}
+
+.avx-header__toggle[aria-expanded="true"] {
+  border-color: rgba(255, 255, 255, 0.3);
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* --------------------------------------------------------------------------
+   Mobile Drawer & Backdrop
+   -------------------------------------------------------------------------- */
+.avx-drawer-backdrop {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(0, 31, 54, 0.6);
+  -webkit-backdrop-filter: blur(8px);
+  backdrop-filter: blur(8px);
+  z-index: 1020;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition: opacity var(--avx-transition-medium), visibility var(--avx-transition-medium);
+}
+
+.avx-drawer-backdrop.is-open {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
+
+.avx-drawer {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: min(85vw, 380px);
+  height: 100%;
+  height: 100dvh;
+  background-color: var(--avx-navy-dark);
+  z-index: 1030;
+  padding: 6rem 2rem 3rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transform: translateX(100%);
+  visibility: hidden;
+  transition: transform var(--avx-transition-medium), visibility var(--avx-transition-medium);
+  box-shadow: -10px 0 40px rgba(0, 0, 0, 0.3);
+  overflow-y: auto;
+}
+
+.avx-drawer.is-open {
+  transform: translateX(0);
+  visibility: visible;
+}
+
+.avx-drawer__brand {
+  margin-bottom: var(--avx-space-8);
+  display: flex;
+  align-items: center;
+}
+
+.avx-drawer__logo {
+  width: 54px;
+  height: auto;
+}
+
+.avx-drawer__list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--avx-space-5);
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.avx-drawer__item {
+  opacity: 0;
+  transform: translateX(20px);
+  transition: opacity var(--avx-transition-fast), transform var(--avx-transition-fast);
+}
+
+.avx-drawer.is-open .avx-drawer__item {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* Stagger item entrance */
+.avx-drawer.is-open .avx-drawer__item:nth-child(1) { transition-delay: 100ms; }
+.avx-drawer.is-open .avx-drawer__item:nth-child(2) { transition-delay: 150ms; }
+.avx-drawer.is-open .avx-drawer__item:nth-child(3) { transition-delay: 200ms; }
+.avx-drawer.is-open .avx-drawer__item:nth-child(4) { transition-delay: 250ms; }
+.avx-drawer.is-open .avx-drawer__item:nth-child(5) { transition-delay: 300ms; }
+
+.avx-drawer__link {
+  font-family: var(--avx-font-serif);
+  font-size: 1.5rem;
+  font-weight: 400;
+  color: var(--avx-white);
+  text-decoration: none;
+  display: inline-block;
+  padding: 0.35rem 0;
+  position: relative;
+  transition: color var(--avx-transition-fast), transform var(--avx-transition-fast);
+}
+
+.avx-drawer__link:hover,
+.avx-drawer__link:focus-visible {
+  color: var(--avx-orange);
+  transform: translateX(6px);
+}
+
+.avx-drawer__footer {
+  margin-top: auto;
+  padding-top: var(--avx-space-8);
+  border-top: 1px solid var(--avx-border-dark);
+}
+
+.avx-drawer__cta {
+  width: 100%;
+  justify-content: center;
+  padding: 1rem 1.5rem;
+}
+
+/* Body lock when drawer open */
+body.avx-scroll-locked {
+  overflow: hidden !important;
+  touch-action: none;
+}
+
+/* --------------------------------------------------------------------------
+   Responsive Header Breakpoint Rules
+   -------------------------------------------------------------------------- */
+@media (max-width: 991px) {
+  .avx-header__nav {
+    display: none;
+  }
+
+  .avx-header__cta {
+    display: none;
+  }
+
+  .avx-header__toggle {
+    display: flex;
+  }
+
+  .avx-header__logo--desktop {
+    display: none;
+  }
+
+  .avx-header__logo--mobile {
+    display: block;
+  }
+}
+
+@media (min-width: 992px) {
+  .avx-drawer,
+  .avx-drawer-backdrop {
+    display: none !important;
+  }
+}

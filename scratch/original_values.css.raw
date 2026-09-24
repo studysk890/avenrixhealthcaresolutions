@@ -1,0 +1,188 @@
+Created At: 2026-09-24T17:13:34+05:30
+Completed At: 2026-09-24T17:13:34+05:30
+File Path: `file:///c:/Users/SK/Documents/avenrixhealthcaresolutions/css/values.css`
+Total Lines: 573
+Total Bytes: 13859
+Showing lines 1 to 180
+The following code has been modified to include a line number before every line, in the format: <line_number>: <original_line>. Please note that any changes targeting the original code should remove the line number, colon, and leading space.
+1: /* ==========================================================================
+2:    AVENRIX HEALTHCARE SOLUTIONS — WHAT WE STAND FOR SECTION
+3:    Architectural Editorial Styles (.avx-values, .avx-value)
+4:    Inspired by The July Reference: Pure Editorial Typography, Monumental Numerals,
+5:    Continuous Architectural Timeline Spine, and Refined Whitespace.
+6:    (No generic boxed cards; cohesive editorial storytelling)
+7:    ========================================================================== */
+8: 
+9: .avx-values {
+10:   position: relative;
+11:   background-color: var(--avx-white);
+12:   padding-top: clamp(4rem, 7vw, 7.5rem);
+13:   padding-bottom: clamp(4rem, 7vw, 7.5rem);
+14:   scroll-margin-top: clamp(4.5rem, 8vw, 6rem);
+15:   border-top: none;
+16:   overflow: hidden;
+17: }
+18: 
+19: /* Subtle Architectural Grid Background Watermark */
+20: .avx-values__bg-grid {
+21:   position: absolute;
+22:   inset: 0;
+23:   pointer-events: none;
+24:   background-image: 
+25:     linear-gradient(to right, var(--avx-grid-line-light) 1px, transparent 1px),
+26:     linear-gradient(to bottom, var(--avx-grid-line-light) 1px, transparent 1px);
+27:   background-size: var(--avx-grid-size) var(--avx-grid-size);
+28:   background-position: 0 0;
+29:   mask-image: radial-gradient(circle at 15% 45%, black 20%, transparent 75%);
+30:   -webkit-mask-image: radial-gradient(circle at 15% 45%, black 20%, transparent 75%);
+31:   z-index: 1;
+32: }
+33: 
+34: .avx-values__container {
+35:   position: relative;
+36:   z-index: 2;
+37: }
+38: 
+39: /* --------------------------------------------------------------------------
+40:    Editorial Layout: Asymmetric 2-Column Desktop Architecture
+41:    -------------------------------------------------------------------------- */
+42: .avx-values__layout {
+43:   display: grid;
+44:   grid-template-columns: minmax(320px, 390px) 1fr;
+45:   gap: clamp(3.5rem, 7vw, 7rem);
+46:   align-items: start;
+47: }
+48: 
+49: /* --------------------------------------------------------------------------
+50:    Left Column: Sticky Editorial Header Block & Architectural Manifesto
+51:    -------------------------------------------------------------------------- */
+52: .avx-values__aside {
+53:   position: sticky;
+54:   top: clamp(5.5rem, 10vh, 7.5rem);
+55:   display: flex;
+56:   flex-direction: column;
+57: }
+58: 
+59: .avx-values__meta {
+60:   display: flex;
+61:   align-items: center;
+62:   gap: var(--avx-space-3);
+63:   margin-bottom: var(--avx-space-4);
+64: }
+65: 
+66: .avx-values__index {
+67:   font-family: var(--avx-font-sans);
+68:   font-size: var(--avx-text-xs);
+69:   font-weight: 700;
+70:   letter-spacing: var(--avx-tracking-widest);
+71:   color: var(--avx-orange);
+72: }
+73: 
+74: .avx-values__meta-sep {
+75:   color: var(--avx-slate-300);
+76:   font-size: var(--avx-text-xs);
+77:   font-weight: 400;
+78: }
+79: 
+80: .avx-values__eyebrow {
+81:   margin-bottom: 0;
+82: }
+83: 
+84: .avx-values__title {
+85:   font-family: var(--avx-font-serif);
+86:   font-size: clamp(1.75rem, 2.3vw, 2.35rem);
+87:   line-height: var(--avx-leading-tight);
+88:   color: var(--avx-navy);
+89:   font-weight: 400;
+90:   margin-top: 0;
+91:   margin-bottom: var(--avx-space-4);
+92:   letter-spacing: var(--avx-tracking-tight);
+93: }
+94: 
+95: .avx-values__title-accent {
+96:   font-style: normal;
+97:   color: var(--avx-navy-light);
+98: }
+99: 
+100: .avx-values__intro {
+101:   font-family: var(--avx-font-sans);
+102:   font-size: var(--avx-text-lead);
+103:   line-height: var(--avx-leading-relaxed);
+104:   color: var(--avx-slate-600);
+105:   margin-top: 0;
+106:   margin-bottom: var(--avx-space-6);
+107:   max-width: 42ch;
+108: }
+109: 
+110: .avx-values__accent-rule {
+111:   width: 54px;
+112:   height: 3px;
+113:   background-color: var(--avx-orange);
+114:   border-radius: 2px;
+115:   margin-bottom: var(--avx-space-8);
+116:   transform-origin: left;
+117: }
+118: 
+119: /* Left Column: Architectural Manifesto Statement */
+120: .avx-values__manifesto {
+121:   background-color: var(--avx-slate-50);
+122:   border: 1px solid var(--avx-border-light);
+123:   border-left: 3px solid var(--avx-orange);
+124:   border-radius: 8px;
+125:   padding: 1.5rem 1.75rem;
+126:   display: flex;
+127:   flex-direction: column;
+128:   gap: 1rem;
+129: }
+130: 
+131: .avx-values__manifesto-quote {
+132:   font-family: var(--avx-font-sans);
+133:   font-size: 0.9375rem;
+134:   line-height: 1.65;
+135:   color: var(--avx-slate-700);
+136:   margin: 0;
+137:   font-style: normal;
+138: }
+139: 
+140: .avx-values__manifesto-meta {
+141:   display: flex;
+142:   align-items: center;
+143:   justify-content: space-between;
+144:   padding-top: 0.75rem;
+145:   border-top: 1px solid var(--avx-border-light);
+146: }
+147: 
+148: .avx-values__manifesto-label {
+149:   font-family: var(--avx-font-sans);
+150:   font-size: 0.6875rem;
+151:   font-weight: 700;
+152:   letter-spacing: var(--avx-tracking-widest);
+153:   text-transform: uppercase;
+154:   color: var(--avx-slate-500);
+155: }
+156: 
+157: .avx-values__manifesto-dots {
+158:   display: flex;
+159:   align-items: center;
+160:   gap: 6px;
+161: }
+162: 
+163: .avx-values__manifesto-dots span {
+164:   width: 6px;
+165:   height: 6px;
+166:   border-radius: 50%;
+167:   background-color: var(--avx-slate-300);
+168:   transition: all 0.3s ease;
+169: }
+170: 
+171: .avx-values__manifesto-dots span.is-active {
+172:   background-color: var(--avx-orange);
+173:   transform: scale(1.3);
+174: }
+175: 
+176: /* --------------------------------------------------------------------------
+177:    Right Column: Seamless Editorial Pillars on Continuous Architectural Spine
+178:    -------------------------------------------------------------------------- */
+179: .avx-values__editorial {
+180:   position: relative;
+The above content does NOT show the entire file contents. If you need to view any lines of the file which were not shown to complete your task, call this tool again to view those lines.

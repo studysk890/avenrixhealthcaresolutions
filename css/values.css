@@ -1,0 +1,572 @@
+/* ==========================================================================
+   AVENRIX HEALTHCARE SOLUTIONS — WHAT WE STAND FOR SECTION
+   Architectural Editorial Styles (.avx-values, .avx-value)
+   Inspired by The July Reference: Pure Editorial Typography, Monumental Numerals,
+   Continuous Architectural Timeline Spine, and Refined Whitespace.
+   (No generic boxed cards; cohesive editorial storytelling)
+   ========================================================================== */
+
+.avx-values {
+  position: relative;
+  background-color: var(--avx-white);
+  padding-top: clamp(4rem, 7vw, 7.5rem);
+  padding-bottom: clamp(4rem, 7vw, 7.5rem);
+  scroll-margin-top: clamp(4.5rem, 8vw, 6rem);
+  border-top: none;
+  overflow: hidden;
+}
+
+/* Subtle Architectural Grid Background Watermark */
+.avx-values__bg-grid {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background-image: 
+    linear-gradient(to right, var(--avx-grid-line-light) 1px, transparent 1px),
+    linear-gradient(to bottom, var(--avx-grid-line-light) 1px, transparent 1px);
+  background-size: var(--avx-grid-size) var(--avx-grid-size);
+  background-position: 0 0;
+  mask-image: radial-gradient(circle at 15% 45%, black 20%, transparent 75%);
+  -webkit-mask-image: radial-gradient(circle at 15% 45%, black 20%, transparent 75%);
+  z-index: 1;
+}
+
+.avx-values__container {
+  position: relative;
+  z-index: 2;
+}
+
+/* --------------------------------------------------------------------------
+   Editorial Layout: Asymmetric 2-Column Desktop Architecture
+   -------------------------------------------------------------------------- */
+.avx-values__layout {
+  display: grid;
+  grid-template-columns: minmax(320px, 390px) 1fr;
+  gap: clamp(3.5rem, 7vw, 7rem);
+  align-items: start;
+}
+
+/* --------------------------------------------------------------------------
+   Left Column: Sticky Editorial Header Block & Architectural Manifesto
+   -------------------------------------------------------------------------- */
+.avx-values__aside {
+  position: sticky;
+  top: clamp(5.5rem, 10vh, 7.5rem);
+  display: flex;
+  flex-direction: column;
+}
+
+.avx-values__meta {
+  display: flex;
+  align-items: center;
+  gap: var(--avx-space-3);
+  margin-bottom: var(--avx-space-4);
+}
+
+.avx-values__index {
+  font-family: var(--avx-font-sans);
+  font-size: var(--avx-text-xs);
+  font-weight: 700;
+  letter-spacing: var(--avx-tracking-widest);
+  color: var(--avx-orange);
+}
+
+.avx-values__meta-sep {
+  color: var(--avx-slate-300);
+  font-size: var(--avx-text-xs);
+  font-weight: 400;
+}
+
+.avx-values__eyebrow {
+  margin-bottom: 0;
+}
+
+.avx-values__title {
+  font-family: var(--avx-font-serif);
+  font-size: clamp(1.75rem, 2.3vw, 2.35rem);
+  line-height: var(--avx-leading-tight);
+  color: var(--avx-navy);
+  font-weight: 400;
+  margin-top: 0;
+  margin-bottom: var(--avx-space-4);
+  letter-spacing: var(--avx-tracking-tight);
+}
+
+.avx-values__title-accent {
+  font-style: normal;
+  color: var(--avx-navy-light);
+}
+
+.avx-values__intro {
+  font-family: var(--avx-font-sans);
+  font-size: var(--avx-text-lead);
+  line-height: var(--avx-leading-relaxed);
+  color: var(--avx-slate-600);
+  margin-top: 0;
+  margin-bottom: var(--avx-space-6);
+  max-width: 42ch;
+}
+
+.avx-values__accent-rule {
+  width: 54px;
+  height: 3px;
+  background-color: var(--avx-orange);
+  border-radius: 2px;
+  margin-bottom: var(--avx-space-8);
+  transform-origin: left;
+}
+
+/* Left Column: Architectural Manifesto Statement */
+.avx-values__manifesto {
+  background-color: var(--avx-slate-50);
+  border: 1px solid var(--avx-border-light);
+  border-left: 3px solid var(--avx-orange);
+  border-radius: 8px;
+  padding: 1.5rem 1.75rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.avx-values__manifesto-quote {
+  font-family: var(--avx-font-sans);
+  font-size: 0.9375rem;
+  line-height: 1.65;
+  color: var(--avx-slate-700);
+  margin: 0;
+  font-style: normal;
+}
+
+.avx-values__manifesto-meta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 0.75rem;
+  border-top: 1px solid var(--avx-border-light);
+}
+
+.avx-values__manifesto-label {
+  font-family: var(--avx-font-sans);
+  font-size: 0.6875rem;
+  font-weight: 700;
+  letter-spacing: var(--avx-tracking-widest);
+  text-transform: uppercase;
+  color: var(--avx-slate-500);
+}
+
+.avx-values__manifesto-dots {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.avx-values__manifesto-dots span {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: var(--avx-slate-300);
+  transition: all 0.3s ease;
+}
+
+.avx-values__manifesto-dots span.is-active {
+  background-color: var(--avx-orange);
+  transform: scale(1.3);
+}
+
+/* --------------------------------------------------------------------------
+   Right Column: Seamless Editorial Pillars on Continuous Architectural Spine
+   -------------------------------------------------------------------------- */
+.avx-values__editorial {
+  position: relative;
+}
+
+.avx-values__list {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+/* Individual Editorial Value Row (Calibrated Height to Balance with Left Column) */
+.avx-value {
+  --avx-val-py: clamp(1rem, 1.4vw, 1.35rem);
+  --avx-badge-size: clamp(40px, 3.2vw, 46px);
+  display: flex;
+  gap: clamp(1.25rem, 2.5vw, 2.25rem);
+  position: relative;
+  padding: var(--avx-val-py) 1.25rem var(--avx-val-py) 0.25rem;
+  border-bottom: 1px solid var(--avx-border-light);
+  border-radius: 8px;
+  transition: background-color 0.35s ease;
+  outline: none;
+  cursor: default;
+}
+
+.avx-value:last-child {
+  border-bottom: none;
+}
+
+/* Left Axis: Numeral Milestone Badge & Continuous Timeline Spine */
+.avx-value__axis {
+  position: relative;
+  flex-shrink: 0;
+  width: var(--avx-badge-size);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Architectural Numeral Circle Badge */
+.avx-value__badge {
+  width: var(--avx-badge-size);
+  height: var(--avx-badge-size);
+  border-radius: 50%;
+  background-color: var(--avx-white);
+  border: 1.5px solid var(--avx-slate-300);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  z-index: 2;
+  transition: 
+    border-color 0.35s ease,
+    background-color 0.35s ease,
+    box-shadow 0.35s ease,
+    transform 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.avx-value__number {
+  font-family: var(--avx-font-serif);
+  font-size: clamp(1.1rem, 1.4vw, 1.3rem);
+  font-weight: 700;
+  line-height: 1;
+  color: var(--avx-navy);
+  transition: color 0.35s ease, transform 0.35s ease;
+  letter-spacing: var(--avx-tracking-tight);
+}
+
+.avx-value__badge-glow {
+  position: absolute;
+  inset: -3px;
+  border-radius: 50%;
+  border: 1.5px solid transparent;
+  pointer-events: none;
+  transition: border-color 0.35s ease, transform 0.35s ease;
+}
+
+/* Continuous Vertical Spine Line Between Milestones */
+.avx-value__spine {
+  position: absolute;
+  top: var(--avx-badge-size);
+  bottom: calc(-1 * var(--avx-val-py));
+  left: 50%;
+  transform: translateX(-50%);
+  width: 2px;
+  background-color: var(--avx-slate-200);
+  z-index: 1;
+}
+
+.avx-value:last-child .avx-value__spine {
+  display: none;
+}
+
+.avx-value__spine-progress {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 0%;
+  background: linear-gradient(to bottom, var(--avx-orange), var(--avx-navy));
+  transition: height 0.4s ease;
+}
+
+/* Main Editorial Content Column */
+.avx-value__main {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  padding-top: clamp(0.2rem, 0.5vw, 0.35rem);
+}
+
+/* Heading Row: Connector Rule + Title + Tag */
+.avx-value__heading-wrap {
+  display: flex;
+  align-items: center;
+  gap: clamp(0.6rem, 1.5vw, 1.25rem);
+}
+
+.avx-value__connector {
+  height: 1.5px;
+  width: clamp(20px, 3vw, 36px);
+  background-color: var(--avx-border-strong);
+  flex-shrink: 0;
+  transform-origin: left;
+  transition: 
+    width 0.4s cubic-bezier(0.16, 1, 0.3, 1),
+    background-color 0.35s ease;
+}
+
+.avx-value__title {
+  font-family: var(--avx-font-serif);
+  font-size: clamp(1.15rem, 1.5vw, 1.45rem);
+  font-weight: 600;
+  line-height: 1.2;
+  letter-spacing: var(--avx-tracking-wide);
+  text-transform: uppercase;
+  color: var(--avx-navy);
+  margin: 0;
+  transition: color 0.35s ease, transform 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.avx-value__tag {
+  margin-left: auto;
+  font-family: var(--avx-font-sans);
+  font-size: 0.625rem;
+  font-weight: 700;
+  letter-spacing: var(--avx-tracking-widest);
+  text-transform: uppercase;
+  color: var(--avx-slate-400);
+  padding: 3px 10px;
+  border-radius: 16px;
+  background-color: var(--avx-slate-100);
+  border: 1px solid var(--avx-border-light);
+  transition: all 0.3s ease;
+  white-space: nowrap;
+}
+
+/* Value Description */
+.avx-value__description {
+  font-family: var(--avx-font-sans);
+  font-size: clamp(0.9rem, 0.3vw + 0.8rem, 1rem);
+  line-height: 1.55;
+  color: var(--avx-slate-600);
+  margin: 0;
+  max-width: 58ch;
+  transition: color 0.35s ease;
+}
+
+/* --------------------------------------------------------------------------
+   Interactive States: Hover & Scroll Active States (.is-active)
+   -------------------------------------------------------------------------- */
+.avx-value.is-active,
+.avx-value:focus-visible {
+  background-color: rgba(241, 100, 25, 0.025);
+}
+
+.avx-value:focus-visible {
+  outline: 2px solid var(--avx-orange);
+  outline-offset: 3px;
+}
+
+/* Numeral Badge Activation */
+.avx-value.is-active .avx-value__badge,
+.avx-value:focus-visible .avx-value__badge {
+  border-color: var(--avx-orange);
+  background-color: var(--avx-white);
+  box-shadow: 
+    0 0 0 5px rgba(241, 100, 25, 0.15),
+    0 6px 16px rgba(241, 100, 25, 0.2);
+  transform: scale(1.08);
+}
+
+.avx-value.is-active .avx-value__number,
+.avx-value:focus-visible .avx-value__number {
+  color: var(--avx-orange);
+}
+
+.avx-value.is-active .avx-value__spine-progress,
+.avx-value:focus-visible .avx-value__spine-progress {
+  height: 100%;
+}
+
+/* Horizontal Connector Activation */
+.avx-value.is-active .avx-value__connector,
+.avx-value:focus-visible .avx-value__connector {
+  width: clamp(36px, 6vw, 68px);
+  background-color: var(--avx-orange);
+}
+
+.avx-value.is-active .avx-value__title,
+.avx-value:focus-visible .avx-value__title {
+  color: var(--avx-navy-dark);
+  transform: translateX(4px);
+}
+
+.avx-value.is-active .avx-value__tag,
+.avx-value:focus-visible .avx-value__tag {
+  color: var(--avx-orange);
+  background-color: var(--avx-orange-subtle);
+  border-color: rgba(241, 100, 25, 0.3);
+}
+
+.avx-value.is-active .avx-value__description,
+.avx-value:focus-visible .avx-value__description {
+  color: var(--avx-slate-900);
+}
+
+/* Desktop Hover States (Scoped to prevent touch device stickiness) */
+@media (hover: hover) and (pointer: fine) {
+  .avx-value:hover {
+    background-color: rgba(241, 100, 25, 0.025);
+  }
+
+  .avx-value:hover .avx-value__badge {
+    border-color: var(--avx-orange);
+    background-color: var(--avx-white);
+    box-shadow: 
+      0 0 0 5px rgba(241, 100, 25, 0.15),
+      0 6px 16px rgba(241, 100, 25, 0.2);
+    transform: scale(1.08);
+  }
+
+  .avx-value:hover .avx-value__number {
+    color: var(--avx-orange);
+  }
+
+  .avx-value:hover .avx-value__spine-progress {
+    height: 100%;
+  }
+
+  .avx-value:hover .avx-value__connector {
+    width: clamp(36px, 6vw, 68px);
+    background-color: var(--avx-orange);
+  }
+
+  .avx-value:hover .avx-value__title {
+    color: var(--avx-navy-dark);
+    transform: translateX(4px);
+  }
+
+  .avx-value:hover .avx-value__tag {
+    color: var(--avx-orange);
+    background-color: var(--avx-orange-subtle);
+    border-color: rgba(241, 100, 25, 0.3);
+  }
+
+  .avx-value:hover .avx-value__description {
+    color: var(--avx-slate-900);
+  }
+}
+
+/* --------------------------------------------------------------------------
+   Responsive Adaptations
+   -------------------------------------------------------------------------- */
+
+/* Tablet & Medium Screens (< 992px) */
+@media (max-width: 991px) {
+  .avx-values__layout {
+    grid-template-columns: 1fr;
+    gap: 3.5rem;
+  }
+
+  .avx-values__aside {
+    position: static;
+    max-width: 720px;
+  }
+
+  .avx-values__manifesto {
+    max-width: 640px;
+  }
+}
+
+/* Mobile Devices (< 640px) */
+@media (max-width: 639px) {
+  .avx-values {
+    padding-top: clamp(3.5rem, 10vw, 5rem);
+    padding-bottom: clamp(3.5rem, 10vw, 5rem);
+  }
+
+  .avx-values__intro {
+    font-size: var(--avx-text-body);
+  }
+
+  .avx-value {
+    gap: 1.25rem;
+    padding: 1.75rem 0.5rem;
+  }
+
+  .avx-value.is-active,
+  .avx-value:focus-visible {
+    padding-left: 0.5rem; /* subtle on mobile */
+  }
+
+  .avx-value__axis {
+    width: 44px;
+  }
+
+  .avx-value__badge {
+    width: 44px;
+    height: 44px;
+  }
+
+  .avx-value__number {
+    font-size: 1.35rem;
+  }
+
+  .avx-value__spine {
+    top: 44px;
+    bottom: -1.75rem;
+  }
+
+  .avx-value__main {
+    padding-top: 0.35rem;
+  }
+
+  .avx-value__heading-wrap {
+    flex-wrap: wrap;
+    gap: 0.5rem 0.75rem;
+  }
+
+  .avx-value__connector {
+    width: 20px;
+  }
+
+  .avx-value.is-active .avx-value__connector,
+  .avx-value:focus-visible .avx-value__connector {
+    width: 32px;
+  }
+
+  .avx-value__title {
+    font-size: 1.2rem;
+  }
+
+  .avx-value__tag {
+    display: none; /* keep mobile header clean */
+  }
+
+  .avx-value__description {
+    font-size: 0.9375rem;
+    line-height: 1.55;
+  }
+}
+
+/* Landscape Mobile Orientation (< 900px and max-height 500px) */
+@media (max-height: 500px) and (orientation: landscape) {
+  .avx-values {
+    padding-top: 3.5rem;
+    padding-bottom: 3.5rem;
+  }
+
+  .avx-values__aside {
+    position: static;
+  }
+
+  .avx-value {
+    padding: 1.5rem 0.75rem;
+  }
+}
+
+/* Prefers Reduced Motion */
+@media (prefers-reduced-motion: reduce) {
+  .avx-value,
+  .avx-value__badge,
+  .avx-value__number,
+  .avx-value__connector,
+  .avx-value__title,
+  .avx-value__tag,
+  .avx-value__description,
+  .avx-value__spine-progress {
+    transition: none !important;
+    transform: none !important;
+  }
+}

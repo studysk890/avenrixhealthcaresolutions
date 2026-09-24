@@ -1,0 +1,464 @@
+/* ==========================================================================
+   AVENRIX HEALTHCARE SOLUTIONS — DESIGN SYSTEM & TOKENS
+   Phase 0 Architectural Foundation
+   ========================================================================== */
+
+@import url('fonts.css');
+
+:root {
+  /* ------------------------------------------------------------------------
+     1. Brand Colors (Derived from Official Logo & Brand Guidelines)
+     ------------------------------------------------------------------------ */
+  --avx-navy: #012C4E;
+  --avx-navy-dark: #001F36;
+  --avx-navy-deep: #001524;
+  --avx-navy-light: #074170;
+  
+  --avx-orange: #F16419;
+  --avx-orange-hover: #D9530E;
+  --avx-orange-subtle: rgba(241, 100, 25, 0.08);
+  --avx-orange-glow: rgba(241, 100, 25, 0.2);
+
+  --avx-white: #FFFFFF;
+  --avx-light: #F5F7F8;
+
+  /* Supporting Technical Slate Neutrals */
+  --avx-slate-50: #F8FAFC;
+  --avx-slate-100: #F1F5F9;
+  --avx-slate-200: #E2E8F0;
+  --avx-slate-300: #CBD5E1;
+  --avx-slate-400: #94A3B8;
+  --avx-slate-500: #64748B;
+  --avx-slate-600: #475569;
+  --avx-slate-700: #334155;
+  --avx-slate-800: #1E293B;
+  --avx-slate-900: #0F172A;
+
+  /* Border Tokens: Replaced solid grey with ultra-faint divider tone */
+  --avx-border-light: rgba(0, 0, 0, 0.04);
+  --avx-border-strong: rgba(0, 0, 0, 0.07);
+  --avx-border-dark: rgba(255, 255, 255, 0.08);
+  --avx-border-dark-hover: rgba(255, 255, 255, 0.18);
+  --avx-border-orange: rgba(241, 100, 25, 0.35);
+
+  /* Synchronized Architectural Blueprint Grid Tokens */
+  --avx-grid-size: 56px;
+  --avx-grid-line-light: rgba(1, 44, 78, 0.025);
+  --avx-grid-line-dark: rgba(255, 255, 255, 0.025);
+
+  /* ------------------------------------------------------------------------
+     2. Typography Families & Scales
+     Ultra-clean sans-serif with calibrated reduction for spacious breathing room
+     ------------------------------------------------------------------------ */
+  --avx-font-serif: 'The Seasons', Georgia, serif;
+  --avx-font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'SF Pro Text', 'Segoe UI', Roboto, sans-serif;
+
+  /* Responsive Fluid Font Sizes (Min, Fluid Viewport, Max) */
+  --avx-text-display: clamp(1.75rem, 2.3vw, 2.35rem);          /* Synchronized Section Display Headings */
+  --avx-text-h1: clamp(1.75rem, 2.3vw, 2.35rem);
+  --avx-text-h2: clamp(1.75rem, 2.3vw, 2.35rem);
+  --avx-text-h3: clamp(1.25rem, 1.6vw + 0.3rem, 1.65rem);
+  --avx-text-h4: clamp(1.05rem, 1.1vw + 0.25rem, 1.35rem);
+  
+  --avx-text-lead: clamp(0.95rem, 0.35vw + 0.85rem, 1.0625rem);  /* Refined, airy breathing room */
+  --avx-text-body: clamp(0.875rem, 0.2vw + 0.8125rem, 0.9375rem); /* Refined 14-15px body copy */
+  --avx-text-sm: 0.8125rem;                                      /* 13px */
+  --avx-text-xs: 0.75rem;                                        /* 12px */
+
+  /* Line Heights */
+  --avx-leading-tight: 1.08;
+  --avx-leading-snug: 1.25;
+  --avx-leading-normal: 1.65;
+  --avx-leading-relaxed: 1.75;
+
+  /* Letter Spacing */
+  --avx-tracking-tighter: -0.03em;
+  --avx-tracking-tight: -0.015em;
+  --avx-tracking-normal: -0.005em;
+  --avx-tracking-wide: 0.04em;
+  --avx-tracking-wider: 0.08em;
+  --avx-tracking-widest: 0.14em;
+
+  /* ------------------------------------------------------------------------
+     3. Containers & Spacing Architecture
+     ------------------------------------------------------------------------ */
+  --avx-container-max: 1280px;
+  --avx-container-wide: 1400px;
+  --avx-container-narrow: 1040px;
+
+  /* Fluid Horizontal Container Gutters */
+  --avx-gutter: clamp(1.25rem, 3.5vw, 3.75rem); /* 20px - 60px */
+
+  /* Section Spacing (Desktop / Tablet / Mobile) */
+  --avx-section-desktop: 140px;
+  --avx-section-tablet: 100px;
+  --avx-section-mobile: 70px;
+  --avx-section-py: clamp(4.375rem, 8vw, 8.75rem); /* 70px to 140px */
+
+  /* Spacing Scale */
+  --avx-space-1: 0.25rem;   /* 4px */
+  --avx-space-2: 0.5rem;    /* 8px */
+  --avx-space-3: 0.75rem;   /* 12px */
+  --avx-space-4: 1rem;      /* 16px */
+  --avx-space-5: 1.25rem;   /* 20px */
+  --avx-space-6: 1.5rem;    /* 24px */
+  --avx-space-8: 2rem;      /* 32px */
+  --avx-space-10: 2.5rem;   /* 40px */
+  --avx-space-12: 3rem;     /* 48px */
+  --avx-space-16: 4rem;     /* 64px */
+  --avx-space-20: 5rem;     /* 80px */
+  --avx-space-24: 6rem;     /* 96px */
+
+  /* ------------------------------------------------------------------------
+     4. Geometry & Precision Radius
+     Healthcare engineering demands clean, crisp, structural geometry
+     ------------------------------------------------------------------------ */
+  --avx-radius-none: 0px;
+  --avx-radius-sm: 2px;
+  --avx-radius-md: 4px;
+  --avx-radius-lg: 8px;
+  --avx-radius-pill: 9999px;
+
+  /* ------------------------------------------------------------------------
+     5. Transitions & Timing Functions
+     ------------------------------------------------------------------------ */
+  --avx-ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+  --avx-ease-in-out: cubic-bezier(0.65, 0, 0.35, 1);
+  --avx-ease-sharp: cubic-bezier(0.25, 1, 0.5, 1);
+
+  --avx-transition-fast: 250ms var(--avx-ease-out);
+  --avx-transition-medium: 450ms var(--avx-ease-out);
+  --avx-transition-slow: 800ms var(--avx-ease-out);
+
+  /* Elevation Shadows (Soft Depth & Floating Architectural Weight) */
+  --avx-shadow-subtle: 0 1px 3px rgba(1, 44, 78, 0.03);
+  --avx-shadow-card: 0 10px 30px -5px rgba(1, 44, 78, 0.04), 0 2px 6px -1px rgba(1, 44, 78, 0.02);
+  --avx-shadow-elevated: 0 20px 45px -10px rgba(1, 44, 78, 0.07), 0 4px 12px -2px rgba(1, 44, 78, 0.03);
+  --avx-shadow-float: 0 25px 50px -12px rgba(1, 44, 78, 0.08), 0 0 1px 1px rgba(0, 0, 0, 0.04);
+  --avx-shadow-dark-card: 0 25px 60px -15px rgba(0, 0, 0, 0.35), 0 0 1px 1px rgba(255, 255, 255, 0.08);
+  --avx-shadow-orange: 0 8px 24px -2px rgba(241, 100, 25, 0.25);
+
+  /* Minimum Accessible Interactive Touch Target */
+  --avx-touch-target: 44px;
+}
+
+/* ==========================================================================
+   CSS RESET & BASE DEFAULTS
+   ========================================================================== */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-family: var(--avx-font-sans);
+  font-size: 15.5px;
+  line-height: var(--avx-leading-normal);
+  color: var(--avx-slate-800);
+  background-color: var(--avx-white);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+  scroll-behavior: smooth;
+}
+
+body {
+  min-height: 100vh;
+  overflow-x: hidden;
+  background-color: var(--avx-white);
+  font-family: var(--avx-font-sans);
+  font-size: var(--avx-text-body);
+  line-height: var(--avx-leading-normal);
+  letter-spacing: var(--avx-tracking-normal);
+  color: var(--avx-slate-700);
+}
+
+img, picture, svg, video {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+  transition: color var(--avx-transition-fast);
+}
+
+button, input, select, textarea {
+  font: inherit;
+  color: inherit;
+  border: none;
+  outline: none;
+  background: none;
+}
+
+ul, ol {
+  list-style: none;
+}
+
+/* ==========================================================================
+   LAYOUT CONTAINERS & GRID SYSTEM (.avx-*)
+   ========================================================================== */
+.avx-container {
+  width: 100%;
+  max-width: var(--avx-container-max);
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: var(--avx-gutter);
+  padding-right: var(--avx-gutter);
+}
+
+.avx-container--wide {
+  max-width: var(--avx-container-wide);
+}
+
+.avx-container--narrow {
+  max-width: var(--avx-container-narrow);
+}
+
+.avx-section {
+  padding-top: var(--avx-section-py);
+  padding-bottom: var(--avx-section-py);
+  position: relative;
+}
+
+/* Responsive Grid Primitives */
+.avx-grid-2 {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--avx-space-8);
+}
+
+@media (min-width: 768px) {
+  .avx-grid-2 {
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--avx-space-10);
+  }
+}
+
+.avx-grid-3 {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--avx-space-6);
+}
+
+@media (min-width: 640px) {
+  .avx-grid-3 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .avx-grid-3 {
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--avx-space-8);
+  }
+}
+
+/* Asymmetric Editorial Grid (Left Coast / Precision Consultative Style) */
+.avx-grid-asymmetric {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--avx-space-8);
+}
+
+@media (min-width: 992px) {
+  .avx-grid-asymmetric {
+    grid-template-columns: 1.15fr 0.85fr;
+    gap: var(--avx-space-16);
+    align-items: center;
+  }
+}
+
+/* Split-Screen Contact Layout (IWC Global Reference) */
+.avx-split-layout {
+  display: grid;
+  grid-template-columns: 1fr;
+  min-height: 80vh;
+}
+
+@media (min-width: 992px) {
+  .avx-split-layout {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+/* ==========================================================================
+   TYPOGRAPHY UTILITIES (.avx-*)
+   ========================================================================== */
+.avx-heading-display {
+  font-family: var(--avx-font-serif);
+  font-size: var(--avx-text-display);
+  line-height: var(--avx-leading-tight);
+  font-weight: 400;
+  letter-spacing: var(--avx-tracking-tight);
+  color: var(--avx-navy);
+}
+
+.avx-heading-1 {
+  font-family: var(--avx-font-serif);
+  font-size: var(--avx-text-h1);
+  line-height: var(--avx-leading-snug);
+  font-weight: 400;
+  letter-spacing: var(--avx-tracking-tight);
+  color: var(--avx-navy);
+}
+
+.avx-heading-2 {
+  font-family: var(--avx-font-serif);
+  font-size: var(--avx-text-h2);
+  line-height: var(--avx-leading-snug);
+  font-weight: 400;
+  color: var(--avx-navy);
+}
+
+.avx-heading-3 {
+  font-family: var(--avx-font-serif);
+  font-size: var(--avx-text-h3);
+  line-height: var(--avx-leading-snug);
+  font-weight: 700;
+  color: var(--avx-navy);
+}
+
+.avx-heading-4 {
+  font-family: var(--avx-font-serif);
+  font-size: var(--avx-text-h4);
+  line-height: 1.35;
+  font-weight: 700;
+  color: var(--avx-navy);
+}
+
+.avx-body-lead {
+  font-family: var(--avx-font-sans);
+  font-size: var(--avx-text-lead);
+  line-height: var(--avx-leading-relaxed);
+  color: var(--avx-slate-600);
+}
+
+.avx-body {
+  font-family: var(--avx-font-sans);
+  font-size: var(--avx-text-body);
+  line-height: var(--avx-leading-normal);
+  color: var(--avx-slate-700);
+}
+
+.avx-eyebrow {
+  font-family: var(--avx-font-sans);
+  font-size: var(--avx-text-xs);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: var(--avx-tracking-widest);
+  color: var(--avx-orange);
+  display: inline-flex;
+  align-items: center;
+  gap: var(--avx-space-2);
+}
+
+.avx-eyebrow::before {
+  content: '';
+  display: inline-block;
+  width: 16px;
+  height: 2px;
+  background-color: var(--avx-orange);
+}
+
+/* ==========================================================================
+   BUTTON & INTERACTION FOUNDATIONS (.avx-btn-*)
+   ========================================================================== */
+.avx-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--avx-space-3);
+  padding: 0.875rem 1.75rem;
+  min-height: var(--avx-touch-target);
+  font-family: var(--avx-font-sans);
+  font-size: var(--avx-text-sm);
+  font-weight: 600;
+  letter-spacing: var(--avx-tracking-wide);
+  border-radius: var(--avx-radius-sm);
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  transition: all var(--avx-transition-fast);
+}
+
+.avx-btn--primary {
+  background-color: var(--avx-orange);
+  color: var(--avx-white);
+  border: 1px solid var(--avx-orange);
+}
+
+.avx-btn--secondary {
+  background-color: transparent;
+  color: var(--avx-navy);
+  border: 1px solid var(--avx-navy);
+}
+
+.avx-btn--white {
+  background-color: var(--avx-white);
+  color: var(--avx-navy);
+  border: 1px solid var(--avx-white);
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .avx-btn--primary:hover {
+    background-color: var(--avx-orange-hover);
+    border-color: var(--avx-orange-hover);
+    transform: translateY(-1px);
+    box-shadow: var(--avx-shadow-orange);
+  }
+
+  .avx-btn--secondary:hover {
+    background-color: var(--avx-navy);
+    color: var(--avx-white);
+  }
+
+  .avx-btn--white:hover {
+    background-color: transparent;
+    color: var(--avx-white);
+  }
+}
+
+/* Accessible Skip Link */
+.avx-skip-link {
+  position: absolute;
+  top: -100px;
+  left: 20px;
+  z-index: 10000;
+  padding: 12px 20px;
+  background-color: var(--avx-navy);
+  color: var(--avx-white);
+  font-family: var(--avx-font-sans);
+  font-size: var(--avx-fs-sm);
+  font-weight: var(--avx-fw-semibold);
+  text-decoration: none;
+  border: 2px solid var(--avx-orange);
+  border-radius: var(--avx-radius-sm);
+  box-shadow: var(--avx-shadow-card);
+  transition: top 0.2s ease;
+}
+
+.avx-skip-link:focus {
+  top: 20px;
+  outline: 2px solid var(--avx-white);
+  outline-offset: 2px;
+}
+
+/* Accessible Focus States */
+:focus-visible {
+  outline: 2px solid var(--avx-orange);
+  outline-offset: 3px;
+}
+
+/* Prefers Reduced Motion */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}

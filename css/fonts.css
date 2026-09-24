@@ -1,0 +1,77 @@
+/* ==========================================================================
+   AVENRIX HEALTHCARE SOLUTIONS — TYPOGRAPHY & @FONT-FACE DECLARATIONS
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   Primary Editorial Serif: The Seasons
+   High-contrast luxury serif used for brand wordmark, hero display,
+   and primary section titles.
+   -------------------------------------------------------------------------- */
+@font-face {
+  font-family: 'The Seasons';
+  src: url('../fonts/TheSeasons-Lt.otf') format('opentype');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'The Seasons';
+  src: url('../fonts/TheSeasons-LtIt.otf') format('opentype');
+  font-weight: 300;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'The Seasons';
+  src: url('../fonts/TheSeasons-Reg.otf') format('opentype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'The Seasons';
+  src: url('../fonts/TheSeasons-It.otf') format('opentype');
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'The Seasons';
+  src: url('../fonts/TheSeasons-Bd.otf') format('opentype');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'The Seasons';
+  src: url('../fonts/TheSeasons-BdIt.otf') format('opentype');
+  font-weight: 700;
+  font-style: italic;
+  font-display: swap;
+}
+
+/* --------------------------------------------------------------------------
+   Primary Technical Sans-Serif: Inter (Variable Font)
+   Precision neo-grotesque sans-serif used for body copy, specifications,
+   navigation, form controls, and micro-labels.
+   -------------------------------------------------------------------------- */
+@font-face {
+  font-family: 'Inter';
+  src: url('../fonts/Inter-VariableFont_opsz,wght.ttf') format('truetype-variations');
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Inter';
+  src: url('../fonts/Inter-Italic-VariableFont_opsz,wght.ttf') format('truetype-variations');
+  font-weight: 100 900;
+  font-style: italic;
+  font-display: swap;
+}

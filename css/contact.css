@@ -1,0 +1,605 @@
+/* ==========================================================================
+   AVENRIX HEALTHCARE SOLUTIONS — CONTACT US & ENQUIRY FORM
+   Modular Cohesive Dark Navy Architecture (.avx-contact)
+   Elite Clinical & Architectural Overhaul:
+   - Unified Cohesive Dark Canvas across Entire Section (No Split Break)
+   - Floating Architectural Form Container with Smooth 16px Radius
+   - Elite Low-Opacity Drop Shadow for Floating Weight
+   - Minimalist Form Inputs: Heavy Box Borders Stripped -> Dynamic Bottom Accent Lines
+   - Ultra-Clean Sans-Serif Typography & Refined Breathing Room
+   ========================================================================== */
+
+.avx-contact {
+  position: relative;
+  background: linear-gradient(180deg, var(--avx-navy-dark) 0%, #00182D 100%);
+  color: var(--avx-white);
+  padding-top: clamp(5rem, 8vw, 8rem);
+  padding-bottom: clamp(5rem, 8vw, 8rem);
+  scroll-margin-top: clamp(4rem, 8vw, 5.5rem);
+  border-top: none;
+  overflow: hidden;
+}
+
+/* Subtle Architectural Grid Background Watermark Across Entire Section */
+.avx-contact__aside-grid,
+.avx-contact__panel-grid {
+  display: none; /* Replaced by unified ambient grid */
+}
+
+.avx-contact__bg-grid {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background-image: 
+    linear-gradient(to right, var(--avx-grid-line-dark) 1px, transparent 1px),
+    linear-gradient(to bottom, var(--avx-grid-line-dark) 1px, transparent 1px);
+  background-size: var(--avx-grid-size) var(--avx-grid-size);
+  background-position: 0 0;
+  mask-image: radial-gradient(circle at 50% 40%, black 30%, transparent 85%);
+  -webkit-mask-image: radial-gradient(circle at 50% 40%, black 30%, transparent 85%);
+  z-index: 1;
+}
+
+/* --------------------------------------------------------------------------
+   Unified Cohesive Layout: 2-Column Desktop Grid
+   Left: Editorial Narrative & Capabilities
+   Right: Floating Translucent Form Card
+   -------------------------------------------------------------------------- */
+.avx-contact__split {
+  position: relative;
+  z-index: 2;
+  max-width: var(--avx-container-max);
+  margin: 0 auto;
+  padding-left: var(--avx-gutter);
+  padding-right: var(--avx-gutter);
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: clamp(2.5rem, 5vw, 4.5rem);
+  align-items: center;
+}
+
+@media (min-width: 992px) {
+  .avx-contact__split {
+    grid-template-columns: 1fr 1.08fr;
+    gap: clamp(3rem, 5vw, 5.5rem);
+  }
+}
+
+/* --------------------------------------------------------------------------
+   Left Column: Editorial Narrative & Capabilities
+   -------------------------------------------------------------------------- */
+.avx-contact__aside {
+  background: transparent;
+  color: var(--avx-white);
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+  border: none;
+}
+
+.avx-contact__aside-inner {
+  position: relative;
+  z-index: 2;
+  max-width: 540px;
+}
+
+/* Eyebrow & Index */
+.avx-contact__meta {
+  display: flex;
+  align-items: center;
+  gap: var(--avx-space-3);
+  margin-bottom: var(--avx-space-3);
+}
+
+.avx-contact__index {
+  font-family: var(--avx-font-sans);
+  font-size: var(--avx-text-xs);
+  font-weight: 700;
+  letter-spacing: var(--avx-tracking-widest);
+  color: var(--avx-orange);
+}
+
+.avx-contact__meta-sep {
+  color: rgba(255, 255, 255, 0.25);
+  font-size: var(--avx-text-xs);
+}
+
+.avx-contact__eyebrow {
+  margin-bottom: 0;
+  color: rgba(255, 255, 255, 0.85);
+}
+
+/* Left Main Display Heading */
+.avx-contact__title {
+  font-family: var(--avx-font-serif);
+  font-size: clamp(2rem, 3.2vw, 2.75rem);
+  line-height: var(--avx-leading-tight);
+  color: var(--avx-white);
+  font-weight: 400;
+  margin-top: 0;
+  margin-bottom: var(--avx-space-4);
+  letter-spacing: -0.025em;
+}
+
+.avx-contact__accent-rule {
+  width: 44px;
+  height: 3px;
+  background-color: var(--avx-orange);
+  border-radius: 2px;
+  margin-bottom: var(--avx-space-4);
+  transform-origin: left;
+}
+
+/* Supporting Copy */
+.avx-contact__lead {
+  font-family: var(--avx-font-sans);
+  font-size: clamp(0.9375rem, 0.2vw + 0.875rem, 1.02rem);
+  font-weight: 500;
+  line-height: 1.6;
+  letter-spacing: -0.01em;
+  color: rgba(255, 255, 255, 0.95);
+  margin-top: 0;
+  margin-bottom: var(--avx-space-3);
+}
+
+.avx-contact__desc {
+  font-family: var(--avx-font-sans);
+  font-size: 0.875rem;
+  line-height: 1.65;
+  letter-spacing: -0.005em;
+  color: var(--avx-slate-300);
+  margin-top: 0;
+  margin-bottom: var(--avx-space-4);
+}
+
+/* Left Technical Capabilities Bar */
+.avx-contact__caps {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0.625rem;
+  margin-top: var(--avx-space-4);
+  padding-top: var(--avx-space-4);
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.avx-contact__cap-item {
+  display: flex;
+  align-items: center;
+  gap: 0.875rem;
+  padding: 0.6rem 0.875rem;
+  background-color: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: 10px;
+  transition: background-color var(--avx-transition-fast), border-color var(--avx-transition-fast);
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .avx-contact__cap-item:hover {
+    background-color: rgba(255, 255, 255, 0.06);
+    border-color: rgba(241, 100, 25, 0.3);
+  }
+}
+
+.avx-contact__cap-num {
+  font-family: var(--avx-font-sans);
+  font-size: 0.6875rem;
+  font-weight: 700;
+  color: var(--avx-orange);
+  letter-spacing: 0.12em;
+  flex-shrink: 0;
+}
+
+.avx-contact__cap-text {
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+}
+
+.avx-contact__cap-title {
+  font-family: var(--avx-font-sans);
+  font-size: 0.8125rem;
+  font-weight: 600;
+  color: var(--avx-white);
+  line-height: 1.25;
+}
+
+.avx-contact__cap-desc {
+  font-family: var(--avx-font-sans);
+  font-size: 0.75rem;
+  color: var(--avx-slate-400);
+  line-height: 1.35;
+}
+
+/* --------------------------------------------------------------------------
+   Right Column: Floating Translucent Form Card
+   Smooth 16px border-radius, elite low-opacity drop shadow
+   -------------------------------------------------------------------------- */
+.avx-contact__panel {
+  background: linear-gradient(160deg, rgba(255, 255, 255, 0.06) 0%, rgba(255, 255, 255, 0.02) 100%);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 16px; /* Smooth 16px radius */
+  box-shadow: 
+    0 30px 70px -15px rgba(0, 0, 0, 0.45),
+    0 10px 25px -5px rgba(0, 0, 0, 0.25),
+    0 0 1px 1px rgba(255, 255, 255, 0.06); /* Elite low-opacity floating weight */
+  padding: clamp(1.75rem, 3.2vw, 2.75rem);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.avx-contact__panel-inner {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+}
+
+/* Form Header Block */
+.avx-contact__form-header {
+  margin-bottom: 1.25rem;
+}
+
+.avx-contact__form-title {
+  font-family: var(--avx-font-serif);
+  font-size: clamp(1.35rem, 1.8vw, 1.65rem);
+  line-height: var(--avx-leading-tight);
+  color: var(--avx-white);
+  font-weight: 400;
+  margin-top: 0;
+  margin-bottom: 0.35rem;
+  letter-spacing: -0.015em;
+}
+
+.avx-contact__form-intro {
+  font-family: var(--avx-font-sans);
+  font-size: 0.8125rem;
+  line-height: 1.5;
+  letter-spacing: -0.005em;
+  color: var(--avx-slate-300);
+  margin: 0;
+}
+
+/* --------------------------------------------------------------------------
+   Enquiry Form: Sleek Minimal Fields with Dynamic Bottom Accent Line
+   Heavy structural box borders completely stripped.
+   -------------------------------------------------------------------------- */
+.avx-contact__form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  position: relative;
+  transition: opacity 0.35s ease, transform 0.35s ease;
+}
+
+.avx-contact__form.is-hidden {
+  display: none;
+  opacity: 0;
+}
+
+/* 2-Column Responsive Field Grid on Desktop */
+.avx-contact__row {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.15rem;
+}
+
+@media (min-width: 640px) {
+  .avx-contact__row--two-col {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+/* Field Group */
+.avx-contact__field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  position: relative;
+}
+
+/* Minimalist Label Styling */
+.avx-contact__label {
+  font-family: var(--avx-font-sans);
+  font-size: 0.6875rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.7);
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+  transition: color 0.25s ease;
+}
+
+.avx-contact__required {
+  color: var(--avx-orange);
+  font-weight: 700;
+}
+
+.avx-contact__optional {
+  font-size: 0.625rem;
+  font-weight: 400;
+  color: rgba(255, 255, 255, 0.4);
+  text-transform: lowercase;
+  margin-left: 0.25rem;
+}
+
+/* Minimal Sleek Input, Select, Textarea Primitives (Bottom Accent Line Only) */
+.avx-contact__input,
+.avx-contact__select,
+.avx-contact__textarea {
+  width: 100%;
+  font-family: var(--avx-font-sans);
+  font-size: 0.9375rem;
+  line-height: 1.4;
+  color: var(--avx-white);
+  background-color: transparent;
+  /* Stripped white box & heavy borders */
+  border: none;
+  border-bottom: 1.5px solid rgba(255, 255, 255, 0.15);
+  border-radius: 0;
+  padding: 0.65rem 0.25rem;
+  min-height: var(--avx-touch-target);
+  box-sizing: border-box;
+  transition: 
+    border-bottom-color 0.25s ease,
+    background-color 0.25s ease,
+    box-shadow 0.25s ease;
+  outline: none;
+}
+
+.avx-contact__input::placeholder,
+.avx-contact__textarea::placeholder {
+  color: rgba(255, 255, 255, 0.35);
+  font-size: 0.84375rem;
+}
+
+/* Native Select Dropdown Styling in Dark Canvas */
+.avx-contact__select {
+  appearance: none;
+  -webkit-appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg width='12' height='8' viewBox='0 0 12 8' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 1.5L6 6.5L11 1.5' stroke='%23F16419' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 0.25rem center;
+  padding-right: 1.75rem;
+  cursor: pointer;
+}
+
+.avx-contact__select:invalid,
+.avx-contact__select option[value=""] {
+  color: rgba(255, 255, 255, 0.4);
+}
+
+.avx-contact__select option {
+  color: var(--avx-slate-900);
+  background-color: #FFFFFF;
+}
+
+/* Textarea Specifics */
+.avx-contact__textarea {
+  min-height: 54px;
+  max-height: 110px;
+  resize: vertical;
+  padding: 0.65rem 0.25rem;
+}
+
+/* Dynamic Transform on Click / Focus */
+.avx-contact__input:focus,
+.avx-contact__select:focus,
+.avx-contact__textarea:focus {
+  background-color: rgba(255, 255, 255, 0.04);
+  border-bottom-color: var(--avx-orange);
+  box-shadow: 0 1px 0 0 var(--avx-orange);
+}
+
+.avx-contact__field:focus-within .avx-contact__label {
+  color: var(--avx-orange);
+}
+
+/* Error States */
+.avx-contact__field.has-error .avx-contact__input,
+.avx-contact__field.has-error .avx-contact__select,
+.avx-contact__field.has-error .avx-contact__textarea {
+  border-bottom-color: #EF4444;
+  box-shadow: 0 1px 0 0 #EF4444;
+  background-color: rgba(239, 68, 68, 0.05);
+}
+
+.avx-contact__field.has-error .avx-contact__input:focus,
+.avx-contact__field.has-error .avx-contact__select:focus,
+.avx-contact__field.has-error .avx-contact__textarea:focus {
+  border-bottom-color: #EF4444;
+  box-shadow: 0 1px 0 0 #EF4444;
+}
+
+.avx-contact__error {
+  font-family: var(--avx-font-sans);
+  font-size: 0.6875rem;
+  font-weight: 500;
+  color: #FCA5A5; /* Soft light coral on dark background */
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  min-height: 1em;
+  margin-top: 0.2rem;
+  opacity: 0;
+  transform: translateY(-2px);
+  transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+.avx-contact__field.has-error .avx-contact__error {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Submit Button */
+.avx-contact__submit-wrap {
+  margin-top: 0.5rem;
+}
+
+.avx-contact__submit {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--avx-space-3);
+  background-color: var(--avx-orange);
+  color: var(--avx-white);
+  font-family: var(--avx-font-sans);
+  font-size: 0.875rem;
+  font-weight: 600;
+  letter-spacing: var(--avx-tracking-wide);
+  padding: 0.75rem 2rem;
+  min-height: var(--avx-touch-target);
+  border-radius: 10px;
+  cursor: pointer;
+  border: 1px solid transparent;
+  box-shadow: 0 4px 16px -2px rgba(241, 100, 25, 0.4);
+  transition: 
+    background-color var(--avx-transition-fast),
+    transform var(--avx-transition-fast),
+    box-shadow var(--avx-transition-fast);
+  outline: none;
+}
+
+.avx-contact__submit:active {
+  transform: translateY(1px);
+  box-shadow: none;
+}
+
+.avx-contact__submit:focus-visible {
+  outline: 2px solid var(--avx-white);
+  outline-offset: 3px;
+}
+
+.avx-contact__arrow {
+  width: 16px;
+  height: 16px;
+  transition: transform var(--avx-transition-fast);
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .avx-contact__submit:hover {
+    background-color: var(--avx-orange-hover);
+    transform: translateY(-1px);
+    box-shadow: 0 8px 24px rgba(241, 100, 25, 0.45);
+  }
+
+  .avx-contact__submit:hover .avx-contact__arrow {
+    transform: translateX(4px);
+  }
+}
+
+/* --------------------------------------------------------------------------
+   Polished Success State
+   -------------------------------------------------------------------------- */
+.avx-contact__success {
+  display: none;
+  background-color: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-left: 4px solid var(--avx-orange);
+  border-radius: 12px;
+  padding: clamp(2rem, 3.5vw, 2.75rem);
+  text-align: left;
+  opacity: 0;
+  transform: translateY(12px);
+  transition: opacity 0.4s ease, transform 0.4s ease;
+}
+
+.avx-contact__success.is-visible {
+  display: flex;
+  flex-direction: column;
+  gap: var(--avx-space-4);
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.avx-contact__success-icon-wrap {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background-color: rgba(241, 100, 25, 0.15);
+  border: 1.5px solid var(--avx-orange);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--avx-orange);
+}
+
+.avx-contact__success-title {
+  font-family: var(--avx-font-serif);
+  font-size: 1.45rem;
+  font-weight: 500;
+  color: var(--avx-white);
+  margin: 0;
+}
+
+.avx-contact__success-msg {
+  font-family: var(--avx-font-sans);
+  font-size: 0.875rem;
+  line-height: 1.6;
+  color: var(--avx-slate-300);
+  margin: 0;
+}
+
+.avx-contact__reset-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: transparent;
+  border: none;
+  color: var(--avx-orange);
+  font-family: var(--avx-font-sans);
+  font-size: 0.8125rem;
+  font-weight: 600;
+  cursor: pointer;
+  padding: 0.5rem 0;
+  min-height: var(--avx-touch-target);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  transition: color var(--avx-transition-fast);
+}
+
+.avx-contact__reset-btn:hover {
+  color: var(--avx-white);
+}
+
+.avx-contact__reset-btn:focus-visible {
+  outline: 2px solid var(--avx-orange);
+  outline-offset: 2px;
+}
+
+/* --------------------------------------------------------------------------
+   Responsive Adaptations
+   -------------------------------------------------------------------------- */
+@media (max-width: 991px) {
+  .avx-contact {
+    padding-top: 4.5rem;
+    padding-bottom: 4.5rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .avx-contact {
+    padding-top: 3.5rem;
+    padding-bottom: 3.5rem;
+  }
+
+  .avx-contact__panel {
+    padding: 1.5rem 1.25rem;
+    border-radius: 16px;
+  }
+
+  .avx-contact__title {
+    font-size: 1.85rem;
+  }
+
+  .avx-contact__submit {
+    width: 100%;
+  }
+}

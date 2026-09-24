@@ -1,0 +1,122 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 420" width="100%" height="100%" fill="none" role="img" aria-label="Avenrix Critical Environment Architectural Schematic">
+  <defs>
+    <!-- Grid Pattern -->
+    <pattern id="archGrid" width="30" height="30" patternUnits="userSpaceOnUse">
+      <path d="M 30 0 L 0 0 0 30" fill="none" stroke="#012C4E" stroke-width="0.5" stroke-opacity="0.08" />
+    </pattern>
+
+    <!-- Airflow Gradient -->
+    <linearGradient id="airFlowGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#F16419" stop-opacity="0.8" />
+      <stop offset="100%" stop-color="#012C4E" stop-opacity="0.1" />
+    </linearGradient>
+
+    <!-- Pressure Gradient -->
+    <linearGradient id="pressureGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#012C4E" stop-opacity="0.04" />
+      <stop offset="100%" stop-color="#012C4E" stop-opacity="0.12" />
+    </linearGradient>
+  </defs>
+
+  <!-- Background Base -->
+  <rect width="600" height="420" fill="#FFFFFF" />
+  <rect width="600" height="420" fill="url(#archGrid)" />
+
+  <!-- Outer Architectural Framing Border -->
+  <rect x="25" y="25" width="550" height="370" stroke="#012C4E" stroke-opacity="0.18" stroke-width="1" />
+  <rect x="30" y="30" width="540" height="360" stroke="#012C4E" stroke-opacity="0.08" stroke-width="0.5" stroke-dasharray="4 4" />
+
+  <!-- Top Plenum / AHU Supply Duct -->
+  <rect x="70" y="55" width="460" height="48" fill="url(#pressureGrad)" stroke="#012C4E" stroke-width="1.2" stroke-opacity="0.7" />
+  <text x="85" y="74" font-family="'Inter', sans-serif" font-size="9" font-weight="600" letter-spacing="1" fill="#012C4E">PLENUM AIR SUPPLY SYSTEM [AHU-VAV]</text>
+  <text x="85" y="88" font-family="'Inter', sans-serif" font-size="8" fill="#64748B">TEMP: 21°C ± 1°C | RH: 45% - 55%</text>
+
+  <!-- HEPA Terminal Units -->
+  <g stroke="#012C4E" stroke-width="1">
+    <!-- Filter 1 -->
+    <rect x="110" y="103" width="90" height="18" fill="#FFFFFF" stroke="#012C4E" stroke-opacity="0.8" />
+    <path d="M 115 103 L 125 121 M 125 103 L 135 121 M 135 103 L 145 121 M 145 103 L 155 121 M 155 103 L 165 121 M 165 103 L 175 121 M 175 103 L 185 121 M 185 103 L 195 121" stroke="#012C4E" stroke-opacity="0.25" stroke-width="0.75" />
+    
+    <!-- Filter 2 (Center) -->
+    <rect x="255" y="103" width="90" height="18" fill="#FFFFFF" stroke="#012C4E" stroke-opacity="0.8" />
+    <path d="M 260 103 L 270 121 M 270 103 L 280 121 M 280 103 L 290 121 M 290 103 L 300 121 M 300 103 L 310 121 M 310 103 L 320 121 M 320 103 L 330 121 M 330 103 L 340 121" stroke="#012C4E" stroke-opacity="0.25" stroke-width="0.75" />
+
+    <!-- Filter 3 -->
+    <rect x="400" y="103" width="90" height="18" fill="#FFFFFF" stroke="#012C4E" stroke-opacity="0.8" />
+    <path d="M 405 103 L 415 121 M 415 103 L 425 121 M 425 103 L 435 121 M 435 103 L 445 121 M 445 103 L 455 121 M 455 103 L 465 121 M 465 103 L 475 121 M 475 103 L 485 121" stroke="#012C4E" stroke-opacity="0.25" stroke-width="0.75" />
+  </g>
+
+  <!-- Filter Label -->
+  <text x="300" y="132" font-family="'Inter', sans-serif" font-size="8" font-weight="600" fill="#F16419" text-anchor="middle" letter-spacing="0.5">HEPA H14 TERMINAL FILTRATION (99.995%)</text>
+
+  <!-- Laminar Airflow Directional Vectors -->
+  <g stroke="url(#airFlowGrad)" stroke-width="1.2" stroke-dasharray="3 3">
+    <!-- Stream Column 1 -->
+    <line x1="130" y1="140" x2="130" y2="280" />
+    <line x1="155" y1="140" x2="155" y2="280" />
+    <line x1="180" y1="140" x2="180" y2="280" />
+
+    <!-- Stream Column 2 (Center) -->
+    <line x1="275" y1="140" x2="275" y2="280" />
+    <line x1="300" y1="140" x2="300" y2="280" />
+    <line x1="325" y1="140" x2="325" y2="280" />
+
+    <!-- Stream Column 3 -->
+    <line x1="420" y1="140" x2="420" y2="280" />
+    <line x1="445" y1="140" x2="445" y2="280" />
+    <line x1="470" y1="140" x2="470" y2="280" />
+  </g>
+
+  <!-- Flow Direction Arrows -->
+  <g fill="#F16419">
+    <polygon points="155,230 152,224 158,224" />
+    <polygon points="300,230 297,224 303,224" />
+    <polygon points="445,230 442,224 448,224" />
+  </g>
+
+  <!-- Modular Wall Enclosures (Side Boundaries) -->
+  <!-- Left Wall -->
+  <rect x="70" y="103" width="16" height="232" fill="#F5F7F8" stroke="#012C4E" stroke-width="1" stroke-opacity="0.6" />
+  <line x1="78" y1="103" x2="78" y2="335" stroke="#012C4E" stroke-width="0.5" stroke-dasharray="2 2" stroke-opacity="0.4" />
+  <!-- Right Wall -->
+  <rect x="514" y="103" width="16" height="232" fill="#F5F7F8" stroke="#012C4E" stroke-width="1" stroke-opacity="0.6" />
+  <line x1="522" y1="103" x2="522" y2="335" stroke="#012C4E" stroke-width="0.5" stroke-dasharray="2 2" stroke-opacity="0.4" />
+
+  <!-- Return Air Plinths (Lower corners) -->
+  <rect x="86" y="295" width="28" height="40" fill="#FFFFFF" stroke="#012C4E" stroke-width="0.8" stroke-opacity="0.5" />
+  <path d="M 88 303 L 112 303 M 88 313 L 112 313 M 88 323 L 112 323" stroke="#012C4E" stroke-width="0.75" stroke-opacity="0.4" />
+  
+  <rect x="486" y="295" width="28" height="40" fill="#FFFFFF" stroke="#012C4E" stroke-width="0.8" stroke-opacity="0.5" />
+  <path d="M 488 303 L 512 303 M 488 313 L 512 313 M 488 323 L 512 323" stroke="#012C4E" stroke-width="0.75" stroke-opacity="0.4" />
+
+  <!-- Specialized Seamless Flooring Substrate -->
+  <rect x="70" y="335" width="460" height="20" fill="#012C4E" fill-opacity="0.08" stroke="#012C4E" stroke-width="1" stroke-opacity="0.6" />
+  <text x="300" y="348" font-family="'Inter', sans-serif" font-size="8" font-weight="600" fill="#012C4E" text-anchor="middle" letter-spacing="1">CONDUCTIVE SEAMLESS HYGIENIC FLOORING BASE</text>
+
+  <!-- Technical Spec Callout Box (Center Cleanroom Data) -->
+  <g transform="translate(190, 165)">
+    <rect x="0" y="0" width="220" height="52" rx="2" fill="#FFFFFF" stroke="#012C4E" stroke-width="0.8" stroke-opacity="0.3" filter="drop-shadow(0 2px 8px rgba(1,44,78,0.06))" />
+    <rect x="0" y="0" width="4" height="52" fill="#F16419" />
+    <text x="14" y="16" font-family="'Inter', sans-serif" font-size="8" font-weight="700" letter-spacing="1" fill="#012C4E">CONTROLLED ENVIRONMENT PARAMETERS</text>
+    <text x="14" y="30" font-family="'Inter', sans-serif" font-size="7.5" fill="#475569">PRESSURE CASCADE: +15 Pa POSITIVE DIFFERENTIAL</text>
+    <text x="14" y="42" font-family="'Inter', sans-serif" font-size="7.5" fill="#475569">AIRFLOW VELOCITY: 0.45 m/s UNIDIRECTIONAL</text>
+  </g>
+
+  <!-- Precision Dimension Lines & Markers -->
+  <g stroke="#64748B" stroke-width="0.6" stroke-opacity="0.5">
+    <!-- Top Dimension Line -->
+    <line x1="70" y1="45" x2="530" y2="45" />
+    <line x1="70" y1="41" x2="70" y2="49" />
+    <line x1="530" y1="41" x2="530" y2="49" />
+    <!-- Side Dimension Line -->
+    <line x1="55" y1="55" x2="55" y2="355" />
+    <line x1="51" y1="55" x2="59" y2="55" />
+    <line x1="51" y1="355" x2="59" y2="355" />
+  </g>
+  <text x="300" y="42" font-family="'Inter', sans-serif" font-size="7.5" font-weight="500" fill="#64748B" text-anchor="middle">SPAN: 6,000 mm</text>
+  <text x="50" y="210" font-family="'Inter', sans-serif" font-size="7.5" font-weight="500" fill="#64748B" text-anchor="middle" transform="rotate(-90 50 210)">CLEAR HEIGHT: 3,000 mm</text>
+
+  <!-- Bottom Technical Engineering Footnote -->
+  <text x="35" y="385" font-family="'Inter', sans-serif" font-size="7.5" font-weight="600" letter-spacing="1" fill="#012C4E">AVENRIX HEALTHCARE SOLUTIONS // TECHNICAL INFRASTRUCTURE SCHEMATIC</text>
+  <text x="565" y="385" font-family="'Inter', sans-serif" font-size="7.5" font-weight="500" letter-spacing="0.5" fill="#64748B" text-anchor="end">SYS-REF: AVX-ENV-01</text>
+</svg>

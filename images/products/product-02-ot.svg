@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" width="100%" height="100%" fill="none" role="img" aria-label="Modular Operation Theatres">
+  <defs>
+    <pattern id="grid-02-OT" width="20" height="20" patternUnits="userSpaceOnUse">
+      <path d="M 20 0 L 0 0 0 20" fill="none" stroke="#012C4E" stroke-width="0.5" stroke-opacity="0.06" />
+    </pattern>
+    <linearGradient id="grad-02-OT" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#F8FAFC" />
+      <stop offset="100%" stop-color="#E2E8F0" />
+    </linearGradient>
+  </defs>
+  <rect width="400" height="300" fill="#FFFFFF" />
+  <rect width="400" height="300" fill="url(#grid-02-OT)" />
+  <!-- Outer border -->
+  <rect x="15" y="15" width="370" height="270" stroke="#012C4E" stroke-width="0.8" stroke-opacity="0.15" />
+  <!-- Registration corners -->
+  <path d="M 20 25 L 20 20 L 25 20 M 375 25 L 375 20 L 370 20 M 20 275 L 20 280 L 25 280 M 375 275 L 375 280 L 370 280" stroke="#64748B" stroke-width="0.8" />
+  <!-- Header meta -->
+  <text x="28" y="32" font-family="'Inter', sans-serif" font-size="7.5" font-weight="600" letter-spacing="1" fill="#012C4E">SYS // 02-OT</text>
+  <circle cx="368" cy="30" r="3" fill="#F16419" />
+  <!-- Content Graphic -->
+  
+  <g transform="translate(50, 50)">
+    <rect x="20" y="20" width="260" height="165" fill="#F8FAFC" stroke="#012C4E" stroke-width="1.2" />
+    <rect x="80" y="20" width="140" height="20" fill="#FFFFFF" stroke="#012C4E" stroke-width="1" />
+    <line x1="80" y1="30" x2="220" y2="30" stroke="#F16419" stroke-width="1" stroke-dasharray="2 2" />
+    <line x1="150" y1="40" x2="150" y2="75" stroke="#012C4E" stroke-width="1.5" />
+    <line x1="150" y1="75" x2="120" y2="85" stroke="#012C4E" stroke-width="1.2" />
+    <ellipse cx="115" cy="90" rx="22" ry="8" fill="#FFFFFF" stroke="#012C4E" stroke-width="1" />
+    <circle cx="115" cy="90" r="3" fill="#F16419" />
+    <rect x="110" y="140" width="80" height="10" rx="2" fill="#012C4E" />
+    <rect x="142" y="150" width="16" height="25" fill="#64748B" />
+    <rect x="130" y="175" width="40" height="10" fill="#012C4E" />
+    <rect x="20" y="80" width="8" height="105" fill="#F16419" />
+    <rect x="28" y="75" width="35" height="110" fill="#FFFFFF" stroke="#012C4E" stroke-width="0.8" />
+    <rect x="35" y="90" width="12" height="28" fill="#F1F5F9" stroke="#012C4E" stroke-width="0.5" />
+    <rect x="245" y="80" width="25" height="40" rx="1" fill="#FFFFFF" stroke="#012C4E" stroke-width="0.8" />
+    <rect x="248" y="85" width="19" height="15" fill="#012C4E" />
+    <circle cx="258" cy="110" r="2" fill="#F16419" />
+  </g>
+
+  <!-- Bottom bar -->
+  <line x1="15" y1="268" x2="385" y2="268" stroke="#012C4E" stroke-width="0.6" stroke-opacity="0.1" />
+  <text x="28" y="280" font-family="'Inter', sans-serif" font-size="7" font-weight="600" fill="#012C4E">MODULAR OPERATION THEATRES</text>
+  <text x="372" y="280" font-family="'Inter', sans-serif" font-size="6.5" fill="#64748B" text-anchor="end">AVENRIX TECHNICAL SPEC</text>
+</svg>

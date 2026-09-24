@@ -1,0 +1,348 @@
+/* ==========================================================================
+   AVENRIX HEALTHCARE SOLUTIONS — HERO SECTION
+   Modular Hero Styles (.avx-hero)
+   Elite, Clinical, Architectural Overhaul:
+   - 1.5x Increased Vertical Padding
+   - Asymmetric Layout with Left-Aligned Focus
+   - Massive Headline with Tight Letter-Spacing (-0.03em)
+   - Organic Rounded Blueprint Frame for Schematic Diagram
+   - Kill Solid Grey Outlines -> Soft Shadow Depth & Faint Divider Tones
+   ========================================================================== */
+
+.avx-hero {
+  position: relative;
+  overflow: hidden;
+  background-color: var(--avx-white);
+  /* 1.5x increased vertical padding */
+  padding-top: clamp(10.5rem, 14vw + 2.5rem, 16.5rem);
+  padding-bottom: clamp(5.25rem, 8.5vw, 9.5rem);
+}
+
+/* Subtle Architectural Grid Background */
+.avx-hero__grid-bg {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background-image: 
+    linear-gradient(to right, var(--avx-grid-line-light) 1px, transparent 1px),
+    linear-gradient(to bottom, var(--avx-grid-line-light) 1px, transparent 1px);
+  background-size: var(--avx-grid-size) var(--avx-grid-size);
+  background-position: 0 0;
+  mask-image: radial-gradient(circle at 65% 45%, black 25%, transparent 80%);
+  -webkit-mask-image: radial-gradient(circle at 65% 45%, black 25%, transparent 80%);
+  z-index: 1;
+}
+
+.avx-hero__container {
+  position: relative;
+  z-index: 2;
+}
+
+/* --------------------------------------------------------------------------
+   Asymmetric Editorial Grid Layout
+   Reposition content tightly to the left with wide asymmetric distribution
+   -------------------------------------------------------------------------- */
+.avx-hero__layout {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--avx-space-10);
+  align-items: center;
+}
+
+@media (min-width: 992px) {
+  .avx-hero__layout {
+    grid-template-columns: 1.25fr 0.95fr;
+    gap: clamp(2.5rem, 5.5vw, 6rem);
+    align-items: center;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   Hero Content (Left Column)
+   -------------------------------------------------------------------------- */
+.avx-hero__content {
+  display: flex;
+  flex-direction: column;
+  max-width: 660px;
+}
+
+.avx-hero__eyebrow {
+  margin-bottom: clamp(1rem, 1.5vw, 1.5rem);
+}
+
+/* Massive Headline utilizing tight letter-spacing (-0.03em) */
+.avx-hero__title {
+  font-family: var(--avx-font-serif);
+  font-size: clamp(2.25rem, 4.3vw, 3.85rem);
+  line-height: 1.06;
+  font-weight: 400;
+  letter-spacing: -0.03em;
+  color: var(--avx-navy);
+  margin-bottom: clamp(1.25rem, 1.8vw, 1.75rem);
+}
+
+.avx-hero__title-accent {
+  color: var(--avx-navy);
+  font-style: italic;
+  position: relative;
+}
+
+/* Refined Sans-Serif Body Copy with Generous Breathing Room */
+.avx-hero__desc {
+  font-family: var(--avx-font-sans);
+  font-size: clamp(0.9375rem, 0.25vw + 0.875rem, 1.0625rem);
+  line-height: 1.68;
+  letter-spacing: -0.01em;
+  color: var(--avx-slate-600);
+  max-width: 530px;
+  margin-bottom: clamp(1.75rem, 2.5vw, 2.5rem);
+}
+
+.avx-hero__ctas {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--avx-space-4);
+  align-items: center;
+}
+
+.avx-hero__btn-primary {
+  box-shadow: 0 4px 16px -2px rgba(241, 100, 25, 0.35);
+}
+
+.avx-hero__btn-primary .avx-icon {
+  transition: transform var(--avx-transition-fast);
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .avx-hero__btn-primary:hover .avx-icon {
+    transform: translateX(4px);
+  }
+}
+
+.avx-hero__btn-primary:focus-visible .avx-icon {
+  transform: translateX(4px);
+}
+
+.avx-hero__btn-secondary {
+  border-color: rgba(1, 44, 78, 0.18);
+  background-color: transparent;
+  color: var(--avx-navy);
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .avx-hero__btn-secondary:hover {
+    background-color: var(--avx-navy);
+    color: var(--avx-white);
+    border-color: var(--avx-navy);
+  }
+}
+
+/* --------------------------------------------------------------------------
+   Hero Visual / Blueprint Device Frame (Right Column)
+   Moved out of rigid rectangular box into an organic rounded blueprint frame
+   with floating soft shadow depth.
+   -------------------------------------------------------------------------- */
+.avx-hero__visual-wrapper {
+  width: 100%;
+  position: relative;
+}
+
+.avx-hero__visual {
+  position: relative;
+  background: linear-gradient(155deg, rgba(255, 255, 255, 0.98) 0%, rgba(248, 250, 252, 0.9) 100%);
+  border: 1px solid rgba(0, 0, 0, 0.04);
+  border-radius: 28px;
+  padding: clamp(1.5rem, 2.5vw, 2.25rem);
+  box-shadow: 
+    0 30px 60px -15px rgba(1, 44, 78, 0.08),
+    0 10px 25px -5px rgba(1, 44, 78, 0.04),
+    0 0 1px 1px rgba(0, 0, 0, 0.02);
+  overflow: hidden;
+  transition: 
+    box-shadow var(--avx-transition-medium),
+    transform var(--avx-transition-medium);
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .avx-hero__visual:hover {
+    box-shadow: 
+      0 40px 75px -15px rgba(1, 44, 78, 0.12),
+      0 15px 35px -5px rgba(1, 44, 78, 0.06),
+      0 0 1px 1px rgba(0, 0, 0, 0.03);
+    transform: translateY(-2px);
+  }
+}
+
+/* Remove rigid crosshair corners */
+.avx-hero__corner {
+  display: none;
+}
+
+/* Refined Minimalist Blueprint Header */
+.avx-hero__visual-meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.04);
+  padding-bottom: 0.875rem;
+  margin-bottom: 1.25rem;
+  font-family: var(--avx-font-sans);
+  font-size: 0.6875rem;
+  letter-spacing: 0.12em;
+  color: var(--avx-slate-500);
+  text-transform: uppercase;
+}
+
+.avx-hero__visual-status {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--avx-space-2);
+  color: var(--avx-navy);
+  font-weight: 600;
+  font-size: 0.6875rem;
+}
+
+.avx-hero__status-pulse {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: var(--avx-orange);
+  position: relative;
+}
+
+.avx-hero__status-pulse::after {
+  content: '';
+  position: absolute;
+  inset: -3px;
+  border-radius: 50%;
+  border: 1px solid var(--avx-orange);
+  opacity: 0.6;
+}
+
+/* Freely Floating Schematic Vector Graphic Container */
+.avx-hero__schematic {
+  width: 100%;
+  aspect-ratio: 16 / 11;
+  background: transparent;
+  border: none;
+  border-radius: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+  padding: 0.5rem 0;
+  filter: drop-shadow(0 6px 20px rgba(1, 44, 78, 0.05));
+}
+
+.avx-hero__schematic-svg {
+  width: 94%;
+  height: 94%;
+  object-fit: contain;
+  transition: transform var(--avx-transition-medium);
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .avx-hero__visual:hover .avx-hero__schematic-svg {
+    transform: scale(1.015);
+  }
+}
+
+/* Sleek Floating Blueprint Specification Strip */
+.avx-hero__visual-spec {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.75rem;
+  margin-top: 1.25rem;
+  padding: 0.875rem 1.15rem;
+  border: none;
+  background: rgba(241, 245, 249, 0.7);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border-radius: 16px;
+}
+
+.avx-hero__spec-item {
+  display: flex;
+  flex-direction: column;
+}
+
+.avx-hero__spec-label {
+  font-size: 0.625rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--avx-slate-500);
+  font-weight: 500;
+}
+
+.avx-hero__spec-val {
+  font-family: var(--avx-font-sans);
+  font-size: 0.78125rem;
+  color: var(--avx-navy);
+  font-weight: 600;
+  margin-top: 2px;
+  letter-spacing: -0.01em;
+}
+
+/* --------------------------------------------------------------------------
+   Mobile & Responsive Adaptations
+   -------------------------------------------------------------------------- */
+@media (max-width: 991px) {
+  .avx-hero {
+    padding-top: 8rem;
+    padding-bottom: 4.5rem;
+  }
+  
+  .avx-hero__content {
+    max-width: 100%;
+  }
+
+  .avx-hero__desc {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 576px) {
+  .avx-hero {
+    padding-top: 7rem;
+    padding-bottom: 3.5rem;
+  }
+
+  .avx-hero__title {
+    font-size: 2.15rem;
+    letter-spacing: -0.025em;
+  }
+
+  .avx-hero__ctas {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .avx-hero__btn-primary,
+  .avx-hero__btn-secondary {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .avx-hero__visual-spec {
+    grid-template-columns: 1fr;
+    gap: 0.5rem;
+    padding: 0.75rem;
+  }
+}
+
+/* Short Viewport Heights (Landscape Mobile & Compact Laptops) */
+@media (max-height: 650px) and (orientation: landscape) {
+  .avx-hero {
+    padding-top: 5.5rem;
+    padding-bottom: 2.5rem;
+  }
+
+  .avx-hero__layout {
+    gap: var(--avx-space-6);
+  }
+
+  .avx-hero__desc {
+    margin-bottom: var(--avx-space-4);
+  }
+}
