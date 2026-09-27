@@ -113,17 +113,31 @@
     aria-label="Mobile Navigation Drawer" 
     aria-hidden="true"
   >
+    <div class="avx-drawer__header">
+      <a href="#home" class="avx-drawer__brand" aria-label="Avenrix Healthcare Solutions Home">
+        <div class="avx-drawer__logo-badge">
+          <img 
+            src="images/Avenrix Logo Horizontal.png" 
+            alt="Avenrix Healthcare Solutions" 
+            class="avx-drawer__logo" 
+            width="120" 
+            height="32"
+            decoding="async"
+          >
+        </div>
+      </a>
+      <button 
+        type="button"
+        class="avx-drawer__close" 
+        id="drawerClose" 
+        aria-label="Close Navigation Menu"
+      >
+        <svg class="avx-drawer__close-icon" width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true">
+          <path d="M15 5L5 15M5 5L15 15" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </button>
+    </div>
     <div class="avx-drawer__content">
-      <div class="avx-drawer__brand">
-        <img 
-          src="images/Avenrix Logo Vertical.png" 
-          alt="Avenrix Healthcare Solutions" 
-          class="avx-drawer__logo" 
-          width="54" 
-          height="40"
-          decoding="async"
-        >
-      </div>
       <nav class="avx-drawer__nav" aria-label="Mobile Menu Links">
         <ul class="avx-drawer__list">
           <li class="avx-drawer__item"><a href="#home" class="avx-drawer__link">Home</a></li>
@@ -240,7 +254,6 @@
         <!-- Top Editorial Block -->
         <div class="avx-about__header">
           <div class="avx-about__meta">
-            <span class="avx-about__index">01</span>
             <div class="avx-eyebrow avx-about__eyebrow">
               <span>About Avenrix</span>
             </div>
@@ -364,7 +377,6 @@
         <!-- Section Header Block -->
         <div class="avx-products__header">
           <div class="avx-products__meta">
-            <span class="avx-products__index">02</span>
             <div class="avx-eyebrow avx-products__eyebrow">
               <span>Our Products &amp; Services</span>
             </div>
@@ -707,8 +719,6 @@
           <!-- Left Column: Sticky Editorial Header & Quality Manifesto -->
           <aside class="avx-values__aside">
             <div class="avx-values__meta">
-              <span class="avx-values__index">03</span>
-              <span class="avx-values__meta-sep" aria-hidden="true">/</span>
               <div class="avx-eyebrow avx-values__eyebrow">
                 <span>What We Stand For</span>
               </div>
@@ -884,8 +894,6 @@
           <div class="avx-contact__aside-grid" aria-hidden="true"></div>
           <div class="avx-contact__aside-inner">
             <div class="avx-contact__meta">
-              <span class="avx-contact__index">05</span>
-              <span class="avx-contact__meta-sep">/</span>
               <span class="avx-eyebrow avx-contact__eyebrow">Contact Us</span>
             </div>
             <h2 class="avx-contact__title" id="contact-heading">
@@ -1025,15 +1033,15 @@
                 </label>
                 <select id="avxContactProduct" name="product" class="avx-contact__select">
                   <option value="">Select a solution</option>
-                  <option value="AHUs &amp; HVAC Systems">01 — AHUs &amp; HVAC Systems</option>
-                  <option value="Modular Operation Theatres">02 — Modular Operation Theatres</option>
-                  <option value="Cleanrooms">03 — Cleanrooms</option>
-                  <option value="IVF Laboratories">04 — IVF Laboratories</option>
-                  <option value="Medical Gas Pipeline Systems">05 — Medical Gas Pipeline Systems</option>
-                  <option value="Wall &amp; Ceiling Panels">06 — Wall &amp; Ceiling Panels</option>
-                  <option value="Specialized Flooring">07 — Specialized Flooring</option>
-                  <option value="Medical Equipment">08 — Medical Equipment</option>
-                  <option value="Turnkey Project Solutions">09 — Turnkey Project Solutions</option>
+                  <option value="AHUs &amp; HVAC Systems">AHUs &amp; HVAC Systems</option>
+                  <option value="Modular Operation Theatres">Modular Operation Theatres</option>
+                  <option value="Cleanrooms">Cleanrooms</option>
+                  <option value="IVF Laboratories">IVF Laboratories</option>
+                  <option value="Medical Gas Pipeline Systems">Medical Gas Pipeline Systems</option>
+                  <option value="Wall &amp; Ceiling Panels">Wall &amp; Ceiling Panels</option>
+                  <option value="Specialized Flooring">Specialized Flooring</option>
+                  <option value="Medical Equipment">Medical Equipment</option>
+                  <option value="Turnkey Project Solutions">Turnkey Project Solutions</option>
                 </select>
               </div>
 

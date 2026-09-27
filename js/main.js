@@ -54,10 +54,15 @@
     drawerBackdrop.setAttribute('aria-hidden', 'false');
     document.body.classList.add('avx-scroll-locked');
 
-    // Focus the first navigation link inside drawer
-    const firstLink = mobileDrawer.querySelector('.avx-drawer__link');
-    if (firstLink) {
-      setTimeout(() => firstLink.focus(), 150);
+    // Focus close button or first link inside drawer
+    const drawerCloseBtn = document.getElementById('drawerClose');
+    if (drawerCloseBtn) {
+      setTimeout(() => drawerCloseBtn.focus(), 150);
+    } else {
+      const firstLink = mobileDrawer.querySelector('.avx-drawer__link');
+      if (firstLink) {
+        setTimeout(() => firstLink.focus(), 150);
+      }
     }
   }
 
@@ -83,12 +88,21 @@
       }
     });
 
+    // Close on explicit drawer close button click
+    const drawerClose = document.getElementById('drawerClose');
+    if (drawerClose) {
+      drawerClose.addEventListener('click', function (e) {
+        e.preventDefault();
+        closeDrawer();
+      });
+    }
+
     // Close on backdrop click
     drawerBackdrop.addEventListener('click', closeDrawer);
 
     // Close on Escape key press
     document.addEventListener('keydown', function (e) {
-      if (e.key === 'Escape' && menuToggle.getAttribute('aria-expanded') === 'true') {
+      if (e.key === 'Escape' && (menuToggle.getAttribute('aria-expanded') === 'true' || mobileDrawer.classList.contains('is-open'))) {
         closeDrawer();
       }
     });

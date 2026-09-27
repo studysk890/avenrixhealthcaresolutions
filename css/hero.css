@@ -83,7 +83,7 @@
 
 .avx-hero__title-accent {
   color: var(--avx-navy);
-  font-style: italic;
+  font-style: normal;
   position: relative;
 }
 

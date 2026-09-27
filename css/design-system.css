@@ -357,11 +357,8 @@ ul, ol {
 }
 
 .avx-eyebrow::before {
-  content: '';
-  display: inline-block;
-  width: 16px;
-  height: 2px;
-  background-color: var(--avx-orange);
+  content: none;
+  display: none;
 }
 
 /* ==========================================================================

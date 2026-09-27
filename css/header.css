@@ -232,19 +232,19 @@
   position: fixed;
   top: 0;
   right: 0;
-  width: min(85vw, 380px);
+  width: min(88vw, 380px);
   height: 100%;
   height: 100dvh;
   background-color: var(--avx-navy-dark);
   z-index: 1030;
-  padding: 6rem 2rem 3rem;
+  padding: 1.5rem 1.75rem 2.5rem;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   transform: translateX(100%);
   visibility: hidden;
   transition: transform var(--avx-transition-medium), visibility var(--avx-transition-medium);
-  box-shadow: -10px 0 40px rgba(0, 0, 0, 0.3);
+  box-shadow: -10px 0 40px rgba(0, 0, 0, 0.4);
   overflow-y: auto;
 }
 
@@ -253,15 +253,80 @@
   visibility: visible;
 }
 
-.avx-drawer__brand {
-  margin-bottom: var(--avx-space-8);
+/* --------------------------------------------------------------------------
+   Mobile Drawer Header: Brand Badge & Accessible Close Button
+   -------------------------------------------------------------------------- */
+.avx-drawer__header {
   display: flex;
   align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding-bottom: 1.25rem;
+  margin-bottom: 1.5rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  flex-shrink: 0;
+}
+
+.avx-drawer__brand {
+  display: inline-flex;
+  align-items: center;
+  text-decoration: none;
+}
+
+.avx-drawer__logo-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #ffffff;
+  padding: 0.35rem 0.65rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.25);
+  transition: transform var(--avx-transition-fast), box-shadow var(--avx-transition-fast);
+}
+
+.avx-drawer__brand:hover .avx-drawer__logo-badge,
+.avx-drawer__brand:focus-visible .avx-drawer__logo-badge {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 14px rgba(241, 100, 25, 0.35);
 }
 
 .avx-drawer__logo {
-  width: 54px;
+  width: 110px;
   height: auto;
+  display: block;
+}
+
+/* Accessible Close Button (WCAG 44x44px touch target) */
+.avx-drawer__close {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  min-width: 44px;
+  min-height: 44px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  color: var(--avx-white);
+  cursor: pointer;
+  padding: 0;
+  transition: background-color var(--avx-transition-fast), 
+              border-color var(--avx-transition-fast), 
+              color var(--avx-transition-fast), 
+              transform var(--avx-transition-fast);
+}
+
+.avx-drawer__close:hover {
+  background-color: rgba(241, 100, 25, 0.15);
+  border-color: var(--avx-orange);
+  color: var(--avx-orange);
+  transform: rotate(90deg);
+}
+
+.avx-drawer__close:focus-visible {
+  outline: 2px solid var(--avx-orange);
+  outline-offset: 2px;
 }
 
 .avx-drawer__list {
