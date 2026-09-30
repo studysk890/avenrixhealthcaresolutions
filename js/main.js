@@ -15,32 +15,118 @@
   const backToTopBtn = document.getElementById('backToTop');
 
   /**
-   * 1. STICKY HEADER SCROLL STATE
+   * 1. STICKY HEADER & ACTIVE SCROLL-SPY NAVIGATION
    * Adds 'is-scrolled' class when scrolled past 50px.
+   * Continuously monitors scroll position and updates '.is-active' on both
+   * desktop (.avx-header__nav-link) and mobile drawer (.avx-drawer__link)
+   * to accurately reflect whichever section is currently showing.
    */
+  const sections = ['home', 'about', 'products', 'values', 'contact']
+    .map(id => ({ id, el: document.getElementById(id) }))
+    .filter(s => s.el !== null);
+
+  const desktopNavLinks = document.querySelectorAll('.avx-header__nav-link');
+  const drawerNavLinks = document.querySelectorAll('.avx-drawer__link');
+
+  let currentActiveId = null;
+
+  function setActiveNavLink(activeId) {
+    if (!activeId || currentActiveId === activeId) return;
+    currentActiveId = activeId;
+
+    desktopNavLinks.forEach(link => {
+      const href = link.getAttribute('href');
+      const isMatch = href === '#' + activeId;
+      link.classList.toggle('is-active', isMatch);
+      if (isMatch) {
+        link.setAttribute('aria-current', 'page');
+      } else {
+        link.removeAttribute('aria-current');
+      }
+    });
+
+    drawerNavLinks.forEach(link => {
+      const href = link.getAttribute('href');
+      const isMatch = href === '#' + activeId;
+      link.classList.toggle('is-active', isMatch);
+      if (isMatch) {
+        link.setAttribute('aria-current', 'page');
+      } else {
+        link.removeAttribute('aria-current');
+      }
+    });
+  }
+
+  function updateActiveSectionOnScroll() {
+    const scrollY = window.scrollY;
+    const windowHeight = window.innerHeight;
+    const docHeight = document.documentElement.scrollHeight;
+    const headerHeight = header ? header.offsetHeight : 80;
+
+    // 1. Bottom of page reached -> activate the last section ('contact')
+    if (windowHeight + scrollY >= docHeight - 60) {
+      setActiveNavLink('contact');
+      return;
+    }
+
+    // 2. Near top of page -> activate 'home'
+    if (scrollY < 120) {
+      setActiveNavLink('home');
+      return;
+    }
+
+    // 3. Dynamic checkpoint: header offset + 25% of viewport
+    const checkpoint = scrollY + headerHeight + (windowHeight * 0.25);
+
+    let activeId = 'home';
+    for (let i = 0; i < sections.length; i++) {
+      const sec = sections[i];
+      const secTop = sec.el.getBoundingClientRect().top + scrollY;
+      if (checkpoint >= secTop) {
+        activeId = sec.id;
+      } else {
+        break;
+      }
+    }
+
+    setActiveNavLink(activeId);
+  }
+
   let lastScrollY = window.scrollY;
   let ticking = false;
 
-  function updateHeaderState() {
+  function onScrollTick() {
     const currentScrollY = window.scrollY;
+
+    // Sticky Header Class
     if (currentScrollY > 50) {
       header.classList.add('is-scrolled');
     } else {
       header.classList.remove('is-scrolled');
     }
+
+    // Active Section ScrollSpy
+    updateActiveSectionOnScroll();
+
     ticking = false;
   }
 
   window.addEventListener('scroll', function () {
     lastScrollY = window.scrollY;
     if (!ticking) {
-      window.requestAnimationFrame(updateHeaderState);
+      window.requestAnimationFrame(onScrollTick);
       ticking = true;
     }
   }, { passive: true });
 
-  // Initialize header state on page load
-  updateHeaderState();
+  // Initialize on page load and window resize
+  onScrollTick();
+  window.addEventListener('resize', function () {
+    if (!ticking) {
+      window.requestAnimationFrame(onScrollTick);
+      ticking = true;
+    }
+  }, { passive: true });
 
   /**
    * 2. ACCESSIBLE MOBILE DRAWER NAVIGATION
@@ -129,18 +215,16 @@
         const headerHeight = header ? header.offsetHeight : 0;
         const targetPosition = targetEl.getBoundingClientRect().top + window.pageYOffset - headerHeight;
 
+        // Immediately set active nav link for responsive feedback
+        const cleanId = targetId.replace(/^#/, '');
+        if (cleanId) {
+          setActiveNavLink(cleanId);
+        }
+
         window.scrollTo({
           top: targetPosition,
           behavior: 'smooth'
         });
-
-        // Update active class on desktop nav
-        document.querySelectorAll('.avx-header__nav-link').forEach(function (link) {
-          link.classList.remove('is-active');
-        });
-        if (this.classList.contains('avx-header__nav-link')) {
-          this.classList.add('is-active');
-        }
       }
     });
   });

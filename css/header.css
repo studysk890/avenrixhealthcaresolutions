@@ -119,6 +119,11 @@
   border-radius: var(--avx-radius-sm);
 }
 
+.avx-header__nav-link.is-active {
+  color: var(--avx-orange);
+  font-weight: 600;
+}
+
 .avx-header__nav-link.is-active::after {
   width: 100%;
 }
@@ -369,9 +374,11 @@
 }
 
 .avx-drawer__link:hover,
-.avx-drawer__link:focus-visible {
+.avx-drawer__link:focus-visible,
+.avx-drawer__link.is-active {
   color: var(--avx-orange);
   transform: translateX(6px);
+  font-weight: 500;
 }
 
 .avx-drawer__footer {
