@@ -248,6 +248,12 @@
    * accessible ARIA state management, and structured console payload.
    */
   function initContactForm() {
+    // ========================================================================
+    // GOOGLE SHEETS INTEGRATION ENDPOINT:
+    // Deployed Google Apps Script Web App URL
+    // ========================================================================
+    const GOOGLE_SHEETS_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbyhVG4olpXlaZCqQNtyx7s-8DW1u1GK2Ol3OqXT9lsG8xpbtSf8UqM0SYPS9TVjdSTt/exec';
+
     const form = document.getElementById('avxContactForm');
     const successBlock = document.getElementById('avxContactSuccess');
     const resetBtn = document.getElementById('avxContactReset');
@@ -272,6 +278,11 @@
     const productSelect = document.getElementById('avxContactProduct');
     const messageInput = document.getElementById('avxContactMessage');
 
+    const submitBtn = document.getElementById('avxContactSubmit');
+    const submitText = submitBtn ? submitBtn.querySelector('.avx-contact__submit-text') : null;
+    const submitArrow = submitBtn ? submitBtn.querySelector('.avx-contact__arrow') : null;
+    const alertBox = document.getElementById('avxContactAlert');
+
     // Validation patterns
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/;
     // Allows international formats: +..., spaces, hyphens, parentheses, minimum 7 digits
@@ -289,6 +300,40 @@
       wrap.classList.remove('has-error');
       input.removeAttribute('aria-invalid');
       errorEl.textContent = '';
+    }
+
+    function setSubmittingState(isSubmitting) {
+      if (!submitBtn) return;
+      submitBtn.disabled = isSubmitting;
+      submitBtn.classList.toggle('is-submitting', isSubmitting);
+
+      if (isSubmitting) {
+        if (submitText) submitText.textContent = 'Sending Inquiry...';
+        if (submitArrow) submitArrow.style.display = 'none';
+        if (!submitBtn.querySelector('.avx-contact__spinner')) {
+          const spinner = document.createElement('span');
+          spinner.className = 'avx-contact__spinner';
+          spinner.setAttribute('aria-hidden', 'true');
+          submitBtn.prepend(spinner);
+        }
+      } else {
+        if (submitText) submitText.textContent = 'Submit Inquiry';
+        if (submitArrow) submitArrow.style.display = '';
+        const spinner = submitBtn.querySelector('.avx-contact__spinner');
+        if (spinner) spinner.remove();
+      }
+    }
+
+    function showFormAlert(message) {
+      if (!alertBox) return;
+      alertBox.textContent = message;
+      alertBox.classList.add('is-visible');
+    }
+
+    function clearFormAlert() {
+      if (!alertBox) return;
+      alertBox.textContent = '';
+      alertBox.classList.remove('is-visible');
     }
 
     function validateName() {
@@ -376,6 +421,11 @@
         return;
       }
 
+      if (submitBtn && submitBtn.disabled) return;
+
+      clearFormAlert();
+      setSubmittingState(true);
+
       // Construct structured inquiry payload
       const inquiryPayload = {
         name: (nameInput.value || '').trim(),
@@ -384,26 +434,43 @@
         phone: (phoneInput.value || '').trim(),
         product: productSelect ? productSelect.value || null : null,
         message: messageInput ? (messageInput.value || '').trim() || null : null,
-        submittedAt: new Date().toISOString()
+        submittedAt: new Date().toLocaleString()
       };
 
-      // ======================================================================
-      // BACKEND INTEGRATION POINT:
-      // The form does not submit to a fictional endpoint or third-party service.
-      // Hook your production backend API endpoint / webhook / fetch here:
-      // e.g.:
-      // const response = await fetch('/api/avenrix-inquiries', {
-      //   method: 'POST',
-      //   headers: { 'Content-Type': 'application/json' },
-      //   body: JSON.stringify(inquiryPayload)
-      // });
-      // ======================================================================
+      function handleSuccess() {
+        setSubmittingState(false);
+        form.classList.add('is-hidden');
+        successBlock.classList.add('is-visible');
+        successBlock.setAttribute('tabindex', '-1');
+        successBlock.focus();
+      }
 
-      // Transition smoothly from form to success confirmation state
-      form.classList.add('is-hidden');
-      successBlock.classList.add('is-visible');
-      successBlock.setAttribute('tabindex', '-1');
-      successBlock.focus();
+      // If Google Sheets endpoint is configured, POST to it
+      if (GOOGLE_SHEETS_SCRIPT_URL && GOOGLE_SHEETS_SCRIPT_URL.trim() !== '') {
+        // Send as text/plain with no-cors to prevent preflight OPTIONS failures on Google Apps Script
+        fetch(GOOGLE_SHEETS_SCRIPT_URL, {
+          method: 'POST',
+          mode: 'no-cors',
+          headers: {
+            'Content-Type': 'text/plain;charset=utf-8'
+          },
+          body: JSON.stringify(inquiryPayload)
+        })
+        .then(() => {
+          handleSuccess();
+        })
+        .catch((error) => {
+          console.error('[Avenrix Contact Form] Google Sheets submission error:', error);
+          setSubmittingState(false);
+          showFormAlert('We could not send your inquiry due to a network connection issue. Please check your connection or email us directly.');
+        });
+      } else {
+        // Fallback for local preview when endpoint URL is pending deployment
+        console.info('[Avenrix Contact Form] Google Sheets URL not configured yet. Logged payload:', inquiryPayload);
+        setTimeout(() => {
+          handleSuccess();
+        }, 500);
+      }
     });
 
     // Reset button handler: return to clean form
@@ -413,6 +480,8 @@
         clearFieldError(nameWrap, nameInput, nameError);
         clearFieldError(emailWrap, emailInput, emailError);
         clearFieldError(phoneWrap, phoneInput, phoneError);
+        clearFormAlert();
+        setSubmittingState(false);
 
         successBlock.classList.remove('is-visible');
         form.classList.remove('is-hidden');

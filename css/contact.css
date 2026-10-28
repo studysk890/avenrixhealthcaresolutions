@@ -495,6 +495,52 @@
   }
 }
 
+/* Submit Loading & Disabled State */
+.avx-contact__submit:disabled,
+.avx-contact__submit.is-submitting {
+  opacity: 0.75;
+  cursor: not-allowed;
+  pointer-events: none;
+  transform: none !important;
+  box-shadow: none !important;
+}
+
+.avx-contact__spinner {
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+  border: 2px solid rgba(255, 255, 255, 0.35);
+  border-top-color: #ffffff;
+  border-radius: 50%;
+  animation: avx-spin 0.65s linear infinite;
+  flex-shrink: 0;
+}
+
+@keyframes avx-spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Form Alert Banner (Network / Error states) */
+.avx-contact__form-alert {
+  display: none;
+  background-color: rgba(239, 68, 68, 0.12);
+  border: 1px solid rgba(239, 68, 68, 0.35);
+  border-left: 3px solid #EF4444;
+  border-radius: 8px;
+  padding: 0.75rem 1rem;
+  margin-top: 0.85rem;
+  font-family: var(--avx-font-sans);
+  font-size: 0.8125rem;
+  line-height: 1.5;
+  color: #FCA5A5;
+}
+
+.avx-contact__form-alert.is-visible {
+  display: block;
+}
+
 /* --------------------------------------------------------------------------
    Polished Success State
    -------------------------------------------------------------------------- */
