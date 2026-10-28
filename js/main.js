@@ -250,9 +250,11 @@
   function initContactForm() {
     // ========================================================================
     // GOOGLE SHEETS INTEGRATION ENDPOINT:
-    // Deployed Google Apps Script Web App URL
+    // Deployed Webhook URL (Obfuscated to prevent automated crawler harvesting)
     // ========================================================================
-    const GOOGLE_SHEETS_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbyhVG4olpXlaZCqQNtyx7s-8DW1u1GK2Ol3OqXT9lsG8xpbtSf8UqM0SYPS9TVjdSTt/exec';
+    const GOOGLE_SHEETS_SCRIPT_URL = typeof atob === 'function' 
+      ? atob('aHR0cHM6Ly9zY3JpcHQuZ29vZ2xlLmNvbS9tYWNyb3Mvcy9BS2Z5Y2J5aFZHNG9scFhsYVpDcVFOdHl4N3MtOERXMXUxR0syT2wzT3FYVDlsc0c4eHBidFNmOFVxTTBTWVBTOVRWamRTVHQvZXhlYw==')
+      : 'https://script.google.com/macros/s/AKfycbyhVG4olpXlaZCqQNtyx7s-8DW1u1GK2Ol3OqXT9lsG8xpbtSf8UqM0SYPS9TVjdSTt/exec';
 
     const form = document.getElementById('avxContactForm');
     const successBlock = document.getElementById('avxContactSuccess');
@@ -699,5 +701,50 @@
   // Initialize AHU & HVAC Slider
   initAhuHvacSlider();
 
+  /**
+   * 7. SOURCE PROTECTION & ANTI-CLONING SHIELD
+   * Prevents right-click context menu, source-viewing shortcuts,
+   * page saving shortcuts, and image dragging.
+   */
+  function initAntiCloningShield() {
+    // Disable right-click context menu
+    document.addEventListener('contextmenu', function (e) {
+      e.preventDefault();
+      return false;
+    });
+
+    // Disable keyboard shortcuts for viewing source, saving, and inspecting
+    document.addEventListener('keydown', function (e) {
+      const isCtrlOrMeta = e.ctrlKey || e.metaKey;
+      const key = (e.key || '').toLowerCase();
+
+      // Ctrl/Cmd + U (View Source)
+      // Ctrl/Cmd + S (Save Webpage)
+      // Ctrl/Cmd + P (Print / Save PDF)
+      // F12 or Ctrl/Cmd + Shift + I/J/C (Developer Tools / Inspect)
+      if (
+        (isCtrlOrMeta && (key === 'u' || key === 's' || key === 'p')) ||
+        (isCtrlOrMeta && e.shiftKey && (key === 'i' || key === 'j' || key === 'c')) ||
+        e.key === 'F12'
+      ) {
+        e.preventDefault();
+        e.stopPropagation();
+        return false;
+      }
+    });
+
+    // Disable image dragging to prevent asset ripping
+    document.addEventListener('dragstart', function (e) {
+      if (e.target && e.target.nodeName === 'IMG') {
+        e.preventDefault();
+        return false;
+      }
+    });
+  }
+
+  // Initialize Anti-Cloning Shield
+  initAntiCloningShield();
+
 })();
+
 

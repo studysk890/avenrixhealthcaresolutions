@@ -1,0 +1,15 @@
+# Ignore internal test scripts and scratch directories
+scratch/
+google_sheets_integration/
+
+# Ignore internal PDF documentation
+*.pdf
+
+# Ignore markdown documentation
+*.md
+
+# Ignore system and IDE files
+.git/
+.gitignore
+.vscode/
+.idea/

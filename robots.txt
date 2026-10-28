@@ -1,0 +1,25 @@
+User-agent: *
+Disallow: /scratch/
+Disallow: /google_sheets_integration/
+Disallow: /*.pdf$
+Disallow: /*.js$
+Disallow: /*.css$
+
+# Block known aggressive scrapers and archivers
+User-agent: HTTrack
+Disallow: /
+
+User-agent: Wget
+Disallow: /
+
+User-agent: SiteSucker
+Disallow: /
+
+User-agent: CyotekWebCopy
+Disallow: /
+
+User-agent: archive.org_bot
+Disallow: /
+
+User-agent: ia_archiver
+Disallow: /

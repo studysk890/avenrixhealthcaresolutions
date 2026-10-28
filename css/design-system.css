@@ -459,3 +459,12 @@ ul, ol {
     scroll-behavior: auto !important;
   }
 }
+
+/* Source Protection & Asset Dragging Shield */
+img {
+  -webkit-user-drag: none;
+  user-drag: none;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
