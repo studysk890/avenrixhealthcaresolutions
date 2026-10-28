@@ -207,6 +207,158 @@
   z-index: 3;
 }
 
+/* Badge Text Slider (Card 01 - Sliding text inside fixed white overlay) */
+.avx-product-card__badge--slider {
+  overflow: hidden;
+  padding: 0;
+  width: 58px;
+  height: 26px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.avx-badge-slider {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.avx-badge-slide {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  width: 100%;
+  height: 100%;
+  transform: translateX(100%);
+  opacity: 0;
+  pointer-events: none;
+  font-family: var(--avx-font-sans);
+  font-size: 0.6875rem;
+  font-weight: 700;
+  letter-spacing: var(--avx-tracking-wide);
+  color: var(--avx-navy);
+  will-change: transform, opacity;
+}
+
+.avx-badge-slide.is-active {
+  transform: translateX(0);
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.avx-badge-slide.is-animating {
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .avx-badge-slide {
+    transition: none !important;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   Card 01 Auto Slider (AHU & HVAC Dual-Image Infinite Loop)
+   -------------------------------------------------------------------------- */
+.avx-product-card__media--slider {
+  position: relative;
+  overflow: hidden;
+}
+
+.avx-slider-track {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.avx-slider-slide {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  transform: translateX(100%);
+  z-index: 1;
+  pointer-events: none;
+  will-change: transform;
+}
+
+.avx-slider-slide.is-active {
+  transform: translateX(0);
+  z-index: 2;
+  pointer-events: auto;
+}
+
+.avx-slider-slide.is-animating {
+  z-index: 2;
+  pointer-events: none;
+}
+
+.avx-slider-slide .avx-product-card__image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+}
+
+/* Slider Pagination Indicators (Floating Glass Pill) */
+.avx-slider-dots {
+  position: absolute;
+  bottom: 12px;
+  right: 14px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 4px 8px;
+  background-color: rgba(1, 44, 78, 0.45);
+  -webkit-backdrop-filter: blur(6px);
+  backdrop-filter: blur(6px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 999px;
+  z-index: 4;
+}
+
+.avx-slider-dot {
+  width: 7px;
+  height: 7px;
+  padding: 0;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.55);
+  border: none;
+  cursor: pointer;
+  transition: width 0.3s ease, background-color 0.3s ease, border-radius 0.3s ease;
+}
+
+.avx-slider-dot:hover {
+  background-color: var(--avx-white);
+}
+
+.avx-slider-dot.is-active {
+  width: 20px;
+  border-radius: 4px;
+  background-color: var(--avx-orange);
+}
+
+.avx-slider-dot:focus-visible {
+  outline: 2px solid var(--avx-orange);
+  outline-offset: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .avx-slider-slide {
+    transition: none !important;
+  }
+}
+
 /* Card Body Content (Rigid Flex Hierarchy) */
 .avx-product-card__body {
   padding: var(--avx-space-6);

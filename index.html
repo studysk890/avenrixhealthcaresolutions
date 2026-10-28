@@ -213,11 +213,11 @@
               <!-- Schematic Graphic Container -->
               <div class="avx-hero__schematic">
                 <img 
-                  src="images/hero-schematic.svg" 
-                  alt="Avenrix Critical Environment Architectural Schematic Diagram" 
-                  class="avx-hero__schematic-svg" 
-                  width="600" 
-                  height="420"
+                  src="images/hero.jpg" 
+                  alt="Avenrix Turnkey Critical Healthcare and Pharmaceutical Infrastructure Workflow" 
+                  class="avx-hero__schematic-img" 
+                  width="800" 
+                  height="600"
                   decoding="async"
                 >
               </div>
@@ -335,11 +335,11 @@
               <!-- Graphic / Image Frame -->
               <div class="avx-about__image-frame">
                 <img 
-                  src="images/about-architecture.svg" 
-                  alt="Avenrix Critical Healthcare Architectural and Spatial Engineering Model" 
+                  src="images/aboutus.jpg" 
+                  alt="Avenrix Critical Healthcare Infrastructure and Intensive Care Medical Installation" 
                   class="avx-about__image" 
                   width="800" 
-                  height="560"
+                  height="600"
                   loading="lazy"
                   decoding="async"
                 >
@@ -399,17 +399,45 @@
           <!-- Card 01: AHUs & HVAC Systems -->
           <article class="avx-product-card" role="listitem">
             <div class="avx-product-card__accent" aria-hidden="true"></div>
-            <div class="avx-product-card__media">
-              <span class="avx-product-card__badge">HVAC</span>
-              <img 
-                src="images/products/product-01-hvac.svg" 
-                alt="AHUs and HVAC Systems schematic engineering diagram" 
-                class="avx-product-card__image" 
-                width="400" 
-                height="300"
-                loading="lazy"
-                decoding="async"
-              >
+            <div class="avx-product-card__media avx-product-card__media--slider" id="ahuHvacSlider" aria-label="AHU and HVAC Systems Image Showcase">
+              <span class="avx-product-card__badge avx-product-card__badge--slider" id="ahuHvacBadge" aria-label="Current System: AHU">
+                <span class="avx-badge-slider">
+                  <span class="avx-badge-slide is-active" data-index="0">AHU</span>
+                  <span class="avx-badge-slide" data-index="1">HVAC</span>
+                </span>
+              </span>
+              
+              <!-- 2-Image Auto Slider (AHU & HVAC Dual Showcase) -->
+              <div class="avx-slider-track">
+                <div class="avx-slider-slide is-active" data-slide="0">
+                  <img 
+                    src="images/products/02 AHU - Air Handling Unit.jpg" 
+                    alt="AHU - Air Handling Unit engineered ventilation system" 
+                    class="avx-product-card__image" 
+                    width="800" 
+                    height="600"
+                    loading="lazy"
+                    decoding="async"
+                  >
+                </div>
+                <div class="avx-slider-slide" data-slide="1">
+                  <img 
+                    src="images/products/03 HVAC - Heating Ventilation & Air Conditioning.jpg" 
+                    alt="HVAC - Heating Ventilation and Air Conditioning system for controlled environments" 
+                    class="avx-product-card__image" 
+                    width="800" 
+                    height="600"
+                    loading="lazy"
+                    decoding="async"
+                  >
+                </div>
+              </div>
+
+              <!-- Slider Pagination Indicators -->
+              <div class="avx-slider-dots" role="tablist" aria-label="AHU and HVAC slide controls">
+                <button type="button" class="avx-slider-dot is-active" role="tab" aria-selected="true" aria-label="Show AHU - Air Handling Unit" data-slide="0"></button>
+                <button type="button" class="avx-slider-dot" role="tab" aria-selected="false" aria-label="Show HVAC System" data-slide="1"></button>
+              </div>
             </div>
             <div class="avx-product-card__body">
               <div class="avx-product-card__content">
@@ -436,11 +464,11 @@
             <div class="avx-product-card__media">
               <span class="avx-product-card__badge">SURGICAL</span>
               <img 
-                src="images/products/product-02-ot.svg" 
-                alt="Modular Operation Theatres schematic engineering diagram" 
+                src="images/products/04 Modulalr Operation Theater.jpg" 
+                alt="Modular Operation Theatres engineered healthcare facility" 
                 class="avx-product-card__image" 
-                width="400" 
-                height="300"
+                width="800" 
+                height="600"
                 loading="lazy"
                 decoding="async"
               >
@@ -470,11 +498,11 @@
             <div class="avx-product-card__media">
               <span class="avx-product-card__badge">CONTROLLED</span>
               <img 
-                src="images/products/product-03-cleanrooms.svg" 
-                alt="Cleanrooms schematic engineering diagram" 
+                src="images/products/05 Modular Cleanrooms.jpg" 
+                alt="Modular Cleanrooms controlled pharmaceutical environment" 
                 class="avx-product-card__image" 
-                width="400" 
-                height="300"
+                width="800" 
+                height="600"
                 loading="lazy"
                 decoding="async"
               >
@@ -504,11 +532,11 @@
             <div class="avx-product-card__media">
               <span class="avx-product-card__badge">LABORATORY</span>
               <img 
-                src="images/products/product-04-ivf.svg" 
-                alt="IVF Laboratories schematic engineering diagram" 
+                src="images/products/06 IVF Laboratory.jpg" 
+                alt="IVF Laboratories specialized clean environment" 
                 class="avx-product-card__image" 
-                width="400" 
-                height="300"
+                width="800" 
+                height="600"
                 loading="lazy"
                 decoding="async"
               >
@@ -538,11 +566,11 @@
             <div class="avx-product-card__media">
               <span class="avx-product-card__badge">PIPELINE</span>
               <img 
-                src="images/products/product-05-mgps.svg" 
-                alt="Medical Gas Pipeline Systems schematic engineering diagram" 
+                src="images/products/07 Medical Gas Pipeline System.jpg" 
+                alt="Medical Gas Pipeline Systems hospital distribution network" 
                 class="avx-product-card__image" 
-                width="400" 
-                height="300"
+                width="800" 
+                height="600"
                 loading="lazy"
                 decoding="async"
               >
@@ -572,11 +600,11 @@
             <div class="avx-product-card__media">
               <span class="avx-product-card__badge">ENVELOPE</span>
               <img 
-                src="images/products/product-06-panels.svg" 
-                alt="Wall and Ceiling Panels schematic engineering diagram" 
+                src="images/products/08 Wall & Ceiling Panels.jpg" 
+                alt="Wall and Ceiling Panels hygienic modular envelope" 
                 class="avx-product-card__image" 
-                width="400" 
-                height="300"
+                width="800" 
+                height="600"
                 loading="lazy"
                 decoding="async"
               >
@@ -606,11 +634,11 @@
             <div class="avx-product-card__media">
               <span class="avx-product-card__badge">SURFACES</span>
               <img 
-                src="images/products/product-07-flooring.svg" 
-                alt="Specialized Flooring schematic engineering diagram" 
+                src="images/products/09 Wall Panel & Ceiling Coving & Floorings.jpg" 
+                alt="Specialized Healthcare Flooring and coving installation" 
                 class="avx-product-card__image" 
-                width="400" 
-                height="300"
+                width="800" 
+                height="600"
                 loading="lazy"
                 decoding="async"
               >
@@ -640,11 +668,11 @@
             <div class="avx-product-card__media">
               <span class="avx-product-card__badge">EQUIPMENT</span>
               <img 
-                src="images/products/product-08-equipment.svg" 
-                alt="Medical Equipment schematic engineering diagram" 
+                src="images/products/10 Medical Equipments.jpg" 
+                alt="Medical Equipment for hospital and clinical facilities" 
                 class="avx-product-card__image" 
-                width="400" 
-                height="300"
+                width="800" 
+                height="600"
                 loading="lazy"
                 decoding="async"
               >
@@ -674,11 +702,11 @@
             <div class="avx-product-card__media">
               <span class="avx-product-card__badge">TURNKEY INTEGRATION</span>
               <img 
-                src="images/products/product-09-turnkey.svg" 
+                src="images/products/11 Turnkey Project Solutions.jpg" 
                 alt="Turnkey Project Solutions integrated engineering diagram" 
                 class="avx-product-card__image" 
-                width="400" 
-                height="300"
+                width="800" 
+                height="600"
                 loading="lazy"
                 decoding="async"
               >

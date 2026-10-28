@@ -427,5 +427,208 @@
   // Initialize Contact Form
   initContactForm();
 
+  /**
+   * 6. AHU & HVAC DUAL-IMAGE AUTO SLIDER (Card 01)
+   * Automatically cycles every 3 seconds in an infinite loop.
+   * Pauses on hover, focus, and tab switch.
+   * Supports manual dot controls and mobile touch swipe.
+   */
+  function initAhuHvacSlider() {
+    const slider = document.getElementById('ahuHvacSlider');
+    if (!slider) return;
+
+    const slides = slider.querySelectorAll('.avx-slider-slide');
+    const dots = slider.querySelectorAll('.avx-slider-dot');
+    if (slides.length < 2) return;
+
+    const badge = document.getElementById('ahuHvacBadge');
+    const badgeSlides = badge ? badge.querySelectorAll('.avx-badge-slide') : [];
+
+    let currentIndex = 0;
+    let isTransitioning = false;
+    let timer = null;
+    const INTERVAL = 3000; // 3 seconds
+    const TRANSITION_MS = 650; // CSS animation duration
+
+    function updateDots(activeIdx) {
+      dots.forEach((dot, idx) => {
+        const isActive = idx === activeIdx;
+        dot.classList.toggle('is-active', isActive);
+        dot.setAttribute('aria-selected', isActive ? 'true' : 'false');
+      });
+    }
+
+    function goToSlide(nextIndex, direction = 'next') {
+      if (isTransitioning || nextIndex === currentIndex) return;
+      isTransitioning = true;
+
+      const currentSlide = slides[currentIndex];
+      const nextSlide = slides[nextIndex];
+
+      const currentBadge = badgeSlides[currentIndex];
+      const nextBadge = badgeSlides[nextIndex];
+
+      // Prepare incoming slide and badge text position without transition
+      nextSlide.style.transition = 'none';
+      nextSlide.style.transform = direction === 'next' ? 'translateX(100%)' : 'translateX(-100%)';
+      nextSlide.classList.add('is-animating');
+
+      if (nextBadge) {
+        nextBadge.style.transition = 'none';
+        nextBadge.style.transform = direction === 'next' ? 'translateX(100%)' : 'translateX(-100%)';
+        nextBadge.style.opacity = '0';
+        nextBadge.classList.add('is-animating');
+      }
+
+      // Force layout reflow
+      void nextSlide.offsetWidth;
+      if (nextBadge) void nextBadge.offsetWidth;
+
+      // Animate both slides and badge text
+      const transitionStyle = 'transform 0.65s cubic-bezier(0.25, 1, 0.5, 1)';
+      const badgeTransition = 'transform 0.65s cubic-bezier(0.25, 1, 0.5, 1), opacity 0.45s ease';
+
+      currentSlide.style.transition = transitionStyle;
+      nextSlide.style.transition = transitionStyle;
+
+      currentSlide.style.transform = direction === 'next' ? 'translateX(-100%)' : 'translateX(100%)';
+      nextSlide.style.transform = 'translateX(0)';
+
+      if (currentBadge && nextBadge) {
+        currentBadge.style.transition = badgeTransition;
+        nextBadge.style.transition = badgeTransition;
+
+        currentBadge.style.transform = direction === 'next' ? 'translateX(-100%)' : 'translateX(100%)';
+        currentBadge.style.opacity = '0';
+        nextBadge.style.transform = 'translateX(0)';
+        nextBadge.style.opacity = '1';
+      }
+
+      updateDots(nextIndex);
+
+      setTimeout(() => {
+        currentSlide.classList.remove('is-active', 'is-animating');
+        currentSlide.style.transition = 'none';
+        currentSlide.style.transform = '';
+
+        nextSlide.classList.add('is-active');
+        nextSlide.classList.remove('is-animating');
+        nextSlide.style.transition = '';
+        nextSlide.style.transform = '';
+
+        if (currentBadge && nextBadge) {
+          currentBadge.classList.remove('is-active', 'is-animating');
+          currentBadge.style.transition = 'none';
+          currentBadge.style.transform = '';
+          currentBadge.style.opacity = '';
+
+          nextBadge.classList.add('is-active');
+          nextBadge.classList.remove('is-animating');
+          nextBadge.style.transition = '';
+          nextBadge.style.transform = '';
+          nextBadge.style.opacity = '';
+
+          if (badge) {
+            badge.setAttribute('aria-label', 'Current System: ' + (nextBadge.textContent || '').trim());
+          }
+        }
+
+        currentIndex = nextIndex;
+        isTransitioning = false;
+      }, TRANSITION_MS);
+    }
+
+    function nextSlide() {
+      const nextIndex = (currentIndex + 1) % slides.length;
+      goToSlide(nextIndex, 'next');
+    }
+
+    function prevSlide() {
+      const prevIndex = (currentIndex - 1 + slides.length) % slides.length;
+      goToSlide(prevIndex, 'prev');
+    }
+
+    function startAutoPlay() {
+      stopAutoPlay();
+      if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+      timer = setInterval(nextSlide, INTERVAL);
+    }
+
+    function stopAutoPlay() {
+      if (timer) {
+        clearInterval(timer);
+        timer = null;
+      }
+    }
+
+    // Dot navigation
+    dots.forEach(dot => {
+      dot.addEventListener('click', function (e) {
+        e.preventDefault();
+        const targetIdx = parseInt(dot.getAttribute('data-slide'), 10);
+        if (targetIdx !== currentIndex) {
+          goToSlide(targetIdx, targetIdx > currentIndex ? 'next' : 'prev');
+          startAutoPlay();
+        }
+      });
+    });
+
+    // Pause on user hover and focus (WCAG compliance)
+    const card = slider.closest('.avx-product-card') || slider;
+    card.addEventListener('mouseenter', stopAutoPlay);
+    card.addEventListener('mouseleave', startAutoPlay);
+    card.addEventListener('focusin', stopAutoPlay);
+    card.addEventListener('focusout', startAutoPlay);
+
+    // Pause when page tab is hidden
+    document.addEventListener('visibilitychange', function () {
+      if (document.hidden) {
+        stopAutoPlay();
+      } else {
+        startAutoPlay();
+      }
+    });
+
+    // Touch swipe support for mobile
+    let touchStartX = 0;
+    slider.addEventListener('touchstart', function (e) {
+      touchStartX = e.changedTouches[0].screenX;
+      stopAutoPlay();
+    }, { passive: true });
+
+    slider.addEventListener('touchend', function (e) {
+      const touchEndX = e.changedTouches[0].screenX;
+      const diffX = touchEndX - touchStartX;
+      if (Math.abs(diffX) > 40) {
+        if (diffX < 0) {
+          nextSlide();
+        } else {
+          prevSlide();
+        }
+      }
+      startAutoPlay();
+    }, { passive: true });
+
+    // Initial state
+    slides.forEach((slide, idx) => {
+      slide.classList.toggle('is-active', idx === 0);
+    });
+    if (badgeSlides.length > 0) {
+      badgeSlides.forEach((bSlide, idx) => {
+        bSlide.classList.toggle('is-active', idx === 0);
+      });
+      if (badge) {
+        badge.setAttribute('aria-label', 'Current System: ' + (badgeSlides[0].textContent || '').trim());
+      }
+    }
+    updateDots(0);
+
+    // Start 3-second infinite auto loop
+    startAutoPlay();
+  }
+
+  // Initialize AHU & HVAC Slider
+  initAhuHvacSlider();
+
 })();
 

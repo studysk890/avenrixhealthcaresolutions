@@ -219,32 +219,35 @@
   opacity: 0.6;
 }
 
-/* Freely Floating Schematic Vector Graphic Container */
+/* Freely Floating Schematic Vector Graphic / Image Container */
 .avx-hero__schematic {
   width: 100%;
-  aspect-ratio: 16 / 11;
-  background: transparent;
-  border: none;
-  border-radius: 0;
+  aspect-ratio: 4 / 3;
+  background: var(--avx-light);
+  border: 1px solid var(--avx-border-light);
+  border-radius: 14px;
   display: flex;
   align-items: center;
   justify-content: center;
   position: relative;
   overflow: hidden;
-  padding: 0.5rem 0;
-  filter: drop-shadow(0 6px 20px rgba(1, 44, 78, 0.05));
+  box-shadow: 0 4px 16px rgba(1, 44, 78, 0.04);
 }
 
+.avx-hero__schematic-img,
 .avx-hero__schematic-svg {
-  width: 94%;
-  height: 94%;
-  object-fit: contain;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
   transition: transform var(--avx-transition-medium);
 }
 
 @media (hover: hover) and (pointer: fine) {
+  .avx-hero__visual:hover .avx-hero__schematic-img,
   .avx-hero__visual:hover .avx-hero__schematic-svg {
-    transform: scale(1.015);
+    transform: scale(1.02);
   }
 }
 
