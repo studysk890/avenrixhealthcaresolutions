@@ -212,6 +212,83 @@
   line-height: 1.35;
 }
 
+/* Contact Direct Communication Channels */
+.avx-contact__channels {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0.625rem;
+  margin-top: var(--avx-space-4);
+  padding-top: var(--avx-space-4);
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.avx-contact__channel-link {
+  display: flex;
+  align-items: center;
+  gap: 0.875rem;
+  padding: 0.65rem 0.875rem;
+  background-color: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: 10px;
+  text-decoration: none;
+  color: inherit;
+  transition: all var(--avx-transition-fast);
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .avx-contact__channel-link:hover {
+    background-color: rgba(255, 255, 255, 0.08);
+    border-color: rgba(40, 118, 185, 0.4);
+    transform: translateX(3px);
+  }
+}
+
+.avx-contact__channel-icon {
+  width: 32px;
+  height: 32px;
+  border-radius: 8px;
+  background-color: rgba(40, 118, 185, 0.15);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--avx-blue-light);
+  flex-shrink: 0;
+  transition: all var(--avx-transition-fast);
+}
+
+.avx-contact__channel-icon--wa {
+  background-color: rgba(37, 211, 102, 0.15);
+  color: #25D366;
+}
+
+.avx-contact__channel-icon--li {
+  background-color: rgba(10, 102, 194, 0.18);
+  color: #70B5F9;
+}
+
+.avx-contact__channel-info {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.avx-contact__channel-label {
+  font-family: var(--avx-font-sans);
+  font-size: 0.6875rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--avx-blue-light);
+}
+
+.avx-contact__channel-val {
+  font-family: var(--avx-font-sans);
+  font-size: 0.8125rem;
+  font-weight: 500;
+  color: var(--avx-white);
+  line-height: 1.3;
+}
+
 /* --------------------------------------------------------------------------
    Right Column: Floating Translucent Form Card
    Smooth 16px border-radius, elite low-opacity drop shadow

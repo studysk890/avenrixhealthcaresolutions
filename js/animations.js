@@ -74,7 +74,9 @@
     initHeaderAnimations();
     initHeroAnimations();
     initAboutAnimations();
+    initSolutionsAnimations();
     initProductAnimations();
+    initIndustriesAnimations();
     initValuesAnimations();
     initContactAnimations();
     initFooterAnimations();
@@ -101,11 +103,21 @@
       '.avx-about__narrative > *',
       '.avx-about__media',
       '.avx-about__image',
+      '.avx-solutions__eyebrow',
+      '.avx-solutions__title',
+      '.avx-solutions__intro',
+      '.avx-solutions__accent-rule',
+      '.avx-solution-card',
       '.avx-products__meta',
       '.avx-products__title',
       '.avx-products__intro',
       '.avx-products__accent-rule',
       '.avx-product-card',
+      '.avx-industries__eyebrow',
+      '.avx-industries__title',
+      '.avx-industries__intro',
+      '.avx-industries__accent-rule',
+      '.avx-industry-card',
       '.avx-values__meta',
       '.avx-values__title',
       '.avx-values__intro',
@@ -363,6 +375,67 @@
   }
 
   /**
+   * 3.5. OUR SOLUTIONS SECTION ANIMATIONS
+   */
+  function initSolutionsAnimations() {
+    const solutionsSection = document.querySelector('.avx-solutions');
+    if (!solutionsSection || typeof ScrollTrigger === 'undefined') return;
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+
+    const solHeaderTL = gsap.timeline({
+      scrollTrigger: {
+        trigger: '.avx-solutions',
+        start: 'top 80%',
+        toggleActions: 'play none none none'
+      }
+    });
+
+    solHeaderTL
+      .from('.avx-solutions__eyebrow', {
+        opacity: 0,
+        y: MOTION.distance.sm,
+        duration: MOTION.duration.medium,
+        ease: MOTION.ease.editorial,
+        clearProps: 'transform,opacity'
+      })
+      .from('.avx-solutions__title', {
+        opacity: 0,
+        y: MOTION.distance.md,
+        duration: MOTION.duration.reveal,
+        ease: MOTION.ease.editorial,
+        clearProps: 'transform,opacity'
+      }, '-=0.35')
+      .from('.avx-solutions__intro', {
+        opacity: 0,
+        y: MOTION.distance.sm,
+        duration: MOTION.duration.medium,
+        ease: MOTION.ease.editorial,
+        clearProps: 'transform,opacity'
+      }, '-=0.4')
+      .from('.avx-solutions__accent-rule', {
+        scaleX: 0,
+        duration: MOTION.duration.medium,
+        ease: MOTION.ease.inOut,
+        clearProps: 'transform'
+      }, '-=0.3');
+
+    ScrollTrigger.batch('.avx-solution-card', {
+      start: 'top 88%',
+      once: true,
+      onEnter: (batch) => {
+        gsap.from(batch, {
+          opacity: 0,
+          y: MOTION.distance.lg,
+          duration: MOTION.duration.medium,
+          stagger: 0.08,
+          ease: MOTION.ease.decel,
+          clearProps: 'transform,opacity'
+        });
+      }
+    });
+  }
+
+  /**
    * 4. PRODUCTS & SERVICES SECTION ANIMATIONS
    * Requirement:
    *  Section heading reveals first, then 9 cards stagger row-by-row via ScrollTrigger.batch().
@@ -423,6 +496,67 @@
           scale: 0.97,
           duration: MOTION.duration.medium,
           stagger: 0.08,
+          ease: MOTION.ease.decel,
+          clearProps: 'transform,opacity'
+        });
+      }
+    });
+  }
+
+  /**
+   * 4.5. INDUSTRIES WE SERVE SECTION ANIMATIONS
+   */
+  function initIndustriesAnimations() {
+    const industriesSection = document.querySelector('.avx-industries');
+    if (!industriesSection || typeof ScrollTrigger === 'undefined') return;
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+
+    const indHeaderTL = gsap.timeline({
+      scrollTrigger: {
+        trigger: '.avx-industries',
+        start: 'top 80%',
+        toggleActions: 'play none none none'
+      }
+    });
+
+    indHeaderTL
+      .from('.avx-industries__eyebrow', {
+        opacity: 0,
+        y: MOTION.distance.sm,
+        duration: MOTION.duration.medium,
+        ease: MOTION.ease.editorial,
+        clearProps: 'transform,opacity'
+      })
+      .from('.avx-industries__title', {
+        opacity: 0,
+        y: MOTION.distance.md,
+        duration: MOTION.duration.reveal,
+        ease: MOTION.ease.editorial,
+        clearProps: 'transform,opacity'
+      }, '-=0.35')
+      .from('.avx-industries__intro', {
+        opacity: 0,
+        y: MOTION.distance.sm,
+        duration: MOTION.duration.medium,
+        ease: MOTION.ease.editorial,
+        clearProps: 'transform,opacity'
+      }, '-=0.4')
+      .from('.avx-industries__accent-rule', {
+        scaleX: 0,
+        duration: MOTION.duration.medium,
+        ease: MOTION.ease.inOut,
+        clearProps: 'transform'
+      }, '-=0.3');
+
+    ScrollTrigger.batch('.avx-industry-card', {
+      start: 'top 90%',
+      once: true,
+      onEnter: (batch) => {
+        gsap.from(batch, {
+          opacity: 0,
+          y: MOTION.distance.md,
+          duration: MOTION.duration.fast + 0.15,
+          stagger: 0.06,
           ease: MOTION.ease.decel,
           clearProps: 'transform,opacity'
         });
@@ -872,7 +1006,9 @@
   window.initHeaderAnimations = initHeaderAnimations;
   window.initHeroAnimations = initHeroAnimations;
   window.initAboutAnimations = initAboutAnimations;
+  window.initSolutionsAnimations = initSolutionsAnimations;
   window.initProductAnimations = initProductAnimations;
+  window.initIndustriesAnimations = initIndustriesAnimations;
   window.initValuesAnimations = initValuesAnimations;
   window.initContactAnimations = initContactAnimations;
   window.initFooterAnimations = initFooterAnimations;

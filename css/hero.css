@@ -137,6 +137,43 @@
   }
 }
 
+.avx-hero__btn-brochure {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--avx-space-2);
+  background-color: rgba(40, 118, 185, 0.08);
+  color: var(--avx-corp-navy);
+  border: 1px solid rgba(40, 118, 185, 0.22);
+  font-family: var(--avx-font-sans);
+  font-size: 0.875rem;
+  font-weight: 600;
+  padding: 0.75rem 1.4rem;
+  border-radius: var(--avx-radius-sm);
+  text-decoration: none;
+  cursor: pointer;
+  transition: all var(--avx-transition-fast);
+}
+
+.avx-hero__btn-brochure svg {
+  color: var(--avx-blue);
+  transition: transform var(--avx-transition-fast), color var(--avx-transition-fast);
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .avx-hero__btn-brochure:hover {
+    background-color: var(--avx-blue);
+    color: var(--avx-white);
+    border-color: var(--avx-blue);
+    transform: translateY(-1px);
+    box-shadow: 0 4px 16px -2px rgba(40, 118, 185, 0.35);
+  }
+
+  .avx-hero__btn-brochure:hover svg {
+    color: var(--avx-white);
+    transform: translateY(2px);
+  }
+}
+
 /* --------------------------------------------------------------------------
    Hero Visual / Blueprint Device Frame (Right Column)
    Moved out of rigid rectangular box into an organic rounded blueprint frame

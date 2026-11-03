@@ -21,7 +21,7 @@
    * desktop (.avx-header__nav-link) and mobile drawer (.avx-drawer__link)
    * to accurately reflect whichever section is currently showing.
    */
-  const sections = ['home', 'about', 'products', 'values', 'contact']
+  const sections = ['home', 'about', 'solutions', 'products', 'industries', 'why-avenrix', 'contact']
     .map(id => ({ id, el: document.getElementById(id) }))
     .filter(s => s.el !== null);
 
@@ -700,6 +700,64 @@
 
   // Initialize AHU & HVAC Slider
   initAhuHvacSlider();
+
+  /**
+   * 7. PRODUCT PORTFOLIO CATEGORY FILTERING & ENQUIRE SHORTCUT
+   */
+  function initProductPortfolioInteractions() {
+    const filterBtns = document.querySelectorAll('.avx-filter-btn');
+    const productCards = document.querySelectorAll('.avx-products__grid .avx-product-card');
+    const enquireBtns = document.querySelectorAll('.avx-product-card__enquire');
+    const productSelect = document.getElementById('avxContactProduct');
+
+    // Category Filtering
+    if (filterBtns.length > 0 && productCards.length > 0) {
+      filterBtns.forEach(btn => {
+        btn.addEventListener('click', function () {
+          const filter = this.getAttribute('data-filter') || 'all';
+
+          filterBtns.forEach(b => {
+            const isActive = b === btn;
+            b.classList.toggle('is-active', isActive);
+            b.setAttribute('aria-selected', isActive ? 'true' : 'false');
+          });
+
+          productCards.forEach(card => {
+            const cat = card.getAttribute('data-category') || '';
+            const match = filter === 'all' || cat === filter;
+            card.classList.toggle('is-filtered-out', !match);
+          });
+
+          if (typeof ScrollTrigger !== 'undefined') {
+            ScrollTrigger.refresh();
+          }
+        });
+      });
+    }
+
+    // "Enquire Now" Click -> Select product in contact form
+    if (enquireBtns.length > 0 && productSelect) {
+      enquireBtns.forEach(btn => {
+        btn.addEventListener('click', function () {
+          const targetProduct = (this.getAttribute('data-product') || '').trim();
+          if (targetProduct) {
+            for (let i = 0; i < productSelect.options.length; i++) {
+              const optVal = (productSelect.options[i].value || '').trim();
+              if (!optVal) continue;
+              if (optVal === targetProduct || optVal.toLowerCase().includes(targetProduct.toLowerCase()) || targetProduct.toLowerCase().includes(optVal.toLowerCase())) {
+                productSelect.selectedIndex = i;
+                productSelect.dispatchEvent(new Event('change', { bubbles: true }));
+                break;
+              }
+            }
+          }
+        });
+      });
+    }
+  }
+
+  // Initialize Product Portfolio Filter & Enquire Interactions
+  initProductPortfolioInteractions();
 
   /**
    * 7. SOURCE PROTECTION & ANTI-CLONING SHIELD

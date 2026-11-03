@@ -1,6 +1,7 @@
 User-agent: *
 Disallow: /scratch/
 Disallow: /google_sheets_integration/
+Allow: /Avenrix-Healthcare-Solutions-Brochure.pdf
 Disallow: /*.pdf$
 Disallow: /*.js$
 Disallow: /*.css$

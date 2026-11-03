@@ -14,6 +14,14 @@
   --avx-navy-deep: #001524;
   --avx-navy-light: #074170;
   
+  /* Proposal Corporate Palette */
+  --avx-corp-navy: #123C70;     /* Corporate Navy */
+  --avx-blue: #2876B9;          /* Avenrix Blue */
+  --avx-blue-hover: #1f629c;
+  --avx-blue-light: #DCEAF5;    /* Light Blue */
+  --avx-blue-subtle: rgba(40, 118, 185, 0.08);
+  --avx-blue-tint: #F4F8FC;     /* Ultra-light blue card backdrop */
+
   --avx-orange: #F16419;
   --avx-orange-hover: #D9530E;
   --avx-orange-subtle: rgba(241, 100, 25, 0.08);

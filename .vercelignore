@@ -2,8 +2,9 @@
 scratch/
 google_sheets_integration/
 
-# Ignore internal PDF documentation
+# Ignore internal PDF documentation (except public company brochure)
 *.pdf
+!Avenrix-Healthcare-Solutions-Brochure.pdf
 
 # Ignore markdown documentation
 *.md

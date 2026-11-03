@@ -88,8 +88,47 @@
 .avx-products__accent-rule {
   width: 72px;
   height: 2px;
-  background-color: var(--avx-orange);
+  background-color: var(--avx-blue);
   transform-origin: left;
+}
+
+/* Category Filter Tabs */
+.avx-products__filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: var(--avx-space-6);
+  margin-bottom: var(--avx-space-6);
+}
+
+.avx-filter-btn {
+  font-family: var(--avx-font-sans);
+  font-size: 0.8125rem;
+  font-weight: 600;
+  color: var(--avx-slate-700);
+  background-color: var(--avx-slate-100);
+  border: 1px solid rgba(0, 0, 0, 0.06);
+  padding: 0.5rem 1.15rem;
+  border-radius: 9999px;
+  cursor: pointer;
+  transition: all var(--avx-transition-fast);
+}
+
+.avx-filter-btn:hover {
+  background-color: var(--avx-blue-light);
+  color: var(--avx-corp-navy);
+  border-color: rgba(40, 118, 185, 0.2);
+}
+
+.avx-filter-btn.is-active {
+  background-color: var(--avx-corp-navy);
+  color: var(--avx-white);
+  border-color: var(--avx-corp-navy);
+  box-shadow: 0 2px 8px rgba(18, 60, 112, 0.25);
+}
+
+.avx-product-card.is-filtered-out {
+  display: none !important;
 }
 
 /* --------------------------------------------------------------------------
@@ -561,3 +600,5 @@
     padding-bottom: 3rem;
   }
 }
+
+
