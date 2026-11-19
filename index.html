@@ -211,12 +211,6 @@
           <!-- Right Column: Precision Technical Visual Frame -->
           <div class="avx-hero__visual-wrapper">
             <div class="avx-hero__visual" id="heroVisual">
-              <!-- Corner Crosshair Registration Marks (+) -->
-              <span class="avx-hero__corner avx-hero__corner--tl" aria-hidden="true"></span>
-              <span class="avx-hero__corner avx-hero__corner--tr" aria-hidden="true"></span>
-              <span class="avx-hero__corner avx-hero__corner--bl" aria-hidden="true"></span>
-              <span class="avx-hero__corner avx-hero__corner--br" aria-hidden="true"></span>
-
               <!-- Card Header Bar -->
               <div class="avx-hero__visual-meta">
                 <span class="avx-hero__visual-id">SYS-REF // CRITICAL ENV SPEC</span>
@@ -331,12 +325,6 @@
           <!-- Right Column: Architectural Visual Frame -->
           <div class="avx-about__visual-col">
             <div class="avx-about__media">
-              <!-- Corner Crosshair Registration Marks (+) -->
-              <span class="avx-about__corner avx-about__corner--tl" aria-hidden="true"></span>
-              <span class="avx-about__corner avx-about__corner--tr" aria-hidden="true"></span>
-              <span class="avx-about__corner avx-about__corner--bl" aria-hidden="true"></span>
-              <span class="avx-about__corner avx-about__corner--br" aria-hidden="true"></span>
-
               <!-- Visual Header Bar -->
               <div class="avx-about__media-meta">
                 <span>ARCH-REF // CRITICAL SPATIAL MODEL</span>
@@ -410,199 +398,340 @@
           
           <!-- Solution 01: HVAC & AHU Systems -->
           <article class="avx-solution-card" role="listitem">
+
             <div>
+              <div class="avx-solution-card__sys-bar">
+                <span class="avx-solution-card__code">SYS-01 // AIR-HVAC</span>
+                <span class="avx-solution-card__badge-status">
+                  <span class="avx-solution-card__dot" aria-hidden="true"></span>
+                  NABH &bull; cGMP
+                </span>
+              </div>
+
               <div class="avx-solution-card__header">
                 <div class="avx-solution-card__icon-wrap" aria-hidden="true">
-                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
                     <path d="M9.59 4.59A2 2 0 1 1 11 8H2m10.59 11.41A2 2 0 1 0 14 16H2m15.73-8.27A2.5 2.5 0 1 1 19.5 12H2"/>
                   </svg>
                 </div>
-                <span class="avx-solution-card__num">01 / HVAC</span>
+                <span class="avx-solution-card__num" aria-hidden="true">01</span>
               </div>
+
               <h3 class="avx-solution-card__title">HVAC &amp; AHU Systems</h3>
               <p class="avx-solution-card__desc">
                 Design, supply, and installation coordination of Air Handling Units and complete HVAC systems for hospitals, operation theatres, and pharmaceutical cleanrooms.
               </p>
+
+              <div class="avx-solution-card__specs" aria-label="Technical Specifications">
+                <div class="avx-solution-card__spec-item">
+                  <span class="avx-solution-card__spec-label">Filtration Grade</span>
+                  <span class="avx-solution-card__spec-val">HEPA H14 (99.995%)</span>
+                </div>
+                <div class="avx-solution-card__spec-item">
+                  <span class="avx-solution-card__spec-label">Pressure Cascade</span>
+                  <span class="avx-solution-card__spec-val">+15 Pa / Pos &amp; Neg</span>
+                </div>
+              </div>
             </div>
+
             <div>
               <div class="avx-solution-card__features" aria-label="Key features">
                 <span class="avx-solution-card__tag">HEPA Filtration</span>
-                <span class="avx-solution-card__tag">Pressure Control</span>
-                <span class="avx-solution-card__tag">Temp &amp; Humidity Management</span>
-                <span class="avx-solution-card__tag">NABH/GMP Compliant</span>
+                <span class="avx-solution-card__tag">Pressure Cascades</span>
+                <span class="avx-solution-card__tag">Temp &amp; RH Stability</span>
+                <span class="avx-solution-card__tag">NABH/GMP Validated</span>
               </div>
-              <a href="#products" class="avx-solution-card__link" aria-label="View HVAC and AHU products">
-                <span>View Products</span>
-                <svg viewBox="0 0 16 16" fill="none" aria-hidden="true">
-                  <path d="M3 8H13M13 8L8.5 3.5M13 8L8.5 12.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                </svg>
-              </a>
+              <div class="avx-solution-card__footer">
+                <a href="#products" class="avx-solution-card__link" aria-label="View HVAC and AHU products and technical specs">
+                  <span>View Products &amp; Specs</span>
+                  <svg viewBox="0 0 16 16" fill="none" aria-hidden="true">
+                    <path d="M3 8H13M13 8L8.5 3.5M13 8L8.5 12.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                </a>
+              </div>
             </div>
           </article>
 
           <!-- Solution 02: Modular Operation Theatres -->
           <article class="avx-solution-card" role="listitem">
+
             <div>
+              <div class="avx-solution-card__sys-bar">
+                <span class="avx-solution-card__code">SYS-02 // SURG-OT</span>
+                <span class="avx-solution-card__badge-status">
+                  <span class="avx-solution-card__dot" aria-hidden="true"></span>
+                  NABH &bull; ASHRAE 170
+                </span>
+              </div>
+
               <div class="avx-solution-card__header">
                 <div class="avx-solution-card__icon-wrap" aria-hidden="true">
-                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
                     <path d="M3 3h18v18H3zM9 9h6v6H9z"/>
                     <path d="M12 9v6M9 12h6"/>
                   </svg>
                 </div>
-                <span class="avx-solution-card__num">02 / MOD-OT</span>
+                <span class="avx-solution-card__num" aria-hidden="true">02</span>
               </div>
+
               <h3 class="avx-solution-card__title">Modular Operation Theatres (OT)</h3>
               <p class="avx-solution-card__desc">
                 Turnkey modular OT solutions engineered for sterile, infection-controlled surgical environments with precision laminar airflow and medical utility integration.
               </p>
+
+              <div class="avx-solution-card__specs" aria-label="Technical Specifications">
+                <div class="avx-solution-card__spec-item">
+                  <span class="avx-solution-card__spec-label">Cleanliness Class</span>
+                  <span class="avx-solution-card__spec-val">ISO 5 (Class 100)</span>
+                </div>
+                <div class="avx-solution-card__spec-item">
+                  <span class="avx-solution-card__spec-label">Airflow Velocity</span>
+                  <span class="avx-solution-card__spec-val">0.45 m/s &plusmn; 20% Uni</span>
+                </div>
+              </div>
             </div>
+
             <div>
               <div class="avx-solution-card__features" aria-label="Key features">
                 <span class="avx-solution-card__tag">Anti-Bacterial Panels</span>
-                <span class="avx-solution-card__tag">Laminar Airflow</span>
-                <span class="avx-solution-card__tag">Scrub Stations</span>
-                <span class="avx-solution-card__tag">Hermetic Doors</span>
-                <span class="avx-solution-card__tag">OT Control Panels</span>
+                <span class="avx-solution-card__tag">Laminar Flow Plenums</span>
+                <span class="avx-solution-card__tag">Hermetic Sliding Doors</span>
+                <span class="avx-solution-card__tag">Touchscreen OT Panels</span>
               </div>
-              <a href="#products" class="avx-solution-card__link" aria-label="View Modular OT products">
-                <span>View Products</span>
-                <svg viewBox="0 0 16 16" fill="none" aria-hidden="true">
-                  <path d="M3 8H13M13 8L8.5 3.5M13 8L8.5 12.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                </svg>
-              </a>
+              <div class="avx-solution-card__footer">
+                <a href="#products" class="avx-solution-card__link" aria-label="View Modular OT products and technical specs">
+                  <span>View Products &amp; Specs</span>
+                  <svg viewBox="0 0 16 16" fill="none" aria-hidden="true">
+                    <path d="M3 8H13M13 8L8.5 3.5M13 8L8.5 12.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                </a>
+              </div>
             </div>
           </article>
 
           <!-- Solution 03: Modular Wall & Ceiling Systems -->
           <article class="avx-solution-card" role="listitem">
+
             <div>
+              <div class="avx-solution-card__sys-bar">
+                <span class="avx-solution-card__code">SYS-03 // ENVELOPE</span>
+                <span class="avx-solution-card__badge-status">
+                  <span class="avx-solution-card__dot" aria-hidden="true"></span>
+                  ISO 14644 CLASS 5-8
+                </span>
+              </div>
+
               <div class="avx-solution-card__header">
                 <div class="avx-solution-card__icon-wrap" aria-hidden="true">
-                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
                     <rect x="3" y="3" width="18" height="18" rx="2"/>
                     <path d="M3 9h18M3 15h18M9 3v18M15 3v18"/>
                   </svg>
                 </div>
-                <span class="avx-solution-card__num">03 / PANELS</span>
+                <span class="avx-solution-card__num" aria-hidden="true">03</span>
               </div>
+
               <h3 class="avx-solution-card__title">Modular Wall &amp; Ceiling Systems</h3>
               <p class="avx-solution-card__desc">
                 Specialized modular panelling for cleanrooms, ICUs, and critical healthcare areas requiring durable, hygienic, and easily sanitised room envelopes.
               </p>
+
+              <div class="avx-solution-card__specs" aria-label="Technical Specifications">
+                <div class="avx-solution-card__spec-item">
+                  <span class="avx-solution-card__spec-label">Core Material</span>
+                  <span class="avx-solution-card__spec-val">PIR / Honeycomb / SS</span>
+                </div>
+                <div class="avx-solution-card__spec-item">
+                  <span class="avx-solution-card__spec-label">Joint Integrity</span>
+                  <span class="avx-solution-card__spec-val">Flush Silicone Sealed</span>
+                </div>
+              </div>
             </div>
+
             <div>
               <div class="avx-solution-card__features" aria-label="Key features">
-                <span class="avx-solution-card__tag">Seamless Joints</span>
-                <span class="avx-solution-card__tag">Chemical &amp; Fire Resistant</span>
-                <span class="avx-solution-card__tag">Flush Fixtures</span>
-                <span class="avx-solution-card__tag">Easy Sanitisation</span>
+                <span class="avx-solution-card__tag">Seamless Flush Joints</span>
+                <span class="avx-solution-card__tag">Chemical &amp; Fire Rated</span>
+                <span class="avx-solution-card__tag">Flush Double Glazing</span>
+                <span class="avx-solution-card__tag">Walkable Ceiling System</span>
               </div>
-              <a href="#products" class="avx-solution-card__link" aria-label="View Wall and Ceiling Panel products">
-                <span>View Products</span>
-                <svg viewBox="0 0 16 16" fill="none" aria-hidden="true">
-                  <path d="M3 8H13M13 8L8.5 3.5M13 8L8.5 12.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                </svg>
-              </a>
+              <div class="avx-solution-card__footer">
+                <a href="#products" class="avx-solution-card__link" aria-label="View Wall and Ceiling Panel products and technical specs">
+                  <span>View Products &amp; Specs</span>
+                  <svg viewBox="0 0 16 16" fill="none" aria-hidden="true">
+                    <path d="M3 8H13M13 8L8.5 3.5M13 8L8.5 12.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                </a>
+              </div>
             </div>
           </article>
 
           <!-- Solution 04: Medical Gas Pipeline Systems (MGPS) -->
           <article class="avx-solution-card" role="listitem">
+
             <div>
+              <div class="avx-solution-card__sys-bar">
+                <span class="avx-solution-card__code">SYS-04 // GAS-MGPS</span>
+                <span class="avx-solution-card__badge-status">
+                  <span class="avx-solution-card__dot" aria-hidden="true"></span>
+                  HTM 02-01 &bull; NFPA 99
+                </span>
+              </div>
+
               <div class="avx-solution-card__header">
                 <div class="avx-solution-card__icon-wrap" aria-hidden="true">
-                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
                     <path d="M4 14h6a2 2 0 0 0 2-2V4M12 14h8M16 10l4 4-4 4M8 6L4 10l4 4"/>
                   </svg>
                 </div>
-                <span class="avx-solution-card__num">04 / MGPS</span>
+                <span class="avx-solution-card__num" aria-hidden="true">04</span>
               </div>
+
               <h3 class="avx-solution-card__title">Medical Gas Pipeline Systems (MGPS)</h3>
               <p class="avx-solution-card__desc">
                 Complete medical gas distribution infrastructure from bulk source manifolds to patient delivery points across critical care departments.
               </p>
+
+              <div class="avx-solution-card__specs" aria-label="Technical Specifications">
+                <div class="avx-solution-card__spec-item">
+                  <span class="avx-solution-card__spec-label">Utility Media</span>
+                  <span class="avx-solution-card__spec-val">O₂, N₂O, Air 4/7 Bar, Vac</span>
+                </div>
+                <div class="avx-solution-card__spec-item">
+                  <span class="avx-solution-card__spec-label">Safety Alarms</span>
+                  <span class="avx-solution-card__spec-val">Digital Area Master Panel</span>
+                </div>
+              </div>
             </div>
+
             <div>
               <div class="avx-solution-card__features" aria-label="Key features">
-                <span class="avx-solution-card__tag">Oxygen &amp; Medical Air</span>
-                <span class="avx-solution-card__tag">Vacuum Lines</span>
-                <span class="avx-solution-card__tag">Area Alarm Panels</span>
-                <span class="avx-solution-card__tag">Bed Head Units</span>
-                <span class="avx-solution-card__tag">HTM/ISO Standards</span>
+                <span class="avx-solution-card__tag">Auto Manifolds</span>
+                <span class="avx-solution-card__tag">Modular Bed Head Units</span>
+                <span class="avx-solution-card__tag">Surgical Pendant Feeds</span>
+                <span class="avx-solution-card__tag">Area Valve Service Units</span>
               </div>
-              <a href="#products" class="avx-solution-card__link" aria-label="View MGPS products">
-                <span>View Products</span>
-                <svg viewBox="0 0 16 16" fill="none" aria-hidden="true">
-                  <path d="M3 8H13M13 8L8.5 3.5M13 8L8.5 12.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                </svg>
-              </a>
+              <div class="avx-solution-card__footer">
+                <a href="#products" class="avx-solution-card__link" aria-label="View MGPS products and technical specs">
+                  <span>View Products &amp; Specs</span>
+                  <svg viewBox="0 0 16 16" fill="none" aria-hidden="true">
+                    <path d="M3 8H13M13 8L8.5 3.5M13 8L8.5 12.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                </a>
+              </div>
             </div>
           </article>
 
           <!-- Solution 05: Medical Equipment & Accessories -->
           <article class="avx-solution-card" role="listitem">
+
             <div>
+              <div class="avx-solution-card__sys-bar">
+                <span class="avx-solution-card__code">SYS-05 // MED-EQUIP</span>
+                <span class="avx-solution-card__badge-status">
+                  <span class="avx-solution-card__dot" aria-hidden="true"></span>
+                  ISO 13485 &bull; CE
+                </span>
+              </div>
+
               <div class="avx-solution-card__header">
                 <div class="avx-solution-card__icon-wrap" aria-hidden="true">
-                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
                     <path d="M12 2v20M2 12h20"/>
                     <circle cx="12" cy="12" r="7"/>
                   </svg>
                 </div>
-                <span class="avx-solution-card__num">05 / EQUIP</span>
+                <span class="avx-solution-card__num" aria-hidden="true">05</span>
               </div>
+
               <h3 class="avx-solution-card__title">Medical Equipment &amp; Accessories</h3>
               <p class="avx-solution-card__desc">
                 Sourcing and coordinated supply of essential surgical and critical-care equipment and OT accessories through trusted, certified partner brands.
               </p>
+
+              <div class="avx-solution-card__specs" aria-label="Technical Specifications">
+                <div class="avx-solution-card__spec-item">
+                  <span class="avx-solution-card__spec-label">Surgical Lighting</span>
+                  <span class="avx-solution-card__spec-val">160,000 Lux / CRI &gt; 96</span>
+                </div>
+                <div class="avx-solution-card__spec-item">
+                  <span class="avx-solution-card__spec-label">Stainless Hygiene</span>
+                  <span class="avx-solution-card__spec-val">AISI 304 / 316L SS Grade</span>
+                </div>
+              </div>
             </div>
+
             <div>
               <div class="avx-solution-card__features" aria-label="Key features">
-                <span class="avx-solution-card__tag">OT Lights &amp; Tables</span>
-                <span class="avx-solution-card__tag">Patient Monitors</span>
-                <span class="avx-solution-card__tag">Surgical Scrub Sinks</span>
-                <span class="avx-solution-card__tag">Medical Pendants</span>
-                <span class="avx-solution-card__tag">SS Furniture</span>
+                <span class="avx-solution-card__tag">LED OT Lights &amp; Tables</span>
+                <span class="avx-solution-card__tag">Medical Gas Pendants</span>
+                <span class="avx-solution-card__tag">Surgeon Scrub Sinks</span>
+                <span class="avx-solution-card__tag">Sterile SS Storage</span>
               </div>
-              <a href="#products" class="avx-solution-card__link" aria-label="View Medical Equipment products">
-                <span>View Products</span>
-                <svg viewBox="0 0 16 16" fill="none" aria-hidden="true">
-                  <path d="M3 8H13M13 8L8.5 3.5M13 8L8.5 12.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                </svg>
-              </a>
+              <div class="avx-solution-card__footer">
+                <a href="#products" class="avx-solution-card__link" aria-label="View Medical Equipment products and technical specs">
+                  <span>View Products &amp; Specs</span>
+                  <svg viewBox="0 0 16 16" fill="none" aria-hidden="true">
+                    <path d="M3 8H13M13 8L8.5 3.5M13 8L8.5 12.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                </a>
+              </div>
             </div>
           </article>
 
           <!-- Solution 06: Cleanroom & Pharmaceutical Infrastructure -->
           <article class="avx-solution-card" role="listitem">
+
             <div>
+              <div class="avx-solution-card__sys-bar">
+                <span class="avx-solution-card__code">SYS-06 // PHARMA-CR</span>
+                <span class="avx-solution-card__badge-status">
+                  <span class="avx-solution-card__dot" aria-hidden="true"></span>
+                  cGMP &bull; EU ANNEX 1
+                </span>
+              </div>
+
               <div class="avx-solution-card__header">
                 <div class="avx-solution-card__icon-wrap" aria-hidden="true">
-                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
                     <path d="M10 2v7.31M14 2v7.31M8.5 2h7M14 9.3a6.5 6.5 0 1 1-4 0"/>
                   </svg>
                 </div>
-                <span class="avx-solution-card__num">06 / CLEAN</span>
+                <span class="avx-solution-card__num" aria-hidden="true">06</span>
               </div>
+
               <h3 class="avx-solution-card__title">Cleanroom &amp; Pharmaceutical Infrastructure</h3>
               <p class="avx-solution-card__desc">
                 Controlled environment solutions for pharmaceutical manufacturing, compounding pharmacies, IVF laboratories, and advanced research facilities.
               </p>
+
+              <div class="avx-solution-card__specs" aria-label="Technical Specifications">
+                <div class="avx-solution-card__spec-item">
+                  <span class="avx-solution-card__spec-label">Containment Range</span>
+                  <span class="avx-solution-card__spec-val">ISO 5 to ISO 8 Cleanroom</span>
+                </div>
+                <div class="avx-solution-card__spec-item">
+                  <span class="avx-solution-card__spec-label">Quality Protocol</span>
+                  <span class="avx-solution-card__spec-val">DQ / IQ / OQ / PQ Validated</span>
+                </div>
+              </div>
             </div>
+
             <div>
               <div class="avx-solution-card__features" aria-label="Key features">
-                <span class="avx-solution-card__tag">ISO Cleanrooms</span>
-                <span class="avx-solution-card__tag">Pass Boxes &amp; Air Showers</span>
-                <span class="avx-solution-card__tag">Epoxy &amp; Vinyl Flooring</span>
-                <span class="avx-solution-card__tag">Validation Documentation</span>
+                <span class="avx-solution-card__tag">Dynamic Pass Boxes</span>
+                <span class="avx-solution-card__tag">HEPA Air Showers</span>
+                <span class="avx-solution-card__tag">Conductive Flooring</span>
+                <span class="avx-solution-card__tag">Airlock Interlocking Doors</span>
               </div>
-              <a href="#products" class="avx-solution-card__link" aria-label="View Cleanroom products">
-                <span>View Products</span>
-                <svg viewBox="0 0 16 16" fill="none" aria-hidden="true">
-                  <path d="M3 8H13M13 8L8.5 3.5M13 8L8.5 12.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                </svg>
-              </a>
+              <div class="avx-solution-card__footer">
+                <a href="#products" class="avx-solution-card__link" aria-label="View Cleanroom products and technical specs">
+                  <span>View Products &amp; Specs</span>
+                  <svg viewBox="0 0 16 16" fill="none" aria-hidden="true">
+                    <path d="M3 8H13M13 8L8.5 3.5M13 8L8.5 12.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                </a>
+              </div>
             </div>
           </article>
 
@@ -1012,156 +1141,547 @@
           <div class="avx-industries__accent-rule" aria-hidden="true"></div>
         </div>
 
+        <!-- Interactive 3-Vertical Tab Navigation Hub -->
+        <div class="avx-industries__tabs-wrapper">
+          <div class="avx-industries__tab-nav" role="tablist" aria-label="Filter Industries by Healthcare Vertical">
+            <button type="button" class="avx-industries__tab-btn is-active" role="tab" aria-selected="true" data-vertical="all" id="tab-all">
+              <span class="avx-industries__tab-title">All Sectors</span>
+              <span class="avx-industries__tab-count">9</span>
+            </button>
+            <button type="button" class="avx-industries__tab-btn" role="tab" aria-selected="false" data-vertical="clinical" id="tab-clinical">
+              <span class="avx-industries__tab-title">Clinical &amp; Hospital Care</span>
+              <span class="avx-industries__tab-count">4</span>
+            </button>
+            <button type="button" class="avx-industries__tab-btn" role="tab" aria-selected="false" data-vertical="cleanroom" id="tab-cleanroom">
+              <span class="avx-industries__tab-title">Cleanroom &amp; Life Sciences</span>
+              <span class="avx-industries__tab-count">3</span>
+            </button>
+            <button type="button" class="avx-industries__tab-btn" role="tab" aria-selected="false" data-vertical="institutional" id="tab-institutional">
+              <span class="avx-industries__tab-title">Institutional &amp; Diagnostics</span>
+              <span class="avx-industries__tab-count">2</span>
+            </button>
+          </div>
+
+          <!-- Dynamic Vertical Domain Lead Bar -->
+          <div class="avx-industries__domain-lead" id="industriesDomainLead" aria-live="polite">
+            <div class="avx-industries__domain-lead-text">
+              <span class="avx-industries__domain-indicator" aria-hidden="true"></span>
+              <span id="industriesDomainDesc">Comprehensive infrastructure coordination across acute care, sterile manufacturing, and diagnostic institutions.</span>
+            </div>
+            <span class="avx-industries__domain-meta" id="industriesDomainMeta">09 Active Sectors</span>
+          </div>
+        </div>
+
         <!-- 9-Card Industries Grid -->
         <div class="avx-industries__grid" role="list">
           
-          <!-- Industry 01: Multispecialty Hospitals -->
-          <article class="avx-industry-card" role="listitem">
-            <div class="avx-industry-card__top">
-              <div class="avx-industry-card__icon-wrap" aria-hidden="true">
-                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-                  <path d="M3 21h18M5 21V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2v16M9 9h6M9 13h6M12 7v8"/>
-                </svg>
+          <!-- Industry 01: Multispecialty Hospitals (Clinical) -->
+          <article class="avx-industry-card" role="listitem" data-vertical="clinical">
+
+            <div>
+              <div class="avx-industry-card__sys-bar">
+                <span class="avx-industry-card__code">SEC-01 // HOSPITALS</span>
+                <span class="avx-industry-card__badge-status">
+                  <span class="avx-industry-card__dot" aria-hidden="true"></span>
+                  TIER-1 ACUTE
+                </span>
               </div>
-              <span class="avx-industry-card__sector">ACUTE CARE</span>
+
+              <div class="avx-industry-card__header">
+                <div class="avx-industry-card__icon-wrap" aria-hidden="true">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M3 21h18M5 21V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2v16M9 9h6M9 13h6M12 7v8"/>
+                  </svg>
+                </div>
+                <span class="avx-industry-card__num" aria-hidden="true">01</span>
+              </div>
+
+              <h3 class="avx-industry-card__title">Multispecialty &amp; General Hospitals</h3>
+              <p class="avx-industry-card__desc">
+                Turnkey OT, HVAC, MGPS, and cleanroom infrastructure for new hospital developments, critical wing additions, and modernization.
+              </p>
+
+              <div class="avx-industry-card__specs" aria-label="Technical Scope">
+                <div class="avx-industry-card__spec-item">
+                  <span class="avx-industry-card__spec-label">Deployed Systems</span>
+                  <span class="avx-industry-card__spec-val">OT Complexes, Central MGPS, Isolation HVAC</span>
+                </div>
+                <div class="avx-industry-card__spec-item">
+                  <span class="avx-industry-card__spec-label">Regulatory Benchmarks</span>
+                  <span class="avx-industry-card__spec-val">NABH Standards &bull; AERB Shielding &bull; HTM 02-01</span>
+                </div>
+              </div>
             </div>
-            <h3 class="avx-industry-card__title">Multispecialty &amp; General Hospitals</h3>
-            <p class="avx-industry-card__desc">
-              Turnkey OT, HVAC, MGPS, and cleanroom infrastructure for new hospital developments, wing additions, and modernization.
-            </p>
+
+            <div>
+              <div class="avx-industry-card__features" aria-label="Key highlights">
+                <span class="avx-industry-card__tag">Central MGPS Plant</span>
+                <span class="avx-industry-card__tag">Multi-Bed HVAC</span>
+                <span class="avx-industry-card__tag">OT Complexes</span>
+                <span class="avx-industry-card__tag">Isolation Regimes</span>
+              </div>
+              <div class="avx-industry-card__footer">
+                <a href="#contact" class="avx-industry-card__link" aria-label="Consult healthcare infrastructure specialist for Multispecialty Hospitals">
+                  <span>Consult Sector Specialist</span>
+                  <svg viewBox="0 0 16 16" fill="none" aria-hidden="true">
+                    <path d="M3 8H13M13 8L8.5 3.5M13 8L8.5 12.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                </a>
+              </div>
+            </div>
           </article>
 
-          <!-- Industry 02: Clinics & Day-Care Centres -->
-          <article class="avx-industry-card" role="listitem">
-            <div class="avx-industry-card__top">
-              <div class="avx-industry-card__icon-wrap" aria-hidden="true">
-                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-                  <path d="M22 12h-4l-3 9L9 3l-3 9H2"/>
-                </svg>
+          <!-- Industry 02: Clinics & Day-Care Centres (Clinical) -->
+          <article class="avx-industry-card" role="listitem" data-vertical="clinical">
+
+            <div>
+              <div class="avx-industry-card__sys-bar">
+                <span class="avx-industry-card__code">SEC-02 // AMBULATORY</span>
+                <span class="avx-industry-card__badge-status">
+                  <span class="avx-industry-card__dot" aria-hidden="true"></span>
+                  AMBULATORY CARE
+                </span>
               </div>
-              <span class="avx-industry-card__sector">AMBULATORY CARE</span>
+
+              <div class="avx-industry-card__header">
+                <div class="avx-industry-card__icon-wrap" aria-hidden="true">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M22 12h-4l-3 9L9 3l-3 9H2"/>
+                  </svg>
+                </div>
+                <span class="avx-industry-card__num" aria-hidden="true">02</span>
+              </div>
+
+              <h3 class="avx-industry-card__title">Clinics &amp; Day-Care Centres</h3>
+              <p class="avx-industry-card__desc">
+                Compact modular procedure rooms, minor surgical suites, specialized clinic air filtration, and hygienic medical utility fit-outs.
+              </p>
+
+              <div class="avx-industry-card__specs" aria-label="Technical Scope">
+                <div class="avx-industry-card__spec-item">
+                  <span class="avx-industry-card__spec-label">Deployed Systems</span>
+                  <span class="avx-industry-card__spec-val">Compact AHU Modules, Minor OT Packages, Gas Outlets</span>
+                </div>
+                <div class="avx-industry-card__spec-item">
+                  <span class="avx-industry-card__spec-label">Regulatory Benchmarks</span>
+                  <span class="avx-industry-card__spec-val">NABH Day-Care Norms &bull; Municipal Health Codes</span>
+                </div>
+              </div>
             </div>
-            <h3 class="avx-industry-card__title">Clinics &amp; Day-Care Centres</h3>
-            <p class="avx-industry-card__desc">
-              Compact modular procedure rooms, minor surgical suites, specialized clinic air filtration, and hygienic medical utility fit-outs.
-            </p>
+
+            <div>
+              <div class="avx-industry-card__features" aria-label="Key highlights">
+                <span class="avx-industry-card__tag">Minor OT Suites</span>
+                <span class="avx-industry-card__tag">Compact AHU</span>
+                <span class="avx-industry-card__tag">Hygienic Outlets</span>
+                <span class="avx-industry-card__tag">Seamless Panels</span>
+              </div>
+              <div class="avx-industry-card__footer">
+                <a href="#contact" class="avx-industry-card__link" aria-label="Consult healthcare infrastructure specialist for Clinics and Day-Care Centres">
+                  <span>Consult Sector Specialist</span>
+                  <svg viewBox="0 0 16 16" fill="none" aria-hidden="true">
+                    <path d="M3 8H13M13 8L8.5 3.5M13 8L8.5 12.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                </a>
+              </div>
+            </div>
           </article>
 
-          <!-- Industry 03: ICUs, NICUs & Critical Care Units -->
-          <article class="avx-industry-card" role="listitem">
-            <div class="avx-industry-card__top">
-              <div class="avx-industry-card__icon-wrap" aria-hidden="true">
-                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-                  <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/>
-                </svg>
+          <!-- Industry 03: ICUs, NICUs & Critical Care Units (Clinical) -->
+          <article class="avx-industry-card" role="listitem" data-vertical="clinical">
+
+            <div>
+              <div class="avx-industry-card__sys-bar">
+                <span class="avx-industry-card__code">SEC-03 // CRITICAL-CARE</span>
+                <span class="avx-industry-card__badge-status">
+                  <span class="avx-industry-card__dot" aria-hidden="true"></span>
+                  HIGH-DEPENDENCY
+                </span>
               </div>
-              <span class="avx-industry-card__sector">CRITICAL CARE</span>
+
+              <div class="avx-industry-card__header">
+                <div class="avx-industry-card__icon-wrap" aria-hidden="true">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/>
+                  </svg>
+                </div>
+                <span class="avx-industry-card__num" aria-hidden="true">03</span>
+              </div>
+
+              <h3 class="avx-industry-card__title">ICUs, NICUs &amp; Critical Care Units</h3>
+              <p class="avx-industry-card__desc">
+                Positive and negative pressure isolation environments, continuous medical gas distribution, and clean air filtration.
+              </p>
+
+              <div class="avx-industry-card__specs" aria-label="Technical Scope">
+                <div class="avx-industry-card__spec-item">
+                  <span class="avx-industry-card__spec-label">Deployed Systems</span>
+                  <span class="avx-industry-card__spec-val">Bed Head Units, Continuous Gas Alarms, HEPA Cascades</span>
+                </div>
+                <div class="avx-industry-card__spec-item">
+                  <span class="avx-industry-card__spec-label">Regulatory Benchmarks</span>
+                  <span class="avx-industry-card__spec-val">CDC Isolation Norms &bull; HTM 02-01 &bull; NABH Critical</span>
+                </div>
+              </div>
             </div>
-            <h3 class="avx-industry-card__title">ICUs, NICUs &amp; Critical Care Units</h3>
-            <p class="avx-industry-card__desc">
-              Positive and negative pressure isolation environments, continuous medical gas distribution, and clean air filtration.
-            </p>
+
+            <div>
+              <div class="avx-industry-card__features" aria-label="Key highlights">
+                <span class="avx-industry-card__tag">Isolation Regimes</span>
+                <span class="avx-industry-card__tag">Bed Head Units</span>
+                <span class="avx-industry-card__tag">HEPA Cascades</span>
+                <span class="avx-industry-card__tag">Area Gas Alarms</span>
+              </div>
+              <div class="avx-industry-card__footer">
+                <a href="#contact" class="avx-industry-card__link" aria-label="Consult healthcare infrastructure specialist for ICUs and Critical Care Units">
+                  <span>Consult Sector Specialist</span>
+                  <svg viewBox="0 0 16 16" fill="none" aria-hidden="true">
+                    <path d="M3 8H13M13 8L8.5 3.5M13 8L8.5 12.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                </a>
+              </div>
+            </div>
           </article>
 
-          <!-- Industry 04: Modular Operation Theatres -->
-          <article class="avx-industry-card" role="listitem">
-            <div class="avx-industry-card__top">
-              <div class="avx-industry-card__icon-wrap" aria-hidden="true">
-                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-                  <path d="M12 2v20M2 12h20M4.93 4.93l14.14 14.14M19.07 4.93L4.93 19.07"/>
-                </svg>
+          <!-- Industry 04: Modular Operation Theatres (Clinical) -->
+          <article class="avx-industry-card" role="listitem" data-vertical="clinical">
+
+            <div>
+              <div class="avx-industry-card__sys-bar">
+                <span class="avx-industry-card__code">SEC-04 // SURG-OT</span>
+                <span class="avx-industry-card__badge-status">
+                  <span class="avx-industry-card__dot" aria-hidden="true"></span>
+                  ISO CLASS 5
+                </span>
               </div>
-              <span class="avx-industry-card__sector">SURGICAL SUITES</span>
+
+              <div class="avx-industry-card__header">
+                <div class="avx-industry-card__icon-wrap" aria-hidden="true">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M12 2v20M2 12h20M4.93 4.93l14.14 14.14M19.07 4.93L4.93 19.07"/>
+                  </svg>
+                </div>
+                <span class="avx-industry-card__num" aria-hidden="true">04</span>
+              </div>
+
+              <h3 class="avx-industry-card__title">Modular Operation Theatres</h3>
+              <p class="avx-industry-card__desc">
+                Dedicated sterile surgical infrastructure featuring laminar airflow ceilings, anti-microbial surfaces, and digital control panels.
+              </p>
+
+              <div class="avx-industry-card__specs" aria-label="Technical Scope">
+                <div class="avx-industry-card__spec-item">
+                  <span class="avx-industry-card__spec-label">Deployed Systems</span>
+                  <span class="avx-industry-card__spec-val">Laminar Flow Plenums, Hermetic Doors, Touchscreen Panels</span>
+                </div>
+                <div class="avx-industry-card__spec-item">
+                  <span class="avx-industry-card__spec-label">Regulatory Benchmarks</span>
+                  <span class="avx-industry-card__spec-val">NABH OT Guidelines &bull; ASHRAE 170 &bull; ISO 14644 Class 5</span>
+                </div>
+              </div>
             </div>
-            <h3 class="avx-industry-card__title">Modular Operation Theatres</h3>
-            <p class="avx-industry-card__desc">
-              Dedicated sterile surgical infrastructure featuring laminar airflow ceilings, anti-microbial surfaces, and digital control panels.
-            </p>
+
+            <div>
+              <div class="avx-industry-card__features" aria-label="Key highlights">
+                <span class="avx-industry-card__tag">Laminar Flow Ceilings</span>
+                <span class="avx-industry-card__tag">Hermetic Doors</span>
+                <span class="avx-industry-card__tag">OT Touch Panels</span>
+                <span class="avx-industry-card__tag">Scrub Sinks</span>
+              </div>
+              <div class="avx-industry-card__footer">
+                <a href="#contact" class="avx-industry-card__link" aria-label="Consult healthcare infrastructure specialist for Modular Operation Theatres">
+                  <span>Consult Sector Specialist</span>
+                  <svg viewBox="0 0 16 16" fill="none" aria-hidden="true">
+                    <path d="M3 8H13M13 8L8.5 3.5M13 8L8.5 12.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                </a>
+              </div>
+            </div>
           </article>
 
-          <!-- Industry 05: IVF Centres & Fertility Labs -->
-          <article class="avx-industry-card" role="listitem">
-            <div class="avx-industry-card__top">
-              <div class="avx-industry-card__icon-wrap" aria-hidden="true">
-                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-                  <circle cx="12" cy="12" r="9"/>
-                  <circle cx="12" cy="12" r="4"/>
-                  <circle cx="12" cy="12" r="1"/>
-                </svg>
+          <!-- Industry 05: IVF Centres & Fertility Labs (Cleanroom) -->
+          <article class="avx-industry-card" role="listitem" data-vertical="cleanroom">
+
+            <div>
+              <div class="avx-industry-card__sys-bar">
+                <span class="avx-industry-card__code">SEC-05 // REPRODUCTIVE</span>
+                <span class="avx-industry-card__badge-status">
+                  <span class="avx-industry-card__dot" aria-hidden="true"></span>
+                  VOC-FREE LAB
+                </span>
               </div>
-              <span class="avx-industry-card__sector">REPRODUCTIVE MEDICINE</span>
+
+              <div class="avx-industry-card__header">
+                <div class="avx-industry-card__icon-wrap" aria-hidden="true">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="12" cy="12" r="9"/>
+                    <circle cx="12" cy="12" r="4"/>
+                    <circle cx="12" cy="12" r="1"/>
+                  </svg>
+                </div>
+                <span class="avx-industry-card__num" aria-hidden="true">05</span>
+              </div>
+
+              <h3 class="avx-industry-card__title">IVF Centres &amp; Fertility Labs</h3>
+              <p class="avx-industry-card__desc">
+                Ultra-clean laboratory environments with ultra-strict VOC elimination, laminar hoods, and precise micro-climate stability.
+              </p>
+
+              <div class="avx-industry-card__specs" aria-label="Technical Scope">
+                <div class="avx-industry-card__spec-item">
+                  <span class="avx-industry-card__spec-label">Deployed Systems</span>
+                  <span class="avx-industry-card__spec-val">VOC Chemical Filtration AHU, Class 100 IVF Benches, CO₂/N₂</span>
+                </div>
+                <div class="avx-industry-card__spec-item">
+                  <span class="avx-industry-card__spec-label">Regulatory Benchmarks</span>
+                  <span class="avx-industry-card__spec-val">ESHRE / ART Guidelines &bull; ICMR Embryology Norms</span>
+                </div>
+              </div>
             </div>
-            <h3 class="avx-industry-card__title">IVF Centres &amp; Fertility Labs</h3>
-            <p class="avx-industry-card__desc">
-              Ultra-clean laboratory environments with ultra-strict VOC elimination, laminar hoods, and precise micro-climate stability.
-            </p>
+
+            <div>
+              <div class="avx-industry-card__features" aria-label="Key highlights">
+                <span class="avx-industry-card__tag">VOC Elimination</span>
+                <span class="avx-industry-card__tag">Class 100 IVF Hoods</span>
+                <span class="avx-industry-card__tag">CO₂ / N₂ Gas Lines</span>
+                <span class="avx-industry-card__tag">Non-Outgassing Walls</span>
+              </div>
+              <div class="avx-industry-card__footer">
+                <a href="#contact" class="avx-industry-card__link" aria-label="Consult healthcare infrastructure specialist for IVF Centres and Fertility Labs">
+                  <span>Consult Sector Specialist</span>
+                  <svg viewBox="0 0 16 16" fill="none" aria-hidden="true">
+                    <path d="M3 8H13M13 8L8.5 3.5M13 8L8.5 12.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                </a>
+              </div>
+            </div>
           </article>
 
-          <!-- Industry 06: Pharmaceutical Manufacturing Facilities -->
-          <article class="avx-industry-card" role="listitem">
-            <div class="avx-industry-card__top">
-              <div class="avx-industry-card__icon-wrap" aria-hidden="true">
-                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-                  <path d="M10.5 20.5l10-10a4.95 4.95 0 1 0-7-7l-10 10a4.95 4.95 0 1 0 7 7z"/>
-                  <path d="M8.5 8.5l7 7"/>
-                </svg>
+          <!-- Industry 06: Pharmaceutical Manufacturing Facilities (Cleanroom) -->
+          <article class="avx-industry-card" role="listitem" data-vertical="cleanroom">
+
+            <div>
+              <div class="avx-industry-card__sys-bar">
+                <span class="avx-industry-card__code">SEC-06 // PHARMA-MFG</span>
+                <span class="avx-industry-card__badge-status">
+                  <span class="avx-industry-card__dot" aria-hidden="true"></span>
+                  cGMP GRADE A-D
+                </span>
               </div>
-              <span class="avx-industry-card__sector">PHARMACEUTICALS</span>
+
+              <div class="avx-industry-card__header">
+                <div class="avx-industry-card__icon-wrap" aria-hidden="true">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M10.5 20.5l10-10a4.95 4.95 0 1 0-7-7l-10 10a4.95 4.95 0 1 0 7 7z"/>
+                    <path d="M8.5 8.5l7 7"/>
+                  </svg>
+                </div>
+                <span class="avx-industry-card__num" aria-hidden="true">06</span>
+              </div>
+
+              <h3 class="avx-industry-card__title">Pharmaceutical Manufacturing Facilities</h3>
+              <p class="avx-industry-card__desc">
+                cGMP-compliant cleanrooms, pharmaceutical HVAC systems, dynamic pass boxes, and full validation documentation support.
+              </p>
+
+              <div class="avx-industry-card__specs" aria-label="Technical Scope">
+                <div class="avx-industry-card__spec-item">
+                  <span class="avx-industry-card__spec-label">Deployed Systems</span>
+                  <span class="avx-industry-card__spec-val">Dehumidification AHU, Dynamic Pass Boxes, Walkable Ceilings</span>
+                </div>
+                <div class="avx-industry-card__spec-item">
+                  <span class="avx-industry-card__spec-label">Regulatory Benchmarks</span>
+                  <span class="avx-industry-card__spec-val">WHO-GMP / cGMP &bull; EU Annex 1 Sterile &bull; FDA 21 CFR</span>
+                </div>
+              </div>
             </div>
-            <h3 class="avx-industry-card__title">Pharmaceutical Manufacturing Facilities</h3>
-            <p class="avx-industry-card__desc">
-              cGMP-compliant cleanrooms, pharmaceutical HVAC systems, dynamic pass boxes, and full validation documentation support.
-            </p>
+
+            <div>
+              <div class="avx-industry-card__features" aria-label="Key highlights">
+                <span class="avx-industry-card__tag">cGMP Cleanrooms</span>
+                <span class="avx-industry-card__tag">Dynamic Pass Boxes</span>
+                <span class="avx-industry-card__tag">Walkable Ceilings</span>
+                <span class="avx-industry-card__tag">DQ/IQ/OQ/PQ</span>
+              </div>
+              <div class="avx-industry-card__footer">
+                <a href="#contact" class="avx-industry-card__link" aria-label="Consult healthcare infrastructure specialist for Pharmaceutical Facilities">
+                  <span>Consult Sector Specialist</span>
+                  <svg viewBox="0 0 16 16" fill="none" aria-hidden="true">
+                    <path d="M3 8H13M13 8L8.5 3.5M13 8L8.5 12.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                </a>
+              </div>
+            </div>
           </article>
 
-          <!-- Industry 07: Cleanrooms & Research Laboratories -->
-          <article class="avx-industry-card" role="listitem">
-            <div class="avx-industry-card__top">
-              <div class="avx-industry-card__icon-wrap" aria-hidden="true">
-                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-                  <path d="M6 18h12M12 2v4M6 22h12a2 2 0 0 0 2-2V7.5L14 2H10L4 7.5V20a2 2 0 0 0 2 2z"/>
-                </svg>
+          <!-- Industry 07: Cleanrooms & Research Laboratories (Cleanroom) -->
+          <article class="avx-industry-card" role="listitem" data-vertical="cleanroom">
+
+            <div>
+              <div class="avx-industry-card__sys-bar">
+                <span class="avx-industry-card__code">SEC-07 // LIFE-SCIENCES</span>
+                <span class="avx-industry-card__badge-status">
+                  <span class="avx-industry-card__dot" aria-hidden="true"></span>
+                  ISO 14644 CL. 5-8
+                </span>
               </div>
-              <span class="avx-industry-card__sector">LIFE SCIENCES &amp; R&amp;D</span>
+
+              <div class="avx-industry-card__header">
+                <div class="avx-industry-card__icon-wrap" aria-hidden="true">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M6 18h12M12 2v4M6 22h12a2 2 0 0 0 2-2V7.5L14 2H10L4 7.5V20a2 2 0 0 0 2 2z"/>
+                  </svg>
+                </div>
+                <span class="avx-industry-card__num" aria-hidden="true">07</span>
+              </div>
+
+              <h3 class="avx-industry-card__title">Cleanrooms &amp; Research Laboratories</h3>
+              <p class="avx-industry-card__desc">
+                ISO 14644-classified controlled environments for biotechnology research, aseptic compounding, and advanced testing.
+              </p>
+
+              <div class="avx-industry-card__specs" aria-label="Technical Scope">
+                <div class="avx-industry-card__spec-item">
+                  <span class="avx-industry-card__spec-label">Deployed Systems</span>
+                  <span class="avx-industry-card__spec-val">Laminar Flow Hoods, Bio-Safety Air Systems, Epoxy Flooring</span>
+                </div>
+                <div class="avx-industry-card__spec-item">
+                  <span class="avx-industry-card__spec-label">Regulatory Benchmarks</span>
+                  <span class="avx-industry-card__spec-val">ISO 14644-1 Classes 5-8 &bull; Biosafety Levels 1-3</span>
+                </div>
+              </div>
             </div>
-            <h3 class="avx-industry-card__title">Cleanrooms &amp; Research Laboratories</h3>
-            <p class="avx-industry-card__desc">
-              ISO 14644-classified controlled environments for biotechnology research, aseptic compounding, and advanced testing.
-            </p>
+
+            <div>
+              <div class="avx-industry-card__features" aria-label="Key highlights">
+                <span class="avx-industry-card__tag">ISO 5-8 Envelopes</span>
+                <span class="avx-industry-card__tag">Bio-Safety Air</span>
+                <span class="avx-industry-card__tag">Conductive Epoxy</span>
+                <span class="avx-industry-card__tag">Fume Exhausts</span>
+              </div>
+              <div class="avx-industry-card__footer">
+                <a href="#contact" class="avx-industry-card__link" aria-label="Consult healthcare infrastructure specialist for Cleanrooms and Research Labs">
+                  <span>Consult Sector Specialist</span>
+                  <svg viewBox="0 0 16 16" fill="none" aria-hidden="true">
+                    <path d="M3 8H13M13 8L8.5 3.5M13 8L8.5 12.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                </a>
+              </div>
+            </div>
           </article>
 
-          <!-- Industry 08: Diagnostic & Imaging Centres -->
-          <article class="avx-industry-card" role="listitem">
-            <div class="avx-industry-card__top">
-              <div class="avx-industry-card__icon-wrap" aria-hidden="true">
-                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-                  <circle cx="12" cy="12" r="3"/>
-                  <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"/>
-                </svg>
+          <!-- Industry 08: Diagnostic & Imaging Centres (Institutional) -->
+          <article class="avx-industry-card" role="listitem" data-vertical="institutional">
+
+            <div>
+              <div class="avx-industry-card__sys-bar">
+                <span class="avx-industry-card__code">SEC-08 // DIAGNOSTICS</span>
+                <span class="avx-industry-card__badge-status">
+                  <span class="avx-industry-card__dot" aria-hidden="true"></span>
+                  RF &amp; RADIATION SHIELDED
+                </span>
               </div>
-              <span class="avx-industry-card__sector">DIAGNOSTICS</span>
+
+              <div class="avx-industry-card__header">
+                <div class="avx-industry-card__icon-wrap" aria-hidden="true">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="12" cy="12" r="3"/>
+                    <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"/>
+                  </svg>
+                </div>
+                <span class="avx-industry-card__num" aria-hidden="true">08</span>
+              </div>
+
+              <h3 class="avx-industry-card__title">Diagnostic &amp; Imaging Centres</h3>
+              <p class="avx-industry-card__desc">
+                Environmental and utility infrastructure coordination for MRI suites, CT scanners, X-ray facilities, and pathology labs.
+              </p>
+
+              <div class="avx-industry-card__specs" aria-label="Technical Scope">
+                <div class="avx-industry-card__spec-item">
+                  <span class="avx-industry-card__spec-label">Deployed Systems</span>
+                  <span class="avx-industry-card__spec-val">Precision MRI/CT HVAC, RF Cage Panelling, Oxygen Flush</span>
+                </div>
+                <div class="avx-industry-card__spec-item">
+                  <span class="avx-industry-card__spec-label">Regulatory Benchmarks</span>
+                  <span class="avx-industry-card__spec-val">AERB Radiation Safety Norms &bull; OEM Environmental Specs</span>
+                </div>
+              </div>
             </div>
-            <h3 class="avx-industry-card__title">Diagnostic &amp; Imaging Centres</h3>
-            <p class="avx-industry-card__desc">
-              Environmental and utility infrastructure coordination for MRI suites, CT scanners, X-ray facilities, and pathology labs.
-            </p>
+
+            <div>
+              <div class="avx-industry-card__features" aria-label="Key highlights">
+                <span class="avx-industry-card__tag">RF / Lead Shielding</span>
+                <span class="avx-industry-card__tag">Precision HVAC</span>
+                <span class="avx-industry-card__tag">Oxygen Flush Lines</span>
+                <span class="avx-industry-card__tag">Chilled Water Feeds</span>
+              </div>
+              <div class="avx-industry-card__footer">
+                <a href="#contact" class="avx-industry-card__link" aria-label="Consult healthcare infrastructure specialist for Diagnostic and Imaging Centres">
+                  <span>Consult Sector Specialist</span>
+                  <svg viewBox="0 0 16 16" fill="none" aria-hidden="true">
+                    <path d="M3 8H13M13 8L8.5 3.5M13 8L8.5 12.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                </a>
+              </div>
+            </div>
           </article>
 
-          <!-- Industry 09: Medical Colleges & Teaching Hospitals -->
-          <article class="avx-industry-card" role="listitem">
-            <div class="avx-industry-card__top">
-              <div class="avx-industry-card__icon-wrap" aria-hidden="true">
-                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-                  <path d="M22 10v6M2 10l10-5 10 5-10 5z"/>
-                  <path d="M6 12v5c0 3 3 5 6 5s6-2 6-5v-5"/>
-                </svg>
+          <!-- Industry 09: Medical Colleges & Teaching Hospitals (Institutional) -->
+          <article class="avx-industry-card" role="listitem" data-vertical="institutional">
+
+            <div>
+              <div class="avx-industry-card__sys-bar">
+                <span class="avx-industry-card__code">SEC-09 // ACADEMIC</span>
+                <span class="avx-industry-card__badge-status">
+                  <span class="avx-industry-card__dot" aria-hidden="true"></span>
+                  INSTITUTIONAL SCALE
+                </span>
               </div>
-              <span class="avx-industry-card__sector">ACADEMIC MEDICINE</span>
+
+              <div class="avx-industry-card__header">
+                <div class="avx-industry-card__icon-wrap" aria-hidden="true">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M22 10v6M2 10l10-5 10 5-10 5z"/>
+                    <path d="M6 12v5c0 3 3 5 6 5s6-2 6-5v-5"/>
+                  </svg>
+                </div>
+                <span class="avx-industry-card__num" aria-hidden="true">09</span>
+              </div>
+
+              <h3 class="avx-industry-card__title">Medical Colleges &amp; Teaching Hospitals</h3>
+              <p class="avx-industry-card__desc">
+                High-capacity medical infrastructure supply and multi-department execution for institutional healthcare universities.
+              </p>
+
+              <div class="avx-industry-card__specs" aria-label="Technical Scope">
+                <div class="avx-industry-card__spec-item">
+                  <span class="avx-industry-card__spec-label">Deployed Systems</span>
+                  <span class="avx-industry-card__spec-val">Campus-Scale MGPS, Observation OTs, High-Volume Exhausts</span>
+                </div>
+                <div class="avx-industry-card__spec-item">
+                  <span class="avx-industry-card__spec-label">Regulatory Benchmarks</span>
+                  <span class="avx-industry-card__spec-val">NMC (National Medical Commission) &bull; NABH Institutional</span>
+                </div>
+              </div>
             </div>
-            <h3 class="avx-industry-card__title">Medical Colleges &amp; Teaching Hospitals</h3>
-            <p class="avx-industry-card__desc">
-              High-capacity medical infrastructure supply and multi-department execution for institutional healthcare universities.
-            </p>
+
+            <div>
+              <div class="avx-industry-card__features" aria-label="Key highlights">
+                <span class="avx-industry-card__tag">Campus-Scale MGPS</span>
+                <span class="avx-industry-card__tag">Auditorium OTs</span>
+                <span class="avx-industry-card__tag">Dissection Ventilation</span>
+                <span class="avx-industry-card__tag">Central Sterilization</span>
+              </div>
+              <div class="avx-industry-card__footer">
+                <a href="#contact" class="avx-industry-card__link" aria-label="Consult healthcare infrastructure specialist for Medical Colleges and Teaching Hospitals">
+                  <span>Consult Sector Specialist</span>
+                  <svg viewBox="0 0 16 16" fill="none" aria-hidden="true">
+                    <path d="M3 8H13M13 8L8.5 3.5M13 8L8.5 12.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                </a>
+              </div>
+            </div>
           </article>
 
         </div>
@@ -1399,7 +1919,7 @@
 
             <!-- Direct Communication Channels -->
             <div class="avx-contact__channels" aria-label="Direct Contact Channels">
-              <a href="mailto:info@avenrix.com" class="avx-contact__channel-link" aria-label="Send email to info@avenrix.com">
+              <a href="mailto:avenrixhealthcaresolutions@gmail.com" class="avx-contact__channel-link" aria-label="Send email to avenrixhealthcaresolutions@gmail.com">
                 <div class="avx-contact__channel-icon" aria-hidden="true">
                   <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                     <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
@@ -1408,45 +1928,33 @@
                 </div>
                 <div class="avx-contact__channel-info">
                   <span class="avx-contact__channel-label">Email Inquiries</span>
-                  <span class="avx-contact__channel-val">info@avenrix.com</span>
+                  <span class="avx-contact__channel-val">avenrixhealthcaresolutions@gmail.com</span>
                 </div>
               </a>
 
-              <a href="tel:+919700000000" class="avx-contact__channel-link" aria-label="Call Avenrix technical team">
-                <div class="avx-contact__channel-icon" aria-hidden="true">
+              <a href="https://www.instagram.com/avenrixhealthcaresolutions?stkn=cndobHY5ZHM4a21l" target="_blank" rel="noopener noreferrer" class="avx-contact__channel-link" aria-label="Follow Avenrix on Instagram">
+                <div class="avx-contact__channel-icon avx-contact__channel-icon--ig" aria-hidden="true">
                   <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                    <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+                    <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
+                    <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/>
+                    <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/>
                   </svg>
                 </div>
                 <div class="avx-contact__channel-info">
-                  <span class="avx-contact__channel-label">Direct Phone</span>
-                  <span class="avx-contact__channel-val">+91 97000 00000</span>
+                  <span class="avx-contact__channel-label">Instagram</span>
+                  <span class="avx-contact__channel-val">@avenrixhealthcaresolutions</span>
                 </div>
               </a>
 
-              <a href="https://wa.me/919700000000" target="_blank" rel="noopener noreferrer" class="avx-contact__channel-link" aria-label="Chat with Avenrix on WhatsApp">
-                <div class="avx-contact__channel-icon avx-contact__channel-icon--wa" aria-hidden="true">
+              <a href="https://www.facebook.com/share/1GcCszMUb7/" target="_blank" rel="noopener noreferrer" class="avx-contact__channel-link" aria-label="Connect with Avenrix on Facebook">
+                <div class="avx-contact__channel-icon avx-contact__channel-icon--fb" aria-hidden="true">
                   <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                    <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/>
+                    <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/>
                   </svg>
                 </div>
                 <div class="avx-contact__channel-info">
-                  <span class="avx-contact__channel-label">Instant Messaging</span>
-                  <span class="avx-contact__channel-val">WhatsApp Chat</span>
-                </div>
-              </a>
-
-              <a href="https://linkedin.com/company/avenrix" target="_blank" rel="noopener noreferrer" class="avx-contact__channel-link" aria-label="Connect with Avenrix on LinkedIn">
-                <div class="avx-contact__channel-icon avx-contact__channel-icon--li" aria-hidden="true">
-                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                    <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/>
-                    <rect x="2" y="9" width="4" height="12"/>
-                    <circle cx="4" cy="4" r="2"/>
-                  </svg>
-                </div>
-                <div class="avx-contact__channel-info">
-                  <span class="avx-contact__channel-label">Corporate Network</span>
-                  <span class="avx-contact__channel-val">LinkedIn Page</span>
+                  <span class="avx-contact__channel-label">Facebook</span>
+                  <span class="avx-contact__channel-val">Avenrix Healthcare Solutions</span>
                 </div>
               </a>
             </div>
@@ -1683,9 +2191,9 @@
           <h3 class="avx-footer__heading">Inquiries &amp; Office</h3>
           <ul class="avx-footer__list">
             <li><a href="#contact" class="avx-footer__link">Hyderabad, Telangana, India</a></li>
-            <li><a href="mailto:info@avenrix.com" class="avx-footer__link">info@avenrix.com</a></li>
-            <li><a href="tel:+919700000000" class="avx-footer__link">+91 97000 00000</a></li>
-            <li><a href="https://wa.me/919700000000" target="_blank" rel="noopener noreferrer" class="avx-footer__link">WhatsApp Chat</a></li>
+            <li><a href="mailto:avenrixhealthcaresolutions@gmail.com" class="avx-footer__link">avenrixhealthcaresolutions@gmail.com</a></li>
+            <li><a href="https://www.instagram.com/avenrixhealthcaresolutions?stkn=cndobHY5ZHM4a21l" target="_blank" rel="noopener noreferrer" class="avx-footer__link">Instagram</a></li>
+            <li><a href="https://www.facebook.com/share/1GcCszMUb7/" target="_blank" rel="noopener noreferrer" class="avx-footer__link">Facebook</a></li>
             <li><a href="Avenrix-Healthcare-Solutions-Brochure.pdf" download class="avx-footer__link">Download Brochure (PDF)</a></li>
           </ul>
         </div>

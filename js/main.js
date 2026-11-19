@@ -760,6 +760,68 @@
   initProductPortfolioInteractions();
 
   /**
+   * 8. INDUSTRIES WE SERVE INTERACTIVE TABBED HUB
+   * Interactive vertical filtering across Clinical, Cleanroom & Institutional sectors.
+   */
+  function initIndustriesTabHub() {
+    const tabBtns = document.querySelectorAll('.avx-industries__tab-btn');
+    const cards = document.querySelectorAll('.avx-industries__grid .avx-industry-card');
+    const domainDesc = document.getElementById('industriesDomainDesc');
+    const domainMeta = document.getElementById('industriesDomainMeta');
+
+    const descriptions = {
+      all: {
+        desc: 'Comprehensive infrastructure coordination across acute care, sterile manufacturing, and diagnostic institutions.',
+        meta: '09 Active Sectors'
+      },
+      clinical: {
+        desc: 'Sterile environments, surgical suites, and life-critical patient infrastructure adhering to NABH and ASHRAE 170 standards.',
+        meta: '04 Clinical Sectors'
+      },
+      cleanroom: {
+        desc: 'Precision particulate containment, VOC elimination, and cGMP Annex 1 validated production facilities.',
+        meta: '03 Cleanroom Sectors'
+      },
+      institutional: {
+        desc: 'Radiation-shielded imaging departments, university teaching hospitals, and large-scale academic campuses.',
+        meta: '02 Institutional Sectors'
+      }
+    };
+
+    if (tabBtns.length > 0 && cards.length > 0) {
+      tabBtns.forEach(btn => {
+        btn.addEventListener('click', function () {
+          const vertical = this.getAttribute('data-vertical') || 'all';
+
+          tabBtns.forEach(b => {
+            const isActive = b === btn;
+            b.classList.toggle('is-active', isActive);
+            b.setAttribute('aria-selected', isActive ? 'true' : 'false');
+          });
+
+          if (descriptions[vertical] && domainDesc && domainMeta) {
+            domainDesc.textContent = descriptions[vertical].desc;
+            domainMeta.textContent = descriptions[vertical].meta;
+          }
+
+          cards.forEach(card => {
+            const cat = card.getAttribute('data-vertical') || '';
+            const match = vertical === 'all' || cat === vertical;
+            card.classList.toggle('is-filtered-out', !match);
+          });
+
+          if (typeof ScrollTrigger !== 'undefined') {
+            ScrollTrigger.refresh();
+          }
+        });
+      });
+    }
+  }
+
+  // Initialize Industries Interactive Tabbed Hub
+  initIndustriesTabHub();
+
+  /**
    * 7. SOURCE PROTECTION & ANTI-CLONING SHIELD
    * Prevents right-click context menu, source-viewing shortcuts,
    * page saving shortcuts, and image dragging.
