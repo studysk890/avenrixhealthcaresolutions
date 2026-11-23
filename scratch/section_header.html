@@ -1,0 +1,134 @@
+<header class="avx-header" id="header" role="banner">
+    <div class="avx-container avx-header__inner">
+      <!-- Brand Logo -->
+      <a href="#home" class="avx-header__brand" aria-label="Avenrix Healthcare Solutions Home">
+        <img 
+          src="images/Avenrix Logo Horizontal.png" 
+          alt="Avenrix Healthcare Solutions" 
+          class="avx-header__logo avx-header__logo--desktop" 
+          width="200" 
+          height="54"
+          decoding="async"
+        >
+        <img 
+          src="images/Avenrix Logo Vertical.png" 
+          alt="Avenrix Healthcare Solutions" 
+          class="avx-header__logo avx-header__logo--mobile" 
+          width="60" 
+          height="44"
+          decoding="async"
+        >
+      </a>
+
+      <!-- Desktop Navigation Menu (Proposal 7-Item Navigation) -->
+      <nav class="avx-header__nav" aria-label="Primary Navigation">
+        <ul class="avx-header__nav-list">
+          <li class="avx-header__nav-item">
+            <a href="#home" class="avx-header__nav-link is-active">Home</a>
+          </li>
+          <li class="avx-header__nav-item">
+            <a href="#about" class="avx-header__nav-link">About Us</a>
+          </li>
+          <li class="avx-header__nav-item">
+            <a href="#solutions" class="avx-header__nav-link">Solutions</a>
+          </li>
+          <li class="avx-header__nav-item">
+            <a href="#products" class="avx-header__nav-link">Products</a>
+          </li>
+          <li class="avx-header__nav-item">
+            <a href="#industries" class="avx-header__nav-link">Industries</a>
+          </li>
+          <li class="avx-header__nav-item">
+            <a href="#why-avenrix" class="avx-header__nav-link">Why Avenrix</a>
+          </li>
+          <li class="avx-header__nav-item">
+            <a href="#contact" class="avx-header__nav-link">Contact</a>
+          </li>
+        </ul>
+      </nav>
+
+      <!-- Desktop Header Actions & Mobile Hamburger -->
+      <div class="avx-header__actions">
+        <a href="#contact" class="avx-btn avx-btn--primary avx-header__cta">
+          <span>Get in Touch</span>
+          <svg class="avx-icon" width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+            <path d="M3 8H13M13 8L8.5 3.5M13 8L8.5 12.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </a>
+
+        <!-- Accessible Hamburger Button -->
+        <button 
+          class="avx-header__toggle" 
+          id="menuToggle" 
+          aria-label="Open Navigation Menu" 
+          aria-expanded="false" 
+          aria-controls="mobileDrawer"
+        >
+          <span class="avx-header__toggle-bar"></span>
+          <span class="avx-header__toggle-bar"></span>
+          <span class="avx-header__toggle-bar"></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Off-Canvas Drawer Backdrop -->
+  <div class="avx-drawer-backdrop" id="drawerBackdrop" aria-hidden="true"></div>
+
+  <!-- Mobile Off-Canvas Drawer -->
+  <aside 
+    class="avx-drawer" 
+    id="mobileDrawer" 
+    role="dialog" 
+    aria-modal="true" 
+    aria-label="Mobile Navigation Drawer" 
+    aria-hidden="true"
+  >
+    <div class="avx-drawer__header">
+      <a href="#home" class="avx-drawer__brand" aria-label="Avenrix Healthcare Solutions Home">
+        <div class="avx-drawer__logo-badge">
+          <img 
+            src="images/Avenrix Logo Horizontal.png" 
+            alt="Avenrix Healthcare Solutions" 
+            class="avx-drawer__logo" 
+            width="120" 
+            height="32"
+            decoding="async"
+          >
+        </div>
+      </a>
+      <button 
+        type="button"
+        class="avx-drawer__close" 
+        id="drawerClose" 
+        aria-label="Close Navigation Menu"
+      >
+        <svg class="avx-drawer__close-icon" width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true">
+          <path d="M15 5L5 15M5 5L15 15" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </button>
+    </div>
+    <div class="avx-drawer__content">
+      <nav class="avx-drawer__nav" aria-label="Mobile Menu Links">
+        <ul class="avx-drawer__list">
+          <li class="avx-drawer__item"><a href="#home" class="avx-drawer__link">Home</a></li>
+          <li class="avx-drawer__item"><a href="#about" class="avx-drawer__link">About Us</a></li>
+          <li class="avx-drawer__item"><a href="#solutions" class="avx-drawer__link">Solutions</a></li>
+          <li class="avx-drawer__item"><a href="#products" class="avx-drawer__link">Products</a></li>
+          <li class="avx-drawer__item"><a href="#industries" class="avx-drawer__link">Industries</a></li>
+          <li class="avx-drawer__item"><a href="#why-avenrix" class="avx-drawer__link">Why Avenrix</a></li>
+          <li class="avx-drawer__item"><a href="#contact" class="avx-drawer__link">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+    <div class="avx-drawer__footer">
+      <a href="#contact" class="avx-btn avx-btn--primary avx-drawer__cta">
+        <span>Get in Touch</span>
+      </a>
+    </div>
+  </aside>
+
+  <!-- ======================================================================
+       MAIN CONTENT: HERO
+       ====================================================================== -->
+  

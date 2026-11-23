@@ -1,0 +1,725 @@
+AVENRIX
+
+WEBSITE UPGRADE
+
+Content Strategy • Visual Direction • Section Order • Build Instructions
+
+ENGINEERING HEALTHCARE. BUILDING TRUST.
+
+ANTIGRAVITY IMPLEMENTATION BRIEFVersion 1.0  |  23 November 2026
+
+1. Project Overview
+
+Use this document as the single source of truth for upgrading the existing Avenrix Healthcare Solutions website. The goal is to improve the current website rather than replace its identity with a generic template. Preserve useful existing structure and brand assets where appropriate, while improving messaging, information architecture, product discovery, trust signals and enquiry conversion.
+
+PRIMARY POSITIONINGAvenrix is a complete turnkey healthcare and pharmaceutical infrastructure solutions partner, coordinating specialized products, manufacturing partnerships, supply and project execution support.
+
+Target audiences
+
+Hospitals and multispecialty healthcare facilities
+
+Architects, healthcare planners and consultants
+
+Pharmaceutical companies and laboratory operators
+
+IVF centres, fertility clinics and specialized clinics
+
+Healthcare contractors, EPC companies and project management teams
+
+Government hospitals and healthcare institutions
+
+Visual direction
+
+Premium corporate blue-and-white design. The website should feel established, technically credible, calm, clean and professional—not like a generic AI-generated startup template.
+
+Navy Blue#123C69
+
+Avenrix Blue#1765A5
+
+Light Blue#EAF3FA
+
+2. Antigravity Build Instructions
+
+First inspect the existing website and project files. Identify the current framework, routing, reusable components, assets, forms and integrations before editing.
+
+Upgrade the existing website in place. Do not discard working functionality or rebuild everything from scratch unless the existing implementation is demonstrably unusable.
+
+Use the content and section order in this document as the approved source. Do not invent company history, project counts, client logos, certifications, manufacturer names, addresses, phone numbers, awards or performance statistics.
+
+Use the existing Avenrix logo and approved brand assets if available. Do not create a substitute logo or alter the logo proportions.
+
+Use a premium blue-and-white corporate visual system: navy headings, clear blue accents, white backgrounds, pale-blue section surfaces, restrained borders and subtle shadows.
+
+Use real, relevant healthcare infrastructure photography. Prefer actual Avenrix/manufacturer images when supplied. If temporary stock imagery is needed, use the image references in this document and keep image assets replaceable.
+
+Do not use unrelated medical stock imagery (for example, doctors smiling at camera) as a substitute for actual infrastructure or products. Product imagery must accurately represent the named product.
+
+Build responsive layouts for desktop, tablet and mobile. Ensure navigation, product cards, forms, buttons, tables and images work at narrow widths.
+
+Use restrained motion: subtle fades, gentle reveal transitions and hover states. Avoid excessive parallax, 3D objects, oversized animated text, cursor gimmicks and distracting transitions.
+
+Keep accessibility in mind: semantic headings, keyboard-accessible navigation, visible focus states, sufficient contrast, descriptive image alt text and properly labelled form fields.
+
+Optimize images, lazy-load below-the-fold media, avoid layout shifts and keep page performance strong.
+
+Every CTA must work. Forms must validate input and use the existing approved submission integration. Do not display a fake success message or claim delivery unless the backend confirms success.
+
+Preserve existing analytics, SEO metadata and integrations where functional. Add or improve page titles, meta descriptions, canonical URLs, Open Graph metadata and structured data only when the information is verified.
+
+After implementation, test all navigation links, product links, enquiry forms, phone/email/WhatsApp actions, brochure downloads, mobile breakpoints and browser console errors.
+
+3. Recommended Site Navigation & Section Order
+
+ORDER
+
+PAGE / SECTION
+
+CONTENT
+
+01
+
+Home
+
+Hero, introduction, solution cards, value proposition, CTA
+
+02
+
+About Avenrix
+
+Company overview, vision, mission, philosophy
+
+03
+
+Our Solutions
+
+Six solution categories
+
+04
+
+Products & Equipment
+
+Product catalogue grouped by category
+
+05
+
+Industries We Serve
+
+Six target industry groups
+
+06
+
+Our Approach & Execution Process
+
+Six-step project coordination process
+
+07
+
+Quality Assurance
+
+Quality approach, documentation and compliance caveats
+
+08
+
+Why Choose Avenrix
+
+Six differentiators
+
+09
+
+Manufacturing & Supply Partnerships
+
+Partnership model and manufacturer CTA
+
+10
+
+FAQs
+
+Common buyer questions
+
+11
+
+Contact Us
+
+Enquiry form and verified contact details
+
+4. Approved Website Copy
+
+4.1 Home
+
+IMAGE REFERENCE  Premium modern hospital operating theatre / modular OT interior, clean blue-white palette, wide architectural photograph.  |  Placement: Hero background or split-screen hero image
+
+Hero headline
+
+Engineering Healthcare. Building Trust.
+
+Complete Turnkey Healthcare & Pharmaceutical Infrastructure Solutions
+
+At Avenrix Healthcare Solutions, we bring together specialized products, technical expertise and reliable manufacturing partnerships to deliver comprehensive infrastructure solutions for healthcare and pharmaceutical environments.
+
+From HVAC and modular operation theatres to medical gas pipeline systems, cleanroom infrastructure and specialized medical equipment, we help transform complex infrastructure requirements into coordinated, dependable solutions.
+
+Primary CTA: Explore Our Solutions     |     Secondary CTA: Request a Consultation
+
+Homepage introduction
+
+Building the Infrastructure Behind Better Healthcare
+
+Healthcare infrastructure requires precision, reliability and uncompromising attention to quality. At Avenrix, we understand that every healthcare environment has unique technical and operational requirements. Our approach focuses on understanding project needs, identifying suitable manufacturing partners, coordinating product supply and supporting installation and commissioning activities. We aim to make healthcare infrastructure projects simpler, more coordinated and more dependable.
+
+Homepage solution cards
+
+HVAC & AHU Solutions
+
+Controlled ventilation and air management systems.
+
+IMAGE REFERENCE  Industrial hospital AHU / air handling unit equipment  |  Placement: Solution card image
+
+Modular Operation Theatres
+
+Integrated OT infrastructure and equipment.
+
+IMAGE REFERENCE  Premium modular operating theatre interior  |  Placement: Solution card image
+
+Modular Infrastructure
+
+Wall panels, ceilings, flooring and doors.
+
+IMAGE REFERENCE  Hospital modular wall panels and cleanroom flooring  |  Placement: Solution card image
+
+Medical Gas Pipeline Systems
+
+Medical gas distribution infrastructure.
+
+IMAGE REFERENCE  Hospital medical gas pipeline outlets and manifold  |  Placement: Solution card image
+
+4.2 About Avenrix
+
+IMAGE REFERENCE  Modern healthcare infrastructure corridor or hospital interior with architectural lines and blue-white tones.  |  Placement: About section banner or side image
+
+Who We Are
+
+Avenrix Healthcare Solutions is a healthcare infrastructure solutions company focused on delivering integrated products and turnkey solutions for hospitals, pharmaceutical facilities and specialized healthcare environments.
+
+We bring together specialized manufacturers, technical resources and project coordination to address diverse infrastructure requirements under one platform.
+
+Our approach is built around understanding client requirements, sourcing suitable products, coordinating with manufacturing partners and supporting project execution.
+
+We believe that dependable healthcare infrastructure begins with the right products, the right technical approach and the right partnerships.
+
+Our Vision
+
+To become a trusted name in healthcare and pharmaceutical infrastructure by delivering reliable, innovative and quality-focused solutions.
+
+Our Mission
+
+To provide comprehensive healthcare infrastructure solutions under one platform.
+
+To connect clients with specialized and dependable manufacturing partners.
+
+To promote quality, technical suitability and transparency.
+
+To simplify infrastructure procurement and project coordination.
+
+To build long-term relationships through reliability and professional service.
+
+Our Philosophy
+
+ENGINEERING HEALTHCARE. BUILDING TRUST.For us, this is more than a tagline. It represents our commitment to building dependable relationships and supporting the infrastructure that healthcare facilities rely on every day.
+
+4.3 Our Solutions
+
+Integrated Solutions for Every Healthcare Environment
+
+Avenrix offers coordinated infrastructure solutions designed to address the diverse requirements of modern healthcare and pharmaceutical facilities.
+
+HVAC & AHU Solutions
+
+We provide HVAC and air handling solutions for specialized healthcare environments where ventilation, filtration, temperature and humidity management are important.
+
+Solutions include: Operation theatres; ICUs; NICU and SICU; IVF laboratories; cleanrooms; pharmaceutical facilities.
+
+IMAGE REFERENCE  Industrial AHU, HVAC ducting, HEPA filtration terminal and hospital ventilation system.  |  Placement: Solution detail image
+
+Modular Operation Theatre Solutions
+
+We coordinate integrated modular OT infrastructure solutions designed around project-specific operational and technical requirements.
+
+Solutions include: Modular wall and ceiling panels; hermetically sealed doors; OT lights; surgeon control panels; surgeon and anaesthesia pendants; scrub stations; OT flooring and covings; HVAC and filtration systems.
+
+IMAGE REFERENCE  Modern modular operation theatre with surgical lights and modular wall panels.  |  Placement: Solution detail image
+
+Modular Wall, Ceiling & Flooring Solutions
+
+Specialized interior infrastructure for healthcare environments, designed to support hygiene, durability, easy maintenance and functional requirements.
+
+Solutions include: Modular wall panels; modular ceiling panels; healthcare flooring; covings; hermetic doors.
+
+IMAGE REFERENCE  Clean hospital modular wall panels, ceiling and seamless healthcare flooring.  |  Placement: Solution detail image
+
+Medical Gas Pipeline Systems (MGPS)
+
+We offer medical gas pipeline infrastructure solutions for hospitals and healthcare facilities, subject to project specifications and applicable technical requirements.
+
+Solutions include: Medical gas pipeline systems; medical gas manifolds; medical gas outlets; area valve service units; medical gas alarm systems.
+
+IMAGE REFERENCE  Hospital medical gas pipeline outlets, zone valve box and manifold room.  |  Placement: Solution detail image
+
+Cleanroom & Pharmaceutical Infrastructure
+
+We support infrastructure requirements for pharmaceutical, laboratory and controlled-environment facilities.
+
+Solutions include: Cleanroom HVAC systems; HEPA filtration solutions; modular wall and ceiling systems; cleanroom doors; pass boxes; cleanroom flooring; SS storage solutions.
+
+IMAGE REFERENCE  Pharmaceutical cleanroom with stainless steel equipment and modular wall panels.  |  Placement: Solution detail image
+
+Medical Equipment & Accessories
+
+We coordinate the supply of specialized medical equipment and accessories for modern healthcare facilities.
+
+Solutions include: OT lights; LED lights; surgeon pendants; anaesthesia pendants; surgeon control panels; scrub stations; X-ray view boxes; SS storage cabinets.
+
+IMAGE REFERENCE  Operating room ceiling pendants, surgical lighting and stainless-steel medical equipment.  |  Placement: Solution detail image
+
+4.4 Products & Equipment
+
+Specialized Products. Integrated Infrastructure. One Reliable Partner.
+
+Avenrix brings together a wide range of healthcare infrastructure products through specialized manufacturing and supply partnerships. Product cards should link to a detail page or open a product enquiry panel.
+
+HVAC & Air Management
+
+Air Handling Units (AHU)
+
+HVAC Systems
+
+HEPA Filtration
+
+Air Management Solutions
+
+IMAGE REFERENCE  Product-specific, accurate studio photograph: Air Handling Units (AHU), HVAC Systems, HEPA Filtration  |  Placement: Product card or category banner
+
+Modular OT Products
+
+Hermetic Doors
+
+OT Lights
+
+OT Wall Panels
+
+OT Ceiling Panels
+
+OT Flooring
+
+Surgeon Control Panels
+
+IMAGE REFERENCE  Product-specific, accurate studio photograph: Hermetic Doors, OT Lights, OT Wall Panels  |  Placement: Product card or category banner
+
+Medical Pendants & Equipment
+
+Surgeon Pendants
+
+Anaesthesia Pendants
+
+Scrub Stations
+
+X-ray View Boxes
+
+IMAGE REFERENCE  Product-specific, accurate studio photograph: Surgeon Pendants, Anaesthesia Pendants, Scrub Stations  |  Placement: Product card or category banner
+
+Medical Gas Pipeline Systems
+
+MGPS Solutions
+
+Gas Manifold Systems
+
+Medical Gas Outlets
+
+Area Valve Service Units
+
+Medical Gas Alarm Systems
+
+IMAGE REFERENCE  Product-specific, accurate studio photograph: MGPS Solutions, Gas Manifold Systems, Medical Gas Outlets  |  Placement: Product card or category banner
+
+Cleanroom & Modular Products
+
+Pass Boxes
+
+SS Storage Cabinets
+
+Wall Panels
+
+Ceiling Panels
+
+Covings & Flooring
+
+Cleanroom Doors
+
+IMAGE REFERENCE  Product-specific, accurate studio photograph: Pass Boxes, SS Storage Cabinets, Wall Panels  |  Placement: Product card or category banner
+
+Product CTA: Need technical specifications, product details or pricing? Request Product Information.
+
+4.5 Industries We Serve
+
+IMAGE REFERENCE  Composite or wide photograph showing hospital, pharmaceutical cleanroom and IVF laboratory environments.  |  Placement: Industries section banner
+
+Hospitals & Multispecialty Healthcare Facilities
+
+Integrated infrastructure solutions for operation theatres, ICUs, NICUs, SICUs and other specialized departments.
+
+IVF Centres & Fertility Clinics
+
+Infrastructure and controlled-environment solutions for IVF laboratories and fertility treatment facilities.
+
+Pharmaceutical Companies
+
+Cleanroom, HVAC, modular infrastructure and specialized equipment for pharmaceutical manufacturing and laboratory environments.
+
+Clinics & Daycare Centres
+
+Functional healthcare infrastructure and specialized equipment for modern clinical facilities.
+
+Architects & Healthcare Consultants
+
+Product sourcing and coordinated infrastructure support to complement healthcare planning and project requirements.
+
+Healthcare Contractors & EPC Companies
+
+A product and manufacturing partner for coordinated procurement and project execution.
+
+Government Hospitals & Healthcare Institutions
+
+Infrastructure product sourcing and project support in accordance with tender requirements, technical specifications and applicable procurement procedures.
+
+4.6 Our Approach & Execution Process
+
+IMAGE REFERENCE  Healthcare engineering team reviewing hospital architectural drawings and technical plans.  |  Placement: Process section banner
+
+From Concept to Completion
+
+We follow a structured approach to understand requirements and coordinate the right solutions for every project.
+
+Understanding Project Requirements
+
+We study the client's infrastructure needs, project scope, technical requirements and operational expectations.
+
+Technical Coordination
+
+We coordinate with relevant manufacturers and technical teams to identify suitable products and solutions.
+
+Product Selection & Sourcing
+
+We facilitate product selection and sourcing based on approved specifications, quality requirements and project needs.
+
+Supply & Delivery Coordination
+
+We coordinate procurement, manufacturing schedules, dispatch and delivery to the project site.
+
+Installation & Commissioning Coordination
+
+We coordinate with the relevant installation teams and manufacturers for installation, testing and commissioning as applicable to the project.
+
+Documentation & Handover Support
+
+We coordinate relevant product documents, test reports, warranty details and project handover documentation.
+
+4.7 Quality Assurance
+
+IMAGE REFERENCE  Engineer inspecting AHU equipment or factory quality-control inspection.  |  Placement: Quality section image
+
+Quality Is Not an Option. It Is a Responsibility.
+
+At Avenrix, we understand that healthcare infrastructure demands careful product selection, technical suitability and reliable execution. Our quality-focused approach emphasizes:
+
+Selection of suitable manufacturing partners.
+
+Verification of technical specifications.
+
+Coordination of pre-dispatch inspection and testing documentation, wherever applicable.
+
+Review of relevant product certifications and compliance documents.
+
+Coordination of installation and commissioning.
+
+Documentation and warranty coordination.
+
+Attention to manufacturing quality and product reliability.
+
+Our Commitment
+
+We aim to ensure that every product supplied meets the agreed specifications and the quality requirements established for the project.
+
+COMPLIANCE & CLAIMS CONTROLDisplay product certifications, test reports and compliance claims only where supporting documentation is available. Do not imply that Avenrix products are NABH-accredited. NABH accreditation applies to healthcare organizations; describe Avenrix's role as supporting infrastructure planning in line with relevant project requirements, where appropriate.
+
+4.8 Why Choose Avenrix?
+
+IMAGE REFERENCE  Modern premium hospital interior, bright blue-white architecture.  |  Placement: Why Choose Avenrix banner
+
+Comprehensive Product Portfolio
+
+Access multiple healthcare infrastructure product categories through one coordinated platform.
+
+Specialized Manufacturing Network
+
+We work towards building relationships with specialized manufacturers and suppliers to meet diverse project requirements.
+
+Project-Focused Approach
+
+Every project is approached with attention to its technical scope, specifications and operational requirements.
+
+Coordinated Execution
+
+From sourcing and supply to installation and commissioning coordination, we aim to simplify project execution.
+
+Quality-Driven Philosophy
+
+We emphasize suitable product selection, technical documentation and quality expectations.
+
+Long-Term Relationships
+
+We believe in transparent communication, dependable coordination and lasting professional relationships.
+
+4.9 Manufacturing & Supply Partnerships
+
+IMAGE REFERENCE  Specialized industrial manufacturing facility producing AHU or modular healthcare equipment.  |  Placement: Partnership section banner
+
+Connecting Specialized Manufacturing with Healthcare Infrastructure Needs
+
+Avenrix operates through a manufacturing and supply partnership model, bringing together specialized manufacturers, suppliers and project requirements.
+
+We focus on identifying suitable products, coordinating technical specifications, facilitating procurement and supporting delivery and project execution.
+
+Our model enables us to address diverse infrastructure requirements without limiting our offerings to products manufactured in-house.
+
+Our Partnership Philosophy
+
+Professional manufacturer relationships.
+
+Clear technical and commercial coordination.
+
+Agreed quality and delivery expectations.
+
+Transparent communication.
+
+Long-term business collaboration.
+
+For Manufacturers
+
+Are you a manufacturer of AHU systems, modular OT equipment, MGPS, cleanroom products or specialized medical equipment? We welcome opportunities to explore manufacturing, dealership and supply partnerships.
+
+CTA: Become an Avenrix Manufacturing Partner
+
+4.10 Frequently Asked Questions
+
+What does Avenrix Healthcare Solutions provide?
+
+Avenrix provides healthcare and pharmaceutical infrastructure solutions, including HVAC, AHU, modular operation theatres, MGPS, cleanroom systems, modular panels and specialized medical equipment.
+
+Does Avenrix manufacture its own products?
+
+Avenrix follows a manufacturing and supply partnership model, sourcing products through specialized manufacturers and suppliers.
+
+Does Avenrix provide turnkey solutions?
+
+Avenrix aims to coordinate complete project requirements, including product sourcing, supply, installation coordination, commissioning support and documentation, depending on the agreed project scope.
+
+Does Avenrix work with architects and consultants?
+
+Yes. We welcome collaboration with architects, healthcare consultants, project management consultants, contractors and EPC companies.
+
+Can customers request customized solutions?
+
+Yes. Solutions can be evaluated according to project requirements, technical specifications and available manufacturing capabilities.
+
+Does Avenrix work with government projects?
+
+Avenrix can explore government healthcare infrastructure projects and procurement opportunities subject to applicable eligibility, tender conditions and documentation requirements.
+
+4.11 Contact Us
+
+IMAGE REFERENCE  Premium hospital reception or modern healthcare facility exterior/interior, professional architectural photograph.  |  Placement: Contact page banner
+
+Let's Build Better Healthcare Infrastructure Together.
+
+Whether you are planning a new hospital, upgrading an existing healthcare facility, developing a pharmaceutical cleanroom or looking for specialized medical equipment, Avenrix is ready to understand your requirements.
+
+Connect with our team to discuss your next project.
+
+Enquiry form fields
+
+Full Name (required)
+
+Company / Organization
+
+Designation
+
+Email Address (required)
+
+Contact Number (required)
+
+Project Location
+
+Type of Requirement (dropdown)
+
+Product / Solution Required
+
+Project Description
+
+CTA: Discuss Your Project With Avenrix
+
+Contact details – insert verified information only
+
+Official registered company name (confirm exact legal entity wording)
+
+Official business email address
+
+Official business contact number
+
+Registered or business office address
+
+Verified website domain and social links
+
+5. Footer Specification
+
+Brand: AVENRIX
+
+Tagline: Engineering Healthcare. Building Trust.
+
+Descriptor: Complete Turnkey Healthcare & Pharmaceutical Infrastructure Solutions.
+
+Quick links
+
+Home | About Us | Our Solutions | Products | Industries We Serve | Quality Assurance | Contact Us
+
+Solution links
+
+HVAC & AHU | Modular OT | MGPS | Cleanroom | Medical Equipment
+
+Copyright line: © [current year] Avenrix Healthcare Solutions. All Rights Reserved. Use the verified legal company name if it differs.
+
+6. Image & Asset Direction
+
+Use image references as search prompts, not as permission to use copyrighted images. Prefer Avenrix-owned photographs, manufacturer-approved product photographs or properly licensed stock images. Keep all images replaceable through a central asset structure.
+
+Hero: wide 16:9 modular operation theatre or modern hospital infrastructure photograph. Avoid generic doctor portraits.
+
+Solution cards: one accurate image per solution category—AHU, modular OT, modular panels, MGPS, cleanroom and medical equipment.
+
+Product cards: use individual product photographs with consistent crop, lighting and background. Do not reuse one generic OT image for unrelated products.
+
+About: modern healthcare interior or engineering/project coordination image.
+
+Execution process: engineers reviewing technical plans or inspecting equipment.
+
+Quality: factory inspection, equipment testing or technical documentation imagery.
+
+Partnerships: manufacturing facility or production equipment.
+
+Contact: premium hospital exterior, lobby or modern healthcare building.
+
+7. Functional & Technical Requirements
+
+Responsive breakpoints should be deliberately tested at 1920, 1600, 1440, 1200, 992, 800, 768, 576 and 480 pixels, plus narrow mobile widths.
+
+Use a consistent max-width content container and readable line lengths.
+
+Sticky header should remain legible over both hero and scrolled page states.
+
+Mobile navigation must be keyboard accessible and close after a navigation selection.
+
+Primary CTAs should scroll smoothly to the relevant section or open the correct enquiry form.
+
+Product enquiry actions should identify the selected product/category in the form (hidden field or prefilled field).
+
+Enquiry form should show inline validation, loading state, success only after confirmed submission, and a clear failure state.
+
+Use the existing approved CRM/email/Google Sheets integration if present. Do not replace endpoints, credentials or data handling without explicit authorization.
+
+Add privacy-policy and consent links near the form if required by the business's actual data practices.
+
+Add click-to-call, mailto and WhatsApp only with verified business details. Do not fabricate contact details.
+
+Create a brochure download only when a final approved PDF is supplied. Do not link to placeholder or outdated brochures.
+
+Set meaningful alt text and avoid putting important text inside images.
+
+Add sitemap.xml, robots.txt, favicon, social sharing metadata and structured data based only on verified business information.
+
+8. SEO Content Direction
+
+PAGE
+
+SUGGESTED SEO COPY
+
+Homepage title
+
+Avenrix Healthcare Solutions | Turnkey Healthcare Infrastructure
+
+Homepage meta description
+
+Avenrix Healthcare Solutions coordinates turnkey healthcare and pharmaceutical infrastructure solutions, including HVAC, modular OT, MGPS, cleanroom systems and medical equipment.
+
+About page title
+
+About Avenrix | Healthcare Infrastructure Solutions Partner
+
+Solutions page title
+
+Healthcare & Pharmaceutical Infrastructure Solutions | Avenrix
+
+Products page title
+
+Healthcare Infrastructure Products & Medical Equipment | Avenrix
+
+Contact page title
+
+Contact Avenrix | Discuss Your Healthcare Infrastructure Project
+
+9. Claims, Accuracy & Content Guardrails
+
+Do not invent years of experience, completed projects, installed capacity, client names, testimonials, manufacturer partnerships or geographic coverage.
+
+Do not claim Avenrix is a manufacturer if its operating model is sourcing and manufacturing partnerships.
+
+Use 'turnkey' with scope clarity. Explain that installation, commissioning and related services depend on the agreed project scope and partner capabilities.
+
+Do not claim all products are certified, NABH-approved, ISO-certified, CE-certified or compliant unless the exact product documentation supports the statement.
+
+Do not publish generic technical performance values such as HEPA efficiency, pressure differentials, air-change rates or ISO cleanroom classifications as universal guarantees. Display only project- and product-specific verified values.
+
+Do not imply that NABH accredits Avenrix products. If mentioning NABH, refer accurately to supporting healthcare facility infrastructure requirements.
+
+Use 'we coordinate', 'we facilitate' or 'we support' where the service is delivered through partners; use direct delivery claims only when confirmed.
+
+Confirm the legal company name, contact details, address, domain and social profile URLs before publishing.
+
+10. Final QA Checklist
+
+☐ Existing site and codebase inspected before modification.
+
+☐ All approved content sections implemented in the agreed order.
+
+☐ Mission includes all five approved statements, including procurement coordination and long-term relationships.
+
+☐ Philosophy statement is reproduced exactly as supplied.
+
+☐ Every solution and product category has relevant imagery.
+
+☐ Images are licensed/approved, optimized and have descriptive alt text.
+
+☐ All buttons, navigation links and product enquiry actions tested.
+
+☐ Forms tested end-to-end against the approved integration.
+
+☐ Mobile and tablet layouts tested at the specified widths.
+
+☐ SEO titles, descriptions, favicon and social metadata checked.
+
+☐ All certifications, technical specifications and company details verified.
+
+☐ Brochure link points to the final approved brochure.
+
+☐ No console errors, broken links, placeholder content or fabricated claims remain.
+
+☐ Final deployment preview reviewed on desktop and mobile.
+
+FINAL IMPLEMENTATION GOALDeliver a premium, credible and conversion-focused Avenrix website that clearly communicates its role as a coordinated turnkey healthcare and pharmaceutical infrastructure solutions partner. The visitor should quickly understand what Avenrix provides, which facilities it serves, how its partnership-led execution model works and how to initiate a project enquiry.

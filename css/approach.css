@@ -1,0 +1,180 @@
+/* ==========================================================================
+   AVENRIX HEALTHCARE SOLUTIONS — APPROACH & EXECUTION PROCESS
+   Section 06: Structured 6-Step Coordination Process (.avx-approach)
+   ========================================================================== */
+
+.avx-approach {
+  position: relative;
+  background-color: var(--avx-white);
+  padding: var(--avx-space-24) 0;
+  border-bottom: 1px solid var(--avx-border-light);
+  overflow: hidden;
+}
+
+.avx-approach__bg-grid {
+  position: absolute;
+  inset: 0;
+  background-image: 
+    linear-gradient(to right, var(--avx-grid-line-light) 1px, transparent 1px),
+    linear-gradient(to bottom, var(--avx-grid-line-light) 1px, transparent 1px);
+  background-size: var(--avx-grid-size) var(--avx-grid-size);
+  opacity: 0.6;
+  pointer-events: none;
+}
+
+.avx-approach__container {
+  position: relative;
+  z-index: 2;
+}
+
+.avx-approach__header {
+  max-width: 820px;
+  margin-bottom: var(--avx-space-12);
+}
+
+.avx-approach__eyebrow {
+  margin-bottom: var(--avx-space-3);
+}
+
+.avx-approach__title {
+  font-family: var(--avx-font-serif);
+  font-size: var(--avx-text-display);
+  font-weight: 400;
+  color: var(--avx-navy);
+  line-height: var(--avx-leading-tight);
+  margin-bottom: var(--avx-space-4);
+  letter-spacing: var(--avx-tracking-tight);
+}
+
+.avx-approach__title-accent {
+  color: var(--avx-corp-navy);
+  font-style: normal;
+}
+
+.avx-approach__intro {
+  font-family: var(--avx-font-sans);
+  font-size: var(--avx-text-lead);
+  color: var(--avx-slate-600);
+  line-height: var(--avx-leading-relaxed);
+  margin-bottom: var(--avx-space-6);
+}
+
+.avx-approach__accent-rule {
+  width: 56px;
+  height: 2px;
+  background-color: var(--avx-orange);
+  border-radius: var(--avx-radius-sm);
+}
+
+/* 6-Step Grid Layout */
+.avx-approach__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--avx-space-6);
+  position: relative;
+}
+
+@media (max-width: 1024px) {
+  .avx-approach__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 640px) {
+  .avx-approach__grid {
+    grid-template-columns: 1fr;
+    gap: var(--avx-space-4);
+  }
+}
+
+/* Individual Step Card */
+.avx-step-card {
+  position: relative;
+  background: var(--avx-white);
+  border: 1px solid var(--avx-border-strong);
+  border-radius: var(--avx-radius-md);
+  padding: var(--avx-space-6);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: transform var(--avx-transition-medium), box-shadow var(--avx-transition-medium), border-color var(--avx-transition-medium);
+  box-shadow: 0 4px 12px -2px rgba(18, 60, 105, 0.04);
+}
+
+.avx-step-card:hover {
+  transform: translateY(-4px);
+  border-color: var(--avx-blue);
+  box-shadow: 0 12px 28px -6px rgba(18, 60, 105, 0.09);
+}
+
+.avx-step-card__top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: var(--avx-space-5);
+  padding-bottom: var(--avx-space-3);
+  border-bottom: 1px solid var(--avx-border-light);
+}
+
+.avx-step-card__num-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: var(--avx-radius-sm);
+  background-color: var(--avx-blue-tint);
+  border: 1px solid var(--avx-blue-light);
+  color: var(--avx-corp-navy);
+  font-family: var(--avx-font-sans);
+  font-weight: 700;
+  font-size: var(--avx-text-sm);
+  letter-spacing: 0.04em;
+}
+
+.avx-step-card__stage {
+  font-family: var(--avx-font-sans);
+  font-size: var(--avx-text-xs);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--avx-slate-500);
+}
+
+.avx-step-card__title {
+  font-family: var(--avx-font-sans);
+  font-size: var(--avx-text-h4);
+  font-weight: 600;
+  color: var(--avx-navy);
+  margin-bottom: var(--avx-space-3);
+  line-height: var(--avx-leading-snug);
+}
+
+.avx-step-card__desc {
+  font-family: var(--avx-font-sans);
+  font-size: var(--avx-text-body);
+  color: var(--avx-slate-600);
+  line-height: var(--avx-leading-relaxed);
+  margin-bottom: var(--avx-space-4);
+  flex-grow: 1;
+}
+
+.avx-step-card__footer {
+  margin-top: auto;
+  padding-top: var(--avx-space-3);
+  border-top: 1px dashed var(--avx-border-light);
+}
+
+.avx-step-card__tag {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--avx-space-2);
+  font-size: var(--avx-text-xs);
+  color: var(--avx-blue);
+  font-weight: 500;
+}
+
+.avx-step-card__tag-icon {
+  width: 14px;
+  height: 14px;
+}

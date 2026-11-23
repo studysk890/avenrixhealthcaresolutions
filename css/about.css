@@ -388,3 +388,153 @@
     margin-bottom: var(--avx-space-4);
   }
 }
+
+/* --------------------------------------------------------------------------
+   Vision, Mission & Philosophy Blocks (Section 4.2)
+   -------------------------------------------------------------------------- */
+.avx-about__extensions {
+  margin-top: clamp(3.5rem, 6vw, 5.5rem);
+  padding-top: clamp(2.5rem, 4vw, 4rem);
+  border-top: 1px solid var(--avx-border-light);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--avx-space-8);
+}
+
+@media (max-width: 900px) {
+  .avx-about__extensions {
+    grid-template-columns: 1fr;
+    gap: var(--avx-space-6);
+  }
+}
+
+.avx-about__vision-mission {
+  display: flex;
+  flex-direction: column;
+  gap: var(--avx-space-6);
+}
+
+.avx-about__block-title {
+  font-family: var(--avx-font-serif);
+  font-size: var(--avx-text-h3);
+  color: var(--avx-navy);
+  margin-bottom: var(--avx-space-3);
+  display: flex;
+  align-items: center;
+  gap: var(--avx-space-3);
+}
+
+.avx-about__block-title svg {
+  color: var(--avx-blue);
+  flex-shrink: 0;
+}
+
+.avx-about__vision-card {
+  background: var(--avx-blue-tint);
+  border: 1px solid var(--avx-border-strong);
+  border-left: 4px solid var(--avx-blue);
+  border-radius: var(--avx-radius-md);
+  padding: var(--avx-space-6);
+}
+
+.avx-about__vision-text {
+  font-family: var(--avx-font-sans);
+  font-size: var(--avx-text-body);
+  color: var(--avx-slate-700);
+  line-height: var(--avx-leading-relaxed);
+  margin: 0;
+}
+
+.avx-about__mission-card {
+  background: var(--avx-white);
+  border: 1px solid var(--avx-border-strong);
+  border-radius: var(--avx-radius-md);
+  padding: var(--avx-space-6);
+}
+
+.avx-about__mission-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: var(--avx-space-3);
+}
+
+.avx-about__mission-item {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--avx-space-3);
+  font-family: var(--avx-font-sans);
+  font-size: var(--avx-text-body);
+  color: var(--avx-slate-700);
+  line-height: var(--avx-leading-normal);
+}
+
+.avx-about__mission-item-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: var(--avx-blue);
+  flex-shrink: 0;
+  margin-top: 8px;
+}
+
+/* Philosophy Callout Card (Right Column) */
+.avx-about__philosophy-card {
+  background: linear-gradient(135deg, var(--avx-corp-navy) 0%, var(--avx-navy) 100%);
+  color: var(--avx-white);
+  border-radius: var(--avx-radius-md);
+  padding: var(--avx-space-8);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  box-shadow: 0 12px 30px -6px rgba(1, 44, 78, 0.22);
+  position: relative;
+  overflow: hidden;
+}
+
+.avx-about__philosophy-card::after {
+  content: '';
+  position: absolute;
+  top: -20%;
+  right: -20%;
+  width: 200px;
+  height: 200px;
+  background: radial-gradient(circle, rgba(40, 118, 185, 0.25) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+.avx-about__philosophy-label {
+  font-family: var(--avx-font-sans);
+  font-size: var(--avx-text-xs);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--avx-blue-light);
+  margin-bottom: var(--avx-space-4);
+  display: inline-block;
+}
+
+.avx-about__philosophy-headline {
+  font-family: var(--avx-font-sans);
+  font-size: clamp(1.25rem, 1.8vw, 1.65rem);
+  font-weight: 800;
+  letter-spacing: 0.04em;
+  color: var(--avx-white);
+  line-height: var(--avx-leading-snug);
+  margin-bottom: var(--avx-space-4);
+  position: relative;
+  z-index: 1;
+}
+
+.avx-about__philosophy-body {
+  font-family: var(--avx-font-sans);
+  font-size: var(--avx-text-body);
+  color: rgba(255, 255, 255, 0.9);
+  line-height: var(--avx-leading-relaxed);
+  margin: 0;
+  position: relative;
+  z-index: 1;
+}
+

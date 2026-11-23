@@ -601,4 +601,57 @@
   }
 }
 
+/* --------------------------------------------------------------------------
+   Product Bottom CTA Banner (Section 4.4)
+   -------------------------------------------------------------------------- */
+.avx-products__cta-banner {
+  margin-top: clamp(2.5rem, 4vw, 4rem);
+  background: var(--avx-blue-tint);
+  border: 1px solid var(--avx-border-strong);
+  border-radius: var(--avx-radius-lg);
+  padding: var(--avx-space-6) var(--avx-space-8);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--avx-space-6);
+  box-shadow: 0 4px 16px -2px rgba(18, 60, 105, 0.04);
+}
+
+@media (max-width: 768px) {
+  .avx-products__cta-banner {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: var(--avx-space-6);
+  }
+}
+
+.avx-products__cta-content {
+  display: flex;
+  flex-direction: column;
+  gap: var(--avx-space-1);
+}
+
+.avx-products__cta-heading {
+  font-family: var(--avx-font-serif);
+  font-size: var(--avx-text-h3);
+  color: var(--avx-navy);
+  margin: 0;
+}
+
+.avx-products__cta-sub {
+  font-family: var(--avx-font-sans);
+  font-size: var(--avx-text-body);
+  color: var(--avx-slate-600);
+  margin: 0;
+}
+
+.avx-products__cta-action {
+  flex-shrink: 0;
+}
+
+.avx-products__cta-btn {
+  white-space: nowrap;
+}
+
+
 

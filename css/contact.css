@@ -276,6 +276,21 @@
   color: #4599FF;
 }
 
+.avx-contact__channel-icon--phone {
+  background-color: rgba(241, 100, 25, 0.16);
+  color: var(--avx-orange);
+}
+
+.avx-contact__channel-icon--loc {
+  background-color: rgba(241, 100, 25, 0.16);
+  color: var(--avx-orange);
+}
+
+.avx-contact__channel-icon--web {
+  background-color: rgba(40, 118, 185, 0.2);
+  color: #70B5F9;
+}
+
 .avx-contact__channel-info {
   display: flex;
   flex-direction: column;

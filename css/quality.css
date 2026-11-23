@@ -1,0 +1,237 @@
+/* ==========================================================================
+   AVENRIX HEALTHCARE SOLUTIONS — QUALITY ASSURANCE
+   Section 07: Quality Framework & Compliance Control (.avx-quality)
+   ========================================================================== */
+
+.avx-quality {
+  position: relative;
+  background-color: var(--avx-blue-tint);
+  padding: var(--avx-space-24) 0;
+  border-bottom: 1px solid var(--avx-border-light);
+  overflow: hidden;
+}
+
+.avx-quality__bg-grid {
+  position: absolute;
+  inset: 0;
+  background-image: 
+    linear-gradient(to right, var(--avx-grid-line-light) 1px, transparent 1px),
+    linear-gradient(to bottom, var(--avx-grid-line-light) 1px, transparent 1px);
+  background-size: var(--avx-grid-size) var(--avx-grid-size);
+  opacity: 0.7;
+  pointer-events: none;
+}
+
+.avx-quality__container {
+  position: relative;
+  z-index: 2;
+}
+
+.avx-quality__header {
+  max-width: 820px;
+  margin-bottom: var(--avx-space-12);
+}
+
+.avx-quality__eyebrow {
+  margin-bottom: var(--avx-space-3);
+}
+
+.avx-quality__title {
+  font-family: var(--avx-font-serif);
+  font-size: var(--avx-text-display);
+  font-weight: 400;
+  color: var(--avx-navy);
+  line-height: var(--avx-leading-tight);
+  margin-bottom: var(--avx-space-4);
+  letter-spacing: var(--avx-tracking-tight);
+}
+
+.avx-quality__title-accent {
+  color: var(--avx-corp-navy);
+  font-style: normal;
+}
+
+.avx-quality__intro {
+  font-family: var(--avx-font-sans);
+  font-size: var(--avx-text-lead);
+  color: var(--avx-slate-600);
+  line-height: var(--avx-leading-relaxed);
+  margin-bottom: var(--avx-space-6);
+}
+
+.avx-quality__accent-rule {
+  width: 56px;
+  height: 2px;
+  background-color: var(--avx-orange);
+  border-radius: var(--avx-radius-sm);
+}
+
+/* Two-column Layout: 7-point Framework (Left) & Commitment / Compliance Cards (Right) */
+.avx-quality__layout {
+  display: grid;
+  grid-template-columns: 1.15fr 0.85fr;
+  gap: var(--avx-space-10);
+  align-items: start;
+}
+
+@media (max-width: 960px) {
+  .avx-quality__layout {
+    grid-template-columns: 1fr;
+    gap: var(--avx-space-8);
+  }
+}
+
+/* Quality Points List */
+.avx-quality__framework {
+  background: var(--avx-white);
+  border: 1px solid var(--avx-border-strong);
+  border-radius: var(--avx-radius-md);
+  padding: var(--avx-space-8);
+  box-shadow: 0 4px 16px -2px rgba(18, 60, 105, 0.04);
+}
+
+.avx-quality__framework-title {
+  font-family: var(--avx-font-sans);
+  font-size: var(--avx-text-h4);
+  font-weight: 600;
+  color: var(--avx-navy);
+  margin-bottom: var(--avx-space-6);
+  padding-bottom: var(--avx-space-3);
+  border-bottom: 1px solid var(--avx-border-light);
+  display: flex;
+  align-items: center;
+  gap: var(--avx-space-3);
+}
+
+.avx-quality__framework-title svg {
+  color: var(--avx-blue);
+  flex-shrink: 0;
+}
+
+.avx-quality__list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: var(--avx-space-4);
+}
+
+.avx-quality__item {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--avx-space-3);
+  font-family: var(--avx-font-sans);
+  font-size: var(--avx-text-body);
+  color: var(--avx-slate-700);
+  line-height: var(--avx-leading-normal);
+}
+
+.avx-quality__item-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background-color: var(--avx-blue-subtle);
+  color: var(--avx-blue);
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+/* Right Column: Commitment Card & Compliance Callout */
+.avx-quality__cards {
+  display: flex;
+  flex-direction: column;
+  gap: var(--avx-space-6);
+}
+
+.avx-quality__commitment-card {
+  background: linear-gradient(135deg, var(--avx-corp-navy) 0%, var(--avx-navy) 100%);
+  color: var(--avx-white);
+  border-radius: var(--avx-radius-md);
+  padding: var(--avx-space-8);
+  box-shadow: 0 10px 24px -4px rgba(1, 44, 78, 0.2);
+  position: relative;
+  overflow: hidden;
+}
+
+.avx-quality__commitment-card::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 120px;
+  height: 120px;
+  background: radial-gradient(circle, rgba(40, 118, 185, 0.25) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+.avx-quality__commitment-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--avx-space-2);
+  font-family: var(--avx-font-sans);
+  font-size: var(--avx-text-xs);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--avx-blue-light);
+  margin-bottom: var(--avx-space-3);
+}
+
+.avx-quality__commitment-title {
+  font-family: var(--avx-font-serif);
+  font-size: var(--avx-text-h3);
+  color: var(--avx-white);
+  margin-bottom: var(--avx-space-3);
+  line-height: var(--avx-leading-snug);
+}
+
+.avx-quality__commitment-text {
+  font-family: var(--avx-font-sans);
+  font-size: var(--avx-text-body);
+  color: rgba(255, 255, 255, 0.9);
+  line-height: var(--avx-leading-relaxed);
+  margin: 0;
+}
+
+/* Compliance Notice Box */
+.avx-quality__compliance-box {
+  background: var(--avx-white);
+  border: 1px solid var(--avx-border-strong);
+  border-left: 4px solid var(--avx-blue);
+  border-radius: var(--avx-radius-md);
+  padding: var(--avx-space-6);
+  box-shadow: 0 4px 12px -2px rgba(18, 60, 105, 0.03);
+}
+
+.avx-quality__compliance-header {
+  display: flex;
+  align-items: center;
+  gap: var(--avx-space-2);
+  margin-bottom: var(--avx-space-2);
+}
+
+.avx-quality__compliance-icon {
+  color: var(--avx-blue);
+  flex-shrink: 0;
+}
+
+.avx-quality__compliance-title {
+  font-family: var(--avx-font-sans);
+  font-size: var(--avx-text-xs);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--avx-corp-navy);
+}
+
+.avx-quality__compliance-text {
+  font-family: var(--avx-font-sans);
+  font-size: var(--avx-text-sm);
+  color: var(--avx-slate-600);
+  line-height: var(--avx-leading-normal);
+  margin: 0;
+}

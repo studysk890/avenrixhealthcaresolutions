@@ -6,6 +6,43 @@
 (function () {
   'use strict';
 
+  // -------------------------------------------------------------------------
+  // 0. LENIS SMOOTH MOMENTUM SCROLL ENGINE
+  // Provides fluid inertial mouse-wheel deceleration and smooth anchor glides
+  // -------------------------------------------------------------------------
+  let lenisInstance = null;
+  const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  if (typeof Lenis !== 'undefined' && !prefersReducedMotion) {
+    lenisInstance = new Lenis({
+      duration: 1.25,
+      easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)), // Exponential deceleration
+      orientation: 'vertical',
+      gestureOrientation: 'vertical',
+      smoothWheel: true,
+      wheelMultiplier: 0.95,
+      touchMultiplier: 1.5,
+      infinite: false
+    });
+
+    window.lenis = lenisInstance;
+
+    // Connect Lenis to GSAP ScrollTrigger ticker for seamless frame sync
+    if (typeof ScrollTrigger !== 'undefined' && typeof gsap !== 'undefined') {
+      lenisInstance.on('scroll', ScrollTrigger.update);
+      gsap.ticker.add((time) => {
+        lenisInstance.raf(time * 1000);
+      });
+      gsap.ticker.lagSmoothing(0);
+    } else {
+      function raf(time) {
+        lenisInstance.raf(time);
+        requestAnimationFrame(raf);
+      }
+      requestAnimationFrame(raf);
+    }
+  }
+
   // DOM Elements
   const header = document.getElementById('header');
   const menuToggle = document.getElementById('menuToggle');
@@ -21,7 +58,7 @@
    * desktop (.avx-header__nav-link) and mobile drawer (.avx-drawer__link)
    * to accurately reflect whichever section is currently showing.
    */
-  const sections = ['home', 'about', 'solutions', 'products', 'industries', 'why-avenrix', 'contact']
+  const sections = ['home', 'about', 'solutions', 'products', 'industries', 'approach', 'quality', 'why-avenrix', 'partnerships', 'faqs', 'contact']
     .map(id => ({ id, el: document.getElementById(id) }))
     .filter(s => s.el !== null);
 
@@ -111,6 +148,11 @@
     ticking = false;
   }
 
+  // Hook scroll ticks to Lenis or native window scroll
+  if (lenisInstance) {
+    lenisInstance.on('scroll', onScrollTick);
+  }
+
   window.addEventListener('scroll', function () {
     lastScrollY = window.scrollY;
     if (!ticking) {
@@ -139,6 +181,9 @@
     drawerBackdrop.classList.add('is-open');
     drawerBackdrop.setAttribute('aria-hidden', 'false');
     document.body.classList.add('avx-scroll-locked');
+    if (window.lenis) {
+      window.lenis.stop();
+    }
 
     // Focus close button or first link inside drawer
     const drawerCloseBtn = document.getElementById('drawerClose');
@@ -160,6 +205,9 @@
     drawerBackdrop.classList.remove('is-open');
     drawerBackdrop.setAttribute('aria-hidden', 'true');
     document.body.classList.remove('avx-scroll-locked');
+    if (window.lenis) {
+      window.lenis.start();
+    }
     menuToggle.focus();
   }
 
@@ -213,7 +261,6 @@
       if (targetEl) {
         e.preventDefault();
         const headerHeight = header ? header.offsetHeight : 0;
-        const targetPosition = targetEl.getBoundingClientRect().top + window.pageYOffset - headerHeight;
 
         // Immediately set active nav link for responsive feedback
         const cleanId = targetId.replace(/^#/, '');
@@ -221,10 +268,19 @@
           setActiveNavLink(cleanId);
         }
 
-        window.scrollTo({
-          top: targetPosition,
-          behavior: 'smooth'
-        });
+        if (window.lenis) {
+          window.lenis.scrollTo(targetEl, {
+            offset: -headerHeight,
+            duration: 1.35,
+            easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t))
+          });
+        } else {
+          const targetPosition = targetEl.getBoundingClientRect().top + window.pageYOffset - headerHeight;
+          window.scrollTo({
+            top: targetPosition,
+            behavior: 'smooth'
+          });
+        }
       }
     });
   });
@@ -235,10 +291,17 @@
   if (backToTopBtn) {
     backToTopBtn.addEventListener('click', function (e) {
       e.preventDefault();
-      window.scrollTo({
-        top: 0,
-        behavior: 'smooth'
-      });
+      if (window.lenis) {
+        window.lenis.scrollTo(0, {
+          duration: 1.4,
+          easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t))
+        });
+      } else {
+        window.scrollTo({
+          top: 0,
+          behavior: 'smooth'
+        });
+      }
     });
   }
 
@@ -268,6 +331,7 @@
     const nameError = document.getElementById('avxNameError');
 
     const companyInput = document.getElementById('avxContactCompany');
+    const designationInput = document.getElementById('avxContactDesignation');
 
     const emailInput = document.getElementById('avxContactEmail');
     const emailWrap = document.getElementById('fieldWrapEmail');
@@ -277,6 +341,8 @@
     const phoneWrap = document.getElementById('fieldWrapPhone');
     const phoneError = document.getElementById('avxPhoneError');
 
+    const locationInput = document.getElementById('avxContactLocation');
+    const reqTypeSelect = document.getElementById('avxContactReqType');
     const productSelect = document.getElementById('avxContactProduct');
     const messageInput = document.getElementById('avxContactMessage');
 
@@ -432,8 +498,11 @@
       const inquiryPayload = {
         name: (nameInput.value || '').trim(),
         company: companyInput ? (companyInput.value || '').trim() || null : null,
+        designation: designationInput ? (designationInput.value || '').trim() || null : null,
         email: (emailInput.value || '').trim(),
         phone: (phoneInput.value || '').trim(),
+        location: locationInput ? (locationInput.value || '').trim() || null : null,
+        requirementType: reqTypeSelect ? reqTypeSelect.value || null : null,
         product: productSelect ? productSelect.value || null : null,
         message: messageInput ? (messageInput.value || '').trim() || null : null,
         submittedAt: new Date().toLocaleString()
@@ -822,7 +891,45 @@
   initIndustriesTabHub();
 
   /**
-   * 7. SOURCE PROTECTION & ANTI-CLONING SHIELD
+   * 7. FAQ INTERACTIVE ACCORDION
+   * Accessible expand/collapse for Section 10 Buyer Questions
+   */
+  function initFaqAccordion() {
+    const faqItems = document.querySelectorAll('.avx-faq-item');
+    if (!faqItems.length) return;
+
+    faqItems.forEach(item => {
+      const trigger = item.querySelector('.avx-faq-trigger');
+      if (!trigger) return;
+
+      trigger.addEventListener('click', function () {
+        const isOpen = item.classList.contains('is-open');
+
+        // Close all items for neat single-open accordion UX
+        faqItems.forEach(otherItem => {
+          otherItem.classList.remove('is-open');
+          const otherTrigger = otherItem.querySelector('.avx-faq-trigger');
+          if (otherTrigger) otherTrigger.setAttribute('aria-expanded', 'false');
+        });
+
+        // Toggle clicked item
+        if (!isOpen) {
+          item.classList.add('is-open');
+          trigger.setAttribute('aria-expanded', 'true');
+        }
+
+        if (typeof ScrollTrigger !== 'undefined') {
+          ScrollTrigger.refresh();
+        }
+      });
+    });
+  }
+
+  // Initialize FAQ Accordion
+  initFaqAccordion();
+
+  /**
+   * 8. SOURCE PROTECTION & ANTI-CLONING SHIELD
    * Prevents right-click context menu, source-viewing shortcuts,
    * page saving shortcuts, and image dragging.
    */

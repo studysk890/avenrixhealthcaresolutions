@@ -1,0 +1,182 @@
+/* ==========================================================================
+   AVENRIX HEALTHCARE SOLUTIONS — FREQUENTLY ASKED QUESTIONS
+   Section 10: Buyer Questions & Accordion Interface (.avx-faqs)
+   ========================================================================== */
+
+.avx-faqs {
+  position: relative;
+  background-color: var(--avx-blue-tint);
+  padding: var(--avx-space-24) 0;
+  border-bottom: 1px solid var(--avx-border-light);
+  overflow: hidden;
+}
+
+.avx-faqs__bg-grid {
+  position: absolute;
+  inset: 0;
+  background-image: 
+    linear-gradient(to right, var(--avx-grid-line-light) 1px, transparent 1px),
+    linear-gradient(to bottom, var(--avx-grid-line-light) 1px, transparent 1px);
+  background-size: var(--avx-grid-size) var(--avx-grid-size);
+  opacity: 0.7;
+  pointer-events: none;
+}
+
+.avx-faqs__container {
+  position: relative;
+  z-index: 2;
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+.avx-faqs__header {
+  text-align: center;
+  max-width: 720px;
+  margin: 0 auto var(--avx-space-12);
+}
+
+.avx-faqs__eyebrow {
+  margin-bottom: var(--avx-space-3);
+  display: inline-flex;
+}
+
+.avx-faqs__title {
+  font-family: var(--avx-font-serif);
+  font-size: var(--avx-text-display);
+  font-weight: 400;
+  color: var(--avx-navy);
+  line-height: var(--avx-leading-tight);
+  margin-bottom: var(--avx-space-4);
+  letter-spacing: var(--avx-tracking-tight);
+}
+
+.avx-faqs__title-accent {
+  color: var(--avx-corp-navy);
+  font-style: normal;
+}
+
+.avx-faqs__intro {
+  font-family: var(--avx-font-sans);
+  font-size: var(--avx-text-lead);
+  color: var(--avx-slate-600);
+  line-height: var(--avx-leading-relaxed);
+  margin-bottom: var(--avx-space-6);
+}
+
+.avx-faqs__accent-rule {
+  width: 56px;
+  height: 2px;
+  background-color: var(--avx-orange);
+  border-radius: var(--avx-radius-sm);
+  margin: 0 auto;
+}
+
+/* Accordion Container */
+.avx-faqs__accordion {
+  display: flex;
+  flex-direction: column;
+  gap: var(--avx-space-4);
+}
+
+.avx-faq-item {
+  background: var(--avx-white);
+  border: 1px solid var(--avx-border-strong);
+  border-radius: var(--avx-radius-md);
+  overflow: hidden;
+  transition: border-color var(--avx-transition-fast), box-shadow var(--avx-transition-fast);
+  box-shadow: 0 2px 8px -1px rgba(18, 60, 105, 0.03);
+}
+
+.avx-faq-item.is-open {
+  border-color: var(--avx-blue);
+  box-shadow: 0 6px 18px -3px rgba(18, 60, 105, 0.08);
+}
+
+.avx-faq-trigger {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--avx-space-5) var(--avx-space-6);
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  text-align: left;
+  gap: var(--avx-space-4);
+  color: var(--avx-navy);
+  transition: color var(--avx-transition-fast);
+}
+
+.avx-faq-trigger:hover {
+  color: var(--avx-blue);
+}
+
+.avx-faq-trigger:focus-visible {
+  outline: 2px solid var(--avx-blue);
+  outline-offset: -2px;
+}
+
+.avx-faq-question {
+  font-family: var(--avx-font-sans);
+  font-size: var(--avx-text-body);
+  font-weight: 600;
+  line-height: var(--avx-leading-snug);
+  margin: 0;
+  color: inherit;
+}
+
+.avx-faq-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background-color: var(--avx-blue-subtle);
+  color: var(--avx-blue);
+  flex-shrink: 0;
+  transition: transform var(--avx-transition-medium), background-color var(--avx-transition-fast), color var(--avx-transition-fast);
+}
+
+.avx-faq-icon svg {
+  width: 14px;
+  height: 14px;
+  transition: transform var(--avx-transition-medium);
+}
+
+.avx-faq-item.is-open .avx-faq-icon {
+  background-color: var(--avx-blue);
+  color: var(--avx-white);
+  transform: rotate(180deg);
+}
+
+.avx-faq-panel {
+  display: none;
+  padding: 0 var(--avx-space-6) var(--avx-space-6);
+  border-top: 1px solid var(--avx-border-light);
+  margin-top: 0;
+  animation: avxFaqSlideDown 0.25s ease-out forwards;
+}
+
+.avx-faq-item.is-open .avx-faq-panel {
+  display: block;
+}
+
+@keyframes avxFaqSlideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-4px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.avx-faq-answer {
+  font-family: var(--avx-font-sans);
+  font-size: var(--avx-text-body);
+  color: var(--avx-slate-700);
+  line-height: var(--avx-leading-relaxed);
+  margin: var(--avx-space-4) 0 0;
+}
