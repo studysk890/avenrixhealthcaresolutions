@@ -88,8 +88,8 @@
 
 @media (min-width: 1024px) {
   .avx-footer__grid {
-    grid-template-columns: 1.8fr 1fr 1.2fr 1fr;
-    gap: var(--avx-space-10);
+    grid-template-columns: 1.4fr 0.9fr 1fr 1.7fr;
+    gap: var(--avx-space-8);
   }
 }
 

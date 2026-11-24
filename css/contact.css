@@ -216,7 +216,7 @@
 .avx-contact__channels {
   display: grid;
   grid-template-columns: 1fr;
-  gap: 0.625rem;
+  gap: 0.55rem;
   margin-top: var(--avx-space-4);
   padding-top: var(--avx-space-4);
   border-top: 1px solid rgba(255, 255, 255, 0.08);
@@ -289,6 +289,26 @@
 .avx-contact__channel-icon--web {
   background-color: rgba(40, 118, 185, 0.2);
   color: #70B5F9;
+}
+
+.avx-contact__channel-icon--mail {
+  background-color: rgba(40, 118, 185, 0.16);
+  color: #70B5F9;
+}
+
+.avx-contact__channel-icon--sales {
+  background-color: rgba(241, 100, 25, 0.16);
+  color: var(--avx-orange);
+}
+
+.avx-contact__channel-icon--ops {
+  background-color: rgba(14, 165, 233, 0.16);
+  color: #38BDF8;
+}
+
+.avx-contact__channel-icon--acct {
+  background-color: rgba(16, 185, 129, 0.16);
+  color: #34D399;
 }
 
 .avx-contact__channel-info {
